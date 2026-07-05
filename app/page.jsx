@@ -25,6 +25,7 @@ const REGIONS = [
 
 // Libelles de roles affiches (l'API renvoie TOP/JUNGLE/MIDDLE/BOTTOM/UTILITY).
 const ROLE_LABEL = { TOP: "TOP", JUNGLE: "JUNGLE", MIDDLE: "MID", BOTTOM: "BOT", UTILITY: "SUPPORT" };
+const ROLE_ORDER_LIST = ["TOP", "JUNGLE", "MIDDLE", "BOTTOM", "UTILITY"];
 function roleLabel(r) {
   return ROLE_LABEL[r] || "";
 }
@@ -107,6 +108,18 @@ function pct1(x) {
   return `${((x || 0) * 100).toFixed(1)}%`;
 }
 
+// Temps ecoule depuis une partie (epoch ms) -> "Il y a X min/heures/jours".
+function relativeTime(ts) {
+  if (!ts) return "";
+  const diff = Date.now() - ts;
+  const min = Math.floor(diff / 60000);
+  if (min < 60) return `Il y a ${Math.max(min, 1)} min`;
+  const h = Math.floor(min / 60);
+  if (h < 24) return `Il y a ${h} heure${h > 1 ? "s" : ""}`;
+  const d = Math.floor(h / 24);
+  return `Il y a ${d} jour${d > 1 ? "s" : ""}`;
+}
+
 function scoreColor(score) {
   if (score >= 60) return "#e05265";
   if (score >= 40) return "#e0a052";
@@ -154,6 +167,7 @@ export default function Home() {
   const [error, setError] = useState(null);
   const [expanded, setExpanded] = useState({}); // puuid -> affiche 12 lignes
   const [roleFilter, setRoleFilter] = useState({}); // puuid -> role filtre (ou undefined)
+  const [banRole, setBanRole] = useState(null); // role filtre pour la section bans
 
   function toggleExpanded(puuid) {
     setExpanded((prev) => ({ ...prev, [puuid]: !prev[puuid] }));
@@ -197,6 +211,8 @@ export default function Home() {
 
   const version = data?.ddragonVersion;
   const logRegion = REGIONS.find((r) => r.key === regionKey)?.log || "euw";
+  const banRoleList = data?.bans ? ROLE_ORDER_LIST.filter((r) => data.bans.some((b) => b.role === r)) : [];
+  const filteredBans = data?.bans ? (banRole ? data.bans.filter((b) => b.role === banRole) : data.bans) : [];
 
   // -------------------- Vue formulaire --------------------
   if (!data) {
@@ -394,14 +410,21 @@ export default function Home() {
                     {recents.slice(0, rows).map((m, i) => (
                       <li key={i}>
                         <ChampIcon version={version} image={m.image} name={m.name} className="detail-icon" />
-                        <span className="mini-name">{m.name}</span>
-                        <span className={`result ${m.win ? "win" : "loss"}`}>
-                          {m.win ? "V" : "D"}
-                        </span>
-                        <span className="mini-stat mono">
-                          {m.kills}/{m.deaths}/{m.assists}
-                        </span>
-                        <span className="mini-role">{roleLabel(m.role)}</span>
+                        <div className="match-info">
+                          <div className="match-line1">
+                            <span className="mini-name">{m.name}</span>
+                            <span className="mini-role">{roleLabel(m.role)}</span>
+                          </div>
+                          <div className="match-line2">
+                            <span className={`result ${m.win ? "win" : "loss"}`}>
+                              {m.win ? "V" : "D"}
+                            </span>
+                            <span className="mini-stat mono">
+                              {m.kills}/{m.deaths}/{m.assists}
+                            </span>
+                            <span className="match-time">{relativeTime(m.gameCreation)}</span>
+                          </div>
+                        </div>
                       </li>
                     ))}
                   </ul>
@@ -474,8 +497,25 @@ export default function Home() {
           Bans recommandes
           <span className="hint">score de danger (survolez le score pour le detail du calcul)</span>
         </h2>
+        <div className="ban-filters">
+          <button
+            className={`role-tag${!banRole ? " active" : ""}`}
+            onClick={() => setBanRole(null)}
+          >
+            Tous
+          </button>
+          {banRoleList.map((r) => (
+            <button
+              key={r}
+              className={`role-tag${banRole === r ? " active" : ""}`}
+              onClick={() => setBanRole(banRole === r ? null : r)}
+            >
+              {roleLabel(r)}
+            </button>
+          ))}
+        </div>
         <div className="grid bans">
-          {data.bans.slice(0, 12).map((b) => (
+          {filteredBans.slice(0, 12).map((b) => (
             <div className="card ban" key={b.championId}>
               <BanScore b={b} />
               <div className="body">

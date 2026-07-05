@@ -135,11 +135,11 @@ button.refresh.ghost { background: transparent; color: var(--gold); border: 1px 
 .player-link:hover { color: var(--gold); border-bottom-color: var(--gold); }
 .role-tag {
   font-family: inherit;
-  font-size: 11px; color: var(--gold); background: var(--panel-2);
+  font-size: 11px; color: var(--muted); background: var(--panel-2);
   border: 1px solid var(--border); padding: 3px 10px; border-radius: 20px;
   font-weight: 600; letter-spacing: .04em; cursor: pointer; transition: all .1s ease;
 }
-.role-tag:hover { border-color: var(--gold); }
+.role-tag:hover { border-color: var(--gold); color: var(--gold); }
 .role-tag.active { background: var(--gold); color: #1a1204; border-color: var(--gold); }
 .col-filter {
   margin-left: 8px; font-size: 10px; font-weight: 700; color: #1a1204;
@@ -180,11 +180,18 @@ button.refresh.ghost { background: transparent; color: var(--gold); border: 1px 
 
 /* --- Roles joues par le joueur (avec %) --- */
 .player-roles { display: flex; flex-wrap: wrap; gap: 8px; margin: -4px 0 14px; }
-.player-roles .role-tag { color: var(--muted); }
+.ban-filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
 .col-title { font-size: 12px; color: var(--gold); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 10px; }
 .mini-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
 .mini-list li { display: flex; align-items: center; gap: 11px; }
 .mini-name { flex: 1; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Parties recentes : 2 lignes (nom+role / resultat+KDA+date) a cote de l'icone */
+.match-info { flex: 1; min-width: 0; }
+.match-line1 { display: flex; align-items: baseline; gap: 8px; }
+.match-line1 .mini-name { font-size: 14px; }
+.match-line2 { display: flex; align-items: center; gap: 10px; margin-top: 3px; }
+.match-time { color: var(--muted); font-size: 11px; margin-left: auto; white-space: nowrap; }
 
 /* --- Champions les plus joues : grosse icone sur 2 lignes + counters --- */
 .champ-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
