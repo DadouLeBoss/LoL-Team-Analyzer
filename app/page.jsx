@@ -230,6 +230,32 @@ export default function Home() {
             </div>
 
             <div className="player-cols">
+              {/* Champions les plus joues */}
+              <div className="col">
+                <div className="col-title">Champions les plus joues</div>
+                {p.champions.length === 0 ? (
+                  <div className="empty">Aucune partie.</div>
+                ) : (
+                  <ul className="mini-list">
+                    {p.champions.slice(0, 5).map((c, i) => (
+                      <li key={i}>
+                        {champImg(version, c.image) && (
+                          <img className="champ-img sm" src={champImg(version, c.image)} alt={c.name} />
+                        )}
+                        <span className="mini-name">{c.name}</span>
+                        <span className="mini-stat mono">{c.games} p.</span>
+                        <span
+                          className="mini-stat mono"
+                          style={{ color: c.winrate >= 0.5 ? "var(--green)" : "var(--red)" }}
+                        >
+                          {pct(c.winrate)}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+
               {/* Parties recentes */}
               <div className="col">
                 <div className="col-title">Parties recentes</div>
