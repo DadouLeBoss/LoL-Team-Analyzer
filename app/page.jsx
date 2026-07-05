@@ -73,6 +73,32 @@ function champImg(version, image) {
   return `https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${image}`;
 }
 
+// Lien vers la fiche Lolalytics du champion. Le slug = nom en minuscules sans
+// caractere special, sauf ces exceptions ou Lolalytics ne garde que le 1er mot.
+const LOLALYTICS_SLUG = { "Renata Glasc": "renata", "Nunu & Willump": "nunu" };
+function lolalyticsUrl(name) {
+  if (!name) return null;
+  const slug = LOLALYTICS_SLUG[name] || name.toLowerCase().replace(/[^a-z0-9]/g, "");
+  return `https://lolalytics.com/fr/lol/${slug}/build/`;
+}
+
+// Icone de champion cliquable (redirige vers Lolalytics).
+function ChampIcon({ version, image, name, className }) {
+  const src = champImg(version, image);
+  if (!src) return null;
+  return (
+    <a
+      className="champ-icon-link"
+      href={lolalyticsUrl(name)}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={`${name} sur Lolalytics`}
+    >
+      <img className={className} src={src} alt={name} />
+    </a>
+  );
+}
+
 function pct(x) {
   return `${Math.round(x * 100)}%`;
 }
@@ -126,6 +152,11 @@ export default function Home() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [expanded, setExpanded] = useState({}); // puuid -> affiche 12 lignes
+
+  function toggleExpanded(puuid) {
+    setExpanded((prev) => ({ ...prev, [puuid]: !prev[puuid] }));
+  }
 
   function setAccount(i, value) {
     setAccounts((prev) => prev.map((a, idx) => (idx === i ? value : a)));
@@ -253,7 +284,9 @@ export default function Home() {
       {/* -------------------- Detail par joueur -------------------- */}
       <section className="section">
         <h2>Detail par joueur</h2>
-        {data.players.map((p) => (
+        {data.players.map((p) => {
+          const rows = expanded[p.puuid] ? 12 : 6;
+          return (
           <div className="card player" key={p.puuid}>
             <h3>
               <a
@@ -266,7 +299,12 @@ export default function Home() {
               </a>
               <RankBadge label="Solo/Duo" r={p.rank?.solo} />
               <RankBadge label="Flex" r={p.rank?.flex} />
-              <span className="count">{p.totalGames} parties analysees</span>
+              <div className="player-meta">
+                <span className="count">{p.totalGames} parties analysees</span>
+                <button className="see-more" onClick={() => toggleExpanded(p.puuid)}>
+                  {expanded[p.puuid] ? "Voir moins" : "Voir plus"}
+                </button>
+              </div>
             </h3>
 
             {p.roles.length > 0 && (
@@ -289,11 +327,9 @@ export default function Home() {
                   <div className="empty">Aucune partie.</div>
                 ) : (
                   <ul className="champ-list">
-                    {p.champions.slice(0, 6).map((c, i) => (
+                    {p.champions.slice(0, rows).map((c, i) => (
                       <li className="champ-entry" key={i}>
-                        {champImg(version, c.image) && (
-                          <img className="detail-icon" src={champImg(version, c.image)} alt={c.name} />
-                        )}
+                        <ChampIcon version={version} image={c.image} name={c.name} className="detail-icon" />
                         <div className="champ-info">
                           <div className="champ-line1">
                             <span className="mini-name">{c.name}</span>
@@ -335,11 +371,9 @@ export default function Home() {
                   <div className="empty">Aucune partie recente.</div>
                 ) : (
                   <ul className="mini-list">
-                    {p.recentMatches.map((m, i) => (
+                    {p.recentMatches.slice(0, rows).map((m, i) => (
                       <li key={i}>
-                        {champImg(version, m.image) && (
-                          <img className="detail-icon" src={champImg(version, m.image)} alt={m.name} />
-                        )}
+                        <ChampIcon version={version} image={m.image} name={m.name} className="detail-icon" />
                         <span className="mini-name">{m.name}</span>
                         <span className={`result ${m.win ? "win" : "loss"}`}>
                           {m.win ? "V" : "D"}
@@ -361,11 +395,9 @@ export default function Home() {
                   <div className="empty">Pas de donnees de maitrise.</div>
                 ) : (
                   <ul className="mini-list">
-                    {p.topMasteries.map((m, i) => (
+                    {p.topMasteries.slice(0, rows).map((m, i) => (
                       <li key={i}>
-                        {champImg(version, m.image) && (
-                          <img className="detail-icon" src={champImg(version, m.image)} alt={m.name} />
-                        )}
+                        <ChampIcon version={version} image={m.image} name={m.name} className="detail-icon" />
                         <span className="mini-name">{m.name}</span>
                         <span className="mini-level">Niv. {m.level}</span>
                         <span className="mini-stat mono">
@@ -378,7 +410,8 @@ export default function Home() {
               </div>
             </div>
           </div>
-        ))}
+          );
+        })}
       </section>
 
       {/* -------------------- Champions flex -------------------- */}
@@ -394,9 +427,7 @@ export default function Home() {
             {data.flex.map((f) => (
               <div className="card flex-card" key={f.championId}>
                 <div className="champ-row">
-                  {champImg(version, f.image) && (
-                    <img className="champ-img" src={champImg(version, f.image)} alt={f.name} />
-                  )}
+                  <ChampIcon version={version} image={f.image} name={f.name} className="champ-img" />
                   <div>
                     <strong>{f.name}</strong>
                     {f.roles?.length > 0 && (
@@ -429,9 +460,7 @@ export default function Home() {
               <BanScore b={b} />
               <div className="body">
                 <div className="champ-row">
-                  {champImg(version, b.image) && (
-                    <img className="champ-img sm" src={champImg(version, b.image)} alt={b.name} />
-                  )}
+                  <ChampIcon version={version} image={b.image} name={b.name} className="champ-img sm" />
                   <div>
                     <div className="name">
                       {b.name}

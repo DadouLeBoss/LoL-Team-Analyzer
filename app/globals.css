@@ -119,7 +119,18 @@ button.refresh.ghost { background: transparent; color: var(--gold); border: 1px 
 .player { padding: 16px; margin-bottom: 16px; }
 .player h3 { margin: 0 0 14px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .player h3 .tag { color: var(--muted); font-weight: 400; font-size: 13px; }
-.player h3 .count { margin-left: auto; color: var(--muted); font-size: 13px; font-weight: 400; }
+.player h3 .count { color: var(--muted); font-size: 13px; font-weight: 400; }
+.player-meta { margin-left: auto; display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
+.see-more {
+  background: transparent; border: none; color: var(--gold); font-size: 12px; font-weight: 600;
+  cursor: pointer; padding: 0;
+}
+.see-more:hover { text-decoration: underline; }
+
+/* Icones de champion cliquables (-> Lolalytics) */
+.champ-icon-link { display: inline-flex; line-height: 0; flex-shrink: 0; }
+.champ-icon-link img { display: block; transition: filter .1s ease; }
+.champ-icon-link:hover img { filter: brightness(1.25); }
 .player-link { color: var(--text); text-decoration: none; border-bottom: 1px dotted var(--muted); }
 .player-link:hover { color: var(--gold); border-bottom-color: var(--gold); }
 .role-tag {
