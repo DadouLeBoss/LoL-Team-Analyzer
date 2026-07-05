@@ -289,10 +289,10 @@ export default function Home() {
                   <div className="empty">Aucune partie.</div>
                 ) : (
                   <ul className="champ-list">
-                    {p.champions.slice(0, 5).map((c, i) => (
+                    {p.champions.slice(0, 6).map((c, i) => (
                       <li className="champ-entry" key={i}>
                         {champImg(version, c.image) && (
-                          <img className="champ-icon-lg" src={champImg(version, c.image)} alt={c.name} />
+                          <img className="detail-icon" src={champImg(version, c.image)} alt={c.name} />
                         )}
                         <div className="champ-info">
                           <div className="champ-line1">
@@ -338,7 +338,7 @@ export default function Home() {
                     {p.recentMatches.map((m, i) => (
                       <li key={i}>
                         {champImg(version, m.image) && (
-                          <img className="champ-img sm" src={champImg(version, m.image)} alt={m.name} />
+                          <img className="detail-icon" src={champImg(version, m.image)} alt={m.name} />
                         )}
                         <span className="mini-name">{m.name}</span>
                         <span className={`result ${m.win ? "win" : "loss"}`}>
@@ -364,7 +364,7 @@ export default function Home() {
                     {p.topMasteries.map((m, i) => (
                       <li key={i}>
                         {champImg(version, m.image) && (
-                          <img className="champ-img sm" src={champImg(version, m.image)} alt={m.name} />
+                          <img className="detail-icon" src={champImg(version, m.image)} alt={m.name} />
                         )}
                         <span className="mini-name">{m.name}</span>
                         <span className="mini-level">Niv. {m.level}</span>
