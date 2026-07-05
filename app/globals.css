@@ -115,6 +115,10 @@ button.refresh.ghost { background: transparent; color: var(--gold); border: 1px 
 .flex-card .players span { font-size: 13px; color: var(--muted); }
 .badge { display: inline-block; background: var(--blue); color: #04121f; font-size: 11px; font-weight: 700; padding: 1px 8px; border-radius: 20px; margin-left: 8px; }
 .flex-roles { display: inline-block; margin-left: 8px; font-size: 11px; font-weight: 700; color: var(--blue); letter-spacing: .04em; }
+.flex-prole { color: var(--gold); font-size: 11px; letter-spacing: .03em; }
+
+/* Indices survolables (tooltip natif) */
+.kda-hint, .reason-flex { cursor: help; border-bottom: 1px dotted var(--muted); }
 
 .player { padding: 16px; margin-bottom: 16px; }
 .player h3 { margin: 0 0 14px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }

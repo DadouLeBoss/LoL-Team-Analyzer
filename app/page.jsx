@@ -461,10 +461,10 @@ export default function Home() {
       <section className="section">
         <h2>
           Champions flex
-          <span className="hint">joues par plusieurs joueurs et jouables sur plusieurs roles</span>
+          <span className="hint">joues par plusieurs joueurs, dans au moins 2 roles differents</span>
         </h2>
         {data.flex.length === 0 ? (
-          <div className="notice">Aucun champion multi-roles joue par 2 joueurs ou plus.</div>
+          <div className="notice">Aucun champion joue par 2 joueurs ou plus dans 2 roles differents.</div>
         ) : (
           <div className="grid flex">
             {data.flex.map((f) => (
@@ -474,14 +474,15 @@ export default function Home() {
                   <div>
                     <strong>{f.name}</strong>
                     {f.roles?.length > 0 && (
-                      <span className="flex-roles">{f.roles.map(metaRoleLabel).join(" · ")}</span>
+                      <span className="flex-roles">{f.roles.map(roleLabel).join(" · ")}</span>
                     )}
                   </div>
                 </div>
                 <div className="players">
                   {f.players.map((p) => (
                     <span key={p.name}>
-                      {p.name} · {p.games} parties · {pct(p.winrate)} WR
+                      {p.name}
+                      {p.role && <b className="flex-prole"> {roleLabel(p.role)}</b>} · {p.games} parties · {pct(p.winrate)} WR
                     </span>
                   ))}
                 </div>
@@ -520,7 +521,7 @@ export default function Home() {
               <BanScore b={b} />
               <div className="body">
                 <div className="champ-row">
-                  <ChampIcon version={version} image={b.image} name={b.name} className="champ-img sm" />
+                  <ChampIcon version={version} image={b.image} name={b.name} className="detail-icon" />
                   <div>
                     <div className="name">
                       {b.name}
@@ -537,14 +538,33 @@ export default function Home() {
                       )}
                     </div>
                     <div className="who">
-                      {b.bestPlayer} · {b.games} parties · {pct(b.winrate)} WR · KDA {b.kda}
+                      {b.bestPlayer} · {b.games} parties · {pct(b.winrate)} WR ·{" "}
+                      {b.kdaAvg ? (
+                        <span
+                          className="kda-hint"
+                          title={`${b.kdaAvg.kills} / ${b.kdaAvg.deaths} / ${b.kdaAvg.assists} (K/D/A moyen)`}
+                        >
+                          KDA {b.kda}
+                        </span>
+                      ) : (
+                        `KDA ${b.kda}`
+                      )}
                     </div>
                   </div>
                 </div>
                 <ul className="reasons">
-                  {b.reasons.map((r, i) => (
-                    <li key={i}>{r}</li>
-                  ))}
+                  {b.reasons.map((r, i) => {
+                    const isFlex = r.includes("flex") && b.meta?.flexRoles?.length >= 2;
+                    return (
+                      <li
+                        key={i}
+                        className={isFlex ? "reason-flex" : undefined}
+                        title={isFlex ? b.meta.flexRoles.map(metaRoleLabel).join(" · ") : undefined}
+                      >
+                        {r}
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             </div>
