@@ -10,9 +10,21 @@ champions flex (jouables par plusieurs coequipiers) et bans recommandes.
 - Analyse de toutes les parties classees de la saison (Solo/Duo et Flex).
 - Detail par joueur : rang Solo/Duo et Flex, 5 parties recentes, 5 meilleures
   maitrises. Joueurs tries par role (TOP, JUNGLE, MID, BOT, SUPPORT).
-- Champions flex : joues par 2 joueurs ou plus dans l'equipe.
-- Bans recommandes : score de danger base sur le winrate, le KDA, le volume
-  de parties et la flexibilite du champion.
+- Champions flex : joues par 2 joueurs ou plus dans l'equipe (au moins 5
+  parties OU 80k de maitrise).
+- Bans recommandes : score de danger base sur le volume (global + 30 dernieres
+  parties), le winrate, le KDA, la flexibilite et la force en meta du champion.
+
+## Force en meta (OP.GG)
+
+Le tier et le winrate global de chaque champion (patch courant) sont figes dans
+`data/meta.json` et servent a prioriser les bans (un champion fort en meta ET
+joue par un joueur monte dans la liste). La donnee provient de l'endpoint MCP
+public d'OP.GG. Pour rafraichir a chaque nouveau patch :
+
+```bash
+node scripts/fetch-meta.mjs
+```
 
 ## Limite de debit et cache
 

@@ -1,4 +1,6 @@
 import { NextResponse } from "next/server";
+import { readFile } from "node:fs/promises";
+import path from "node:path";
 import {
   getAccount,
   getMasteries,
@@ -128,7 +130,15 @@ export async function POST(request) {
         matches: p.matchIds.map((id) => matchMap.get(id)).filter(Boolean),
       }));
 
-    const analysis = analyzeTeam(enriched, ddragon);
+    // Meta des champions (force/tier par patch), optionnelle.
+    let meta = null;
+    try {
+      meta = JSON.parse(await readFile(path.join(process.cwd(), "data", "meta.json"), "utf8"));
+    } catch {
+      // pas de fichier meta -> analyse sans bonus meta
+    }
+
+    const analysis = analyzeTeam(enriched, ddragon, meta);
     analysis.errors = playerRaws
       .filter((p) => p.error)
       .map((p) => ({ riotId: p.riotId, error: p.error }));

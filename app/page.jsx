@@ -196,6 +196,7 @@ export default function Home() {
       </header>
       <p className="sub">
         {data.players.length} joueurs analyses sur leurs parties classees de la saison · {data.matchesDownloaded} parties uniques · patch {version}
+        {data.metaPatch && ` · meta OP.GG ${data.metaPatch}`}
       </p>
 
       {error && <div className="notice error">{error}</div>}
@@ -361,7 +362,14 @@ export default function Home() {
                     <img className="champ-img sm" src={champImg(version, b.image)} alt={b.name} />
                   )}
                   <div>
-                    <div className="name">{b.name}</div>
+                    <div className="name">
+                      {b.name}
+                      {b.meta && b.meta.tier <= 3 && (
+                        <span className={`meta-badge tier${b.meta.tier}`}>
+                          {b.meta.tierLabel} {pct(b.meta.winRate)}
+                        </span>
+                      )}
+                    </div>
                     <div className="who">
                       {b.bestPlayer} · {b.games} parties · {pct(b.winrate)} WR · KDA {b.kda}
                     </div>

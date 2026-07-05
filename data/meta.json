@@ -1,0 +1,1217 @@
+{
+ "patch": "16.13",
+ "source": "OP.GG (lol_list_lane_meta_champions)",
+ "champions": {
+  "Garen": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.52,
+   "pickRate": 0.08,
+   "banRate": 0.07
+  },
+  "Malphite": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.52,
+   "pickRate": 0.07,
+   "banRate": 0.18
+  },
+  "Gangplank": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.06,
+   "banRate": 0.07
+  },
+  "Shen": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.52,
+   "pickRate": 0.04,
+   "banRate": 0.01
+  },
+  "Kayle": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.52,
+   "pickRate": 0.03,
+   "banRate": 0.02
+  },
+  "Singed": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.52,
+   "pickRate": 0.02,
+   "banRate": 0.01
+  },
+  "Sett": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.05,
+   "banRate": 0.02
+  },
+  "Jax": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.06,
+   "banRate": 0.11
+  },
+  "Aatrox": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.06,
+   "banRate": 0.08
+  },
+  "Darius": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.07,
+   "banRate": 0.13
+  },
+  "Teemo": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.04,
+   "banRate": 0.07
+  },
+  "Ornn": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.04,
+   "banRate": 0.01
+  },
+  "Urgot": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.52,
+   "pickRate": 0.03,
+   "banRate": 0.01
+  },
+  "Dr. Mundo": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.04,
+   "banRate": 0.03
+  },
+  "Olaf": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.52,
+   "pickRate": 0.03,
+   "banRate": 0.03
+  },
+  "Irelia": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.04,
+   "banRate": 0.13
+  },
+  "Yone": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.07,
+   "banRate": 0.06
+  },
+  "Riven": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.53,
+   "pickRate": 0.01,
+   "banRate": 0.03
+  },
+  "Tryndamere": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.03,
+   "banRate": 0.02
+  },
+  "Pantheon": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.03,
+   "banRate": 0.02
+  },
+  "Warwick": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.52,
+   "pickRate": 0.01,
+   "banRate": 0.02
+  },
+  "Renekton": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.05,
+   "banRate": 0.04
+  },
+  "Kled": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.52,
+   "pickRate": 0.02,
+   "banRate": 0.01
+  },
+  "Yorick": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.04,
+   "banRate": 0.07
+  },
+  "Zaahen": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.03,
+   "banRate": 0.02
+  },
+  "Nasus": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.53,
+   "pickRate": 0.03,
+   "banRate": 0.06
+  },
+  "Fiora": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.03,
+   "banRate": 0.05
+  },
+  "Illaoi": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.51,
+   "pickRate": 0.03,
+   "banRate": 0.04
+  },
+  "Camille": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.03,
+   "banRate": 0.02
+  },
+  "Wukong": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.52,
+   "pickRate": 0.06,
+   "banRate": 0.02
+  },
+  "Mordekaiser": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.49,
+   "pickRate": 0.05,
+   "banRate": 0.06
+  },
+  "Jayce": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.49,
+   "pickRate": 0.06,
+   "banRate": 0.07
+  },
+  "Tahm Kench": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.51,
+   "pickRate": 0.02,
+   "banRate": 0.02
+  },
+  "Sion": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.49,
+   "pickRate": 0.05,
+   "banRate": 0.01
+  },
+  "Vayne": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.03,
+   "banRate": 0.11
+  },
+  "Cho'Gath": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.02,
+   "banRate": 0.01
+  },
+  "Yasuo": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.49,
+   "pickRate": 0.08,
+   "banRate": 0.16
+  },
+  "Akali": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.06,
+   "banRate": 0.16
+  },
+  "Gragas": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.03,
+   "banRate": 0.01
+  },
+  "Gnar": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.49,
+   "pickRate": 0.04,
+   "banRate": 0.01
+  },
+  "Quinn": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.52,
+   "pickRate": 0.01,
+   "banRate": 0.01
+  },
+  "Gwen": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.5,
+   "pickRate": 0.02,
+   "banRate": 0.03
+  },
+  "Vladimir": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.52,
+   "pickRate": 0.04,
+   "banRate": 0.06
+  },
+  "Heimerdinger": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.51,
+   "pickRate": 0.01,
+   "banRate": 0.02
+  },
+  "Ambessa": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.49,
+   "pickRate": 0.04,
+   "banRate": 0.05
+  },
+  "Poppy": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.52,
+   "pickRate": 0.02,
+   "banRate": 0.03
+  },
+  "Volibear": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.49,
+   "pickRate": 0.03,
+   "banRate": 0.01
+  },
+  "Anivia": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.02,
+   "banRate": 0.03
+  },
+  "Locke": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.5,
+   "pickRate": 0.12,
+   "banRate": 0.68
+  },
+  "Kennen": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.5,
+   "pickRate": 0.02,
+   "banRate": 0.01
+  },
+  "Lissandra": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.51,
+   "pickRate": 0.05,
+   "banRate": 0.03
+  },
+  "Rumble": {
+   "tier": 5,
+   "tierLabel": "Faible",
+   "winRate": 0.49,
+   "pickRate": 0.02,
+   "banRate": 0.01
+  },
+  "K'Sante": {
+   "tier": 5,
+   "tierLabel": "Faible",
+   "winRate": 0.47,
+   "pickRate": 0.04,
+   "banRate": 0.03
+  },
+  "Trundle": {
+   "tier": 5,
+   "tierLabel": "Faible",
+   "winRate": 0.5,
+   "pickRate": 0.01,
+   "banRate": 0
+  },
+  "Aurora": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.49,
+   "pickRate": 0.02,
+   "banRate": 0.02
+  },
+  "Malzahar": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.06,
+   "banRate": 0.1
+  },
+  "Master Yi": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.06,
+   "banRate": 0.13
+  },
+  "Cassiopeia": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.48,
+   "pickRate": 0.01,
+   "banRate": 0.02
+  },
+  "Varus": {
+   "tier": 5,
+   "tierLabel": "Faible",
+   "winRate": 0.49,
+   "pickRate": 0.01,
+   "banRate": 0.02
+  },
+  "Ryze": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.47,
+   "pickRate": 0.03,
+   "banRate": 0.01
+  },
+  "Udyr": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.52,
+   "pickRate": 0.02,
+   "banRate": 0.01
+  },
+  "Swain": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.52,
+   "pickRate": 0.01,
+   "banRate": 0.02
+  },
+  "Xin Zhao": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.5,
+   "pickRate": 0.03,
+   "banRate": 0.02
+  },
+  "Maokai": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.51,
+   "pickRate": 0.02,
+   "banRate": 0
+  },
+  "Nocturne": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.52,
+   "pickRate": 0.07,
+   "banRate": 0.13
+  },
+  "Sylas": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.51,
+   "pickRate": 0.09,
+   "banRate": 0.19
+  },
+  "Naafiri": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.51,
+   "pickRate": 0.07,
+   "banRate": 0.29
+  },
+  "Briar": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.52,
+   "pickRate": 0.05,
+   "banRate": 0.08
+  },
+  "Graves": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.11,
+   "banRate": 0.12
+  },
+  "Lee Sin": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.49,
+   "pickRate": 0.13,
+   "banRate": 0.16
+  },
+  "Kayn": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.07,
+   "banRate": 0.05
+  },
+  "Viego": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.09,
+   "banRate": 0.07
+  },
+  "Shaco": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.05,
+   "banRate": 0.16
+  },
+  "Jarvan IV": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.06,
+   "banRate": 0.01
+  },
+  "Shyvana": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.51,
+   "pickRate": 0.04,
+   "banRate": 0.04
+  },
+  "Rammus": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.53,
+   "pickRate": 0.02,
+   "banRate": 0.03
+  },
+  "Talon": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.05,
+   "banRate": 0.07
+  },
+  "Kha'Zix": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.05,
+   "banRate": 0.03
+  },
+  "Bel'Veth": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.52,
+   "pickRate": 0.02,
+   "banRate": 0.03
+  },
+  "Vi": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.05,
+   "banRate": 0.01
+  },
+  "Diana": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.52,
+   "pickRate": 0.04,
+   "banRate": 0.05
+  },
+  "Fiddlesticks": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.52,
+   "pickRate": 0.02,
+   "banRate": 0.01
+  },
+  "Ekko": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.03,
+   "banRate": 0.02
+  },
+  "Nidalee": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.51,
+   "pickRate": 0.03,
+   "banRate": 0.02
+  },
+  "Nunu & Willump": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.51,
+   "pickRate": 0.02,
+   "banRate": 0.01
+  },
+  "Hecarim": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.04,
+   "banRate": 0.03
+  },
+  "Evelynn": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.51,
+   "pickRate": 0.02,
+   "banRate": 0.02
+  },
+  "Ivern": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.52,
+   "pickRate": 0.01,
+   "banRate": 0
+  },
+  "Kindred": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.5,
+   "pickRate": 0.02,
+   "banRate": 0.02
+  },
+  "Lillia": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.5,
+   "pickRate": 0.02,
+   "banRate": 0.01
+  },
+  "Rek'Sai": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.51,
+   "pickRate": 0.02,
+   "banRate": 0.01
+  },
+  "Zyra": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.52,
+   "pickRate": 0.01,
+   "banRate": 0.02
+  },
+  "Amumu": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.52,
+   "pickRate": 0.01,
+   "banRate": 0.01
+  },
+  "Sejuani": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.5,
+   "pickRate": 0.02,
+   "banRate": 0
+  },
+  "Rengar": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.48,
+   "pickRate": 0.04,
+   "banRate": 0.08
+  },
+  "Elise": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.51,
+   "pickRate": 0.01,
+   "banRate": 0.01
+  },
+  "Zac": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.49,
+   "pickRate": 0.02,
+   "banRate": 0.01
+  },
+  "Skarner": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.5,
+   "pickRate": 0.01,
+   "banRate": 0
+  },
+  "Qiyana": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.49,
+   "pickRate": 0.02,
+   "banRate": 0.02
+  },
+  "Taliyah": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.49,
+   "pickRate": 0.01,
+   "banRate": 0
+  },
+  "Karthus": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.54,
+   "pickRate": 0.01,
+   "banRate": 0.01
+  },
+  "Fizz": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.52,
+   "pickRate": 0.05,
+   "banRate": 0.07
+  },
+  "Zed": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.07,
+   "banRate": 0.21
+  },
+  "Ahri": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.51,
+   "pickRate": 0.09,
+   "banRate": 0.03
+  },
+  "Xerath": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.52,
+   "pickRate": 0.05,
+   "banRate": 0.07
+  },
+  "Katarina": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.51,
+   "pickRate": 0.07,
+   "banRate": 0.1
+  },
+  "Syndra": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.51,
+   "pickRate": 0.07,
+   "banRate": 0.04
+  },
+  "Viktor": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.5,
+   "pickRate": 0.09,
+   "banRate": 0.09
+  },
+  "Twisted Fate": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.05,
+   "banRate": 0.01
+  },
+  "Vex": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.52,
+   "pickRate": 0.03,
+   "banRate": 0.03
+  },
+  "Hwei": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.05,
+   "banRate": 0.02
+  },
+  "Lux": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.04,
+   "banRate": 0.03
+  },
+  "Veigar": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.03,
+   "banRate": 0.01
+  },
+  "Galio": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.04,
+   "banRate": 0.02
+  },
+  "Annie": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.02,
+   "banRate": 0.01
+  },
+  "Kassadin": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.03,
+   "banRate": 0.02
+  },
+  "Zoe": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.03,
+   "banRate": 0.04
+  },
+  "Akshan": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.03,
+   "banRate": 0.02
+  },
+  "LeBlanc": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.49,
+   "pickRate": 0.04,
+   "banRate": 0.13
+  },
+  "Vel'Koz": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.52,
+   "pickRate": 0.01,
+   "banRate": 0.02
+  },
+  "Aurelion Sol": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.53,
+   "pickRate": 0.01,
+   "banRate": 0.01
+  },
+  "Ziggs": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.52,
+   "pickRate": 0.03,
+   "banRate": 0.01
+  },
+  "Brand": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.52,
+   "pickRate": 0.02,
+   "banRate": 0.07
+  },
+  "Orianna": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.47,
+   "pickRate": 0.03,
+   "banRate": 0
+  },
+  "Mel": {
+   "tier": 5,
+   "tierLabel": "Faible",
+   "winRate": 0.47,
+   "pickRate": 0.02,
+   "banRate": 0.2
+  },
+  "Azir": {
+   "tier": 5,
+   "tierLabel": "Faible",
+   "winRate": 0.46,
+   "pickRate": 0.01,
+   "banRate": 0
+  },
+  "Tristana": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.07,
+   "banRate": 0.02
+  },
+  "Smolder": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.51,
+   "pickRate": 0.05,
+   "banRate": 0.05
+  },
+  "Senna": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.53,
+   "pickRate": 0.1,
+   "banRate": 0.24
+  },
+  "Jinx": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.52,
+   "pickRate": 0.12,
+   "banRate": 0.02
+  },
+  "Seraphine": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.54,
+   "pickRate": 0.03,
+   "banRate": 0.11
+  },
+  "Ashe": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.11,
+   "banRate": 0.06
+  },
+  "Jhin": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.16,
+   "banRate": 0.01
+  },
+  "Caitlyn": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.49,
+   "pickRate": 0.16,
+   "banRate": 0.2
+  },
+  "Kai'Sa": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.49,
+   "pickRate": 0.15,
+   "banRate": 0.02
+  },
+  "Miss Fortune": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.07,
+   "banRate": 0.01
+  },
+  "Twitch": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.51,
+   "pickRate": 0.05,
+   "banRate": 0.05
+  },
+  "Samira": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.51,
+   "pickRate": 0.05,
+   "banRate": 0.06
+  },
+  "Nilah": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.53,
+   "pickRate": 0.01,
+   "banRate": 0.02
+  },
+  "Xayah": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.51,
+   "pickRate": 0.04,
+   "banRate": 0
+  },
+  "Kog'Maw": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.52,
+   "pickRate": 0.02,
+   "banRate": 0
+  },
+  "Sivir": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.05,
+   "banRate": 0.02
+  },
+  "Lucian": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.49,
+   "pickRate": 0.08,
+   "banRate": 0.02
+  },
+  "Ezreal": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.47,
+   "pickRate": 0.16,
+   "banRate": 0.07
+  },
+  "Aphelios": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.49,
+   "pickRate": 0.07,
+   "banRate": 0.03
+  },
+  "Zeri": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.04,
+   "banRate": 0
+  },
+  "Draven": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.04,
+   "banRate": 0.13
+  },
+  "Yunara": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.48,
+   "pickRate": 0.05,
+   "banRate": 0.01
+  },
+  "Kalista": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.49,
+   "pickRate": 0.02,
+   "banRate": 0
+  },
+  "Corki": {
+   "tier": 5,
+   "tierLabel": "Faible",
+   "winRate": 0.49,
+   "pickRate": 0.01,
+   "banRate": 0
+  },
+  "Thresh": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.52,
+   "pickRate": 0.14,
+   "banRate": 0.08
+  },
+  "Leona": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.52,
+   "pickRate": 0.08,
+   "banRate": 0.07
+  },
+  "Nautilus": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.11,
+   "banRate": 0.14
+  },
+  "Braum": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.52,
+   "pickRate": 0.05,
+   "banRate": 0.06
+  },
+  "Rell": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.52,
+   "pickRate": 0.04,
+   "banRate": 0.01
+  },
+  "Lulu": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.09,
+   "banRate": 0.08
+  },
+  "Blitzcrank": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.51,
+   "pickRate": 0.06,
+   "banRate": 0.11
+  },
+  "Milio": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.51,
+   "pickRate": 0.06,
+   "banRate": 0.04
+  },
+  "Janna": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.52,
+   "pickRate": 0.04,
+   "banRate": 0.01
+  },
+  "Soraka": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.51,
+   "pickRate": 0.05,
+   "banRate": 0.02
+  },
+  "Pyke": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.07,
+   "banRate": 0.26
+  },
+  "Nami": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.08,
+   "banRate": 0.01
+  },
+  "Sona": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.52,
+   "pickRate": 0.03,
+   "banRate": 0
+  },
+  "Zilean": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.52,
+   "pickRate": 0.03,
+   "banRate": 0.01
+  },
+  "Alistar": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.04,
+   "banRate": 0.02
+  },
+  "Karma": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.49,
+   "pickRate": 0.08,
+   "banRate": 0.05
+  },
+  "Rakan": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.51,
+   "pickRate": 0.04,
+   "banRate": 0
+  },
+  "Morgana": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.04,
+   "banRate": 0.15
+  },
+  "Taric": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.53,
+   "pickRate": 0.01,
+   "banRate": 0
+  },
+  "Bard": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.49,
+   "pickRate": 0.06,
+   "banRate": 0.04
+  },
+  "Renata Glasc": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.51,
+   "pickRate": 0.01,
+   "banRate": 0
+  },
+  "Yuumi": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.47,
+   "pickRate": 0.05,
+   "banRate": 0.07
+  },
+  "Neeko": {
+   "tier": 4,
+   "tierLabel": "Moyen",
+   "winRate": 0.49,
+   "pickRate": 0.02,
+   "banRate": 0.01
+  }
+ }
+}

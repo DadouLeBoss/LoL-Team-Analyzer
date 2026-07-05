@@ -71,6 +71,13 @@ button.refresh.ghost { background: transparent; color: var(--gold); border: 1px 
 }
 .ban .body { flex: 1; }
 .ban .name { font-weight: 600; font-size: 15px; }
+.meta-badge {
+  display: inline-block; margin-left: 8px; font-size: 10px; font-weight: 700;
+  padding: 1px 7px; border-radius: 20px; vertical-align: middle; letter-spacing: .02em;
+}
+.meta-badge.tier1 { background: #e05265; color: #2a0308; } /* OP */
+.meta-badge.tier2 { background: #e0a052; color: #2a1a04; } /* Fort */
+.meta-badge.tier3 { background: #4d9fec; color: #041121; } /* Bon */
 .ban .who { color: var(--muted); font-size: 13px; }
 .ban .reasons { margin: 8px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
 .ban .reasons li { background: var(--panel-2); border: 1px solid var(--border); color: var(--muted); font-size: 11px; padding: 2px 8px; border-radius: 20px; }
