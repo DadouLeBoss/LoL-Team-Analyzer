@@ -296,7 +296,9 @@ export default function Home() {
                             <img className="champ-img sm" src={champImg(version, c.image)} alt={c.name} />
                           )}
                           <span className="mini-name">{c.name}</span>
-                          <span className="mini-stat mono">{c.games} p.</span>
+                          <span className="mini-stat mono">
+                            {c.games}p · {c.kda.kills}/{c.kda.deaths}/{c.kda.assists}
+                          </span>
                           <span
                             className="mini-stat mono"
                             style={{ color: c.winrate >= 0.5 ? "var(--green)" : "var(--red)" }}
@@ -304,18 +306,18 @@ export default function Home() {
                             {pct(c.winrate)}
                           </span>
                         </div>
-                        {c.counters && (c.counters.strong.length > 0 || c.counters.weak.length > 0) && (
+                        {c.counters && (c.counters.beatenBy.length > 0 || c.counters.beats.length > 0) && (
                           <div className="champ-counters">
-                            {c.counters.strong.length > 0 && (
+                            {c.counters.beatenBy.length > 0 && (
                               <div className="ctr bad">
                                 <span className="ctr-lbl">contre par</span>
-                                {c.counters.strong.map((x) => x.name).join(" · ")}
+                                {c.counters.beatenBy.map((x) => x.name).join(" · ")}
                               </div>
                             )}
-                            {c.counters.weak.length > 0 && (
+                            {c.counters.beats.length > 0 && (
                               <div className="ctr good">
                                 <span className="ctr-lbl">bat</span>
-                                {c.counters.weak.map((x) => x.name).join(" · ")}
+                                {c.counters.beats.map((x) => x.name).join(" · ")}
                               </div>
                             )}
                           </div>

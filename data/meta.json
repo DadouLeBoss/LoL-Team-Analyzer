@@ -16,7 +16,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "K'Sante",
       "winRate": 0.57
@@ -30,7 +30,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Kayle",
       "winRate": 0.56
@@ -63,7 +63,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Vayne",
       "winRate": 0.62
@@ -77,7 +77,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Sion",
       "winRate": 0.55
@@ -107,7 +107,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Swain",
       "winRate": 0.62
@@ -121,7 +121,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Kayle",
       "winRate": 0.54
@@ -153,7 +153,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Ornn",
       "winRate": 0.56
@@ -167,7 +167,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Swain",
       "winRate": 0.57
@@ -197,7 +197,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Maokai",
       "winRate": 0.65
@@ -211,7 +211,7 @@
       "winRate": 0.58
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Lissandra",
       "winRate": 0.6
@@ -241,7 +241,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "K'Sante",
       "winRate": 0.61
@@ -255,7 +255,7 @@
       "winRate": 0.58
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Aurora",
       "winRate": 0.59
@@ -287,7 +287,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Vladimir",
       "winRate": 0.58
@@ -301,7 +301,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Malzahar",
       "winRate": 0.58
@@ -331,7 +331,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Xin Zhao",
       "winRate": 0.6
@@ -345,7 +345,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Singed",
       "winRate": 0.56
@@ -377,7 +377,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Volibear",
       "winRate": 0.58
@@ -391,7 +391,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Lissandra",
       "winRate": 0.58
@@ -422,7 +422,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Yasuo",
       "winRate": 0.55
@@ -436,7 +436,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Varus",
       "winRate": 0.56
@@ -466,7 +466,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Udyr",
       "winRate": 0.6
@@ -480,7 +480,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Shen",
       "winRate": 0.56
@@ -511,7 +511,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Vayne",
       "winRate": 0.58
@@ -525,7 +525,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Swain",
       "winRate": 0.58
@@ -555,7 +555,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Master Yi",
       "winRate": 0.61
@@ -569,7 +569,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Aurora",
       "winRate": 0.55
@@ -599,7 +599,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Malzahar",
       "winRate": 0.61
@@ -613,7 +613,7 @@
       "winRate": 0.58
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Kled",
       "winRate": 0.58
@@ -645,7 +645,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Swain",
       "winRate": 0.63
@@ -659,7 +659,7 @@
       "winRate": 0.61
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Tryndamere",
       "winRate": 0.55
@@ -691,7 +691,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Ryze",
       "winRate": 0.6
@@ -705,7 +705,7 @@
       "winRate": 0.58
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Warwick",
       "winRate": 0.59
@@ -737,7 +737,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "K'Sante",
       "winRate": 0.56
@@ -751,7 +751,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Quinn",
       "winRate": 0.57
@@ -783,7 +783,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Xin Zhao",
       "winRate": 0.62
@@ -797,7 +797,7 @@
       "winRate": 0.58
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Quinn",
       "winRate": 0.57
@@ -827,7 +827,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Master Yi",
       "winRate": 0.65
@@ -841,7 +841,7 @@
       "winRate": 0.61
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Cassiopeia",
       "winRate": 0.58
@@ -871,7 +871,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Xin Zhao",
       "winRate": 0.58
@@ -885,7 +885,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Swain",
       "winRate": 0.59
@@ -921,7 +921,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.63
@@ -935,7 +935,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Fiddlesticks",
       "winRate": 0.62
@@ -965,7 +965,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "K'Sante",
       "winRate": 0.57
@@ -979,7 +979,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Singed",
       "winRate": 0.55
@@ -1011,7 +1011,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.61
@@ -1025,7 +1025,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Taliyah",
       "winRate": 0.59
@@ -1055,7 +1055,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Swain",
       "winRate": 0.66
@@ -1069,7 +1069,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Shen",
       "winRate": 0.56
@@ -1099,7 +1099,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Maokai",
       "winRate": 0.57
@@ -1113,7 +1113,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Heimerdinger",
       "winRate": 0.58
@@ -1145,7 +1145,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Pantheon",
       "winRate": 0.63
@@ -1159,7 +1159,7 @@
       "winRate": 0.62
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Volibear",
       "winRate": 0.54
@@ -1189,7 +1189,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "K'Sante",
       "winRate": 0.55
@@ -1203,7 +1203,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Malphite",
       "winRate": 0.57
@@ -1233,7 +1233,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Xin Zhao",
       "winRate": 0.58
@@ -1247,7 +1247,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Ryze",
       "winRate": 0.62
@@ -1279,7 +1279,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.59
@@ -1293,7 +1293,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Taric",
       "winRate": 0.59
@@ -1325,7 +1325,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Malphite",
       "winRate": 0.59
@@ -1339,7 +1339,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Ivern",
       "winRate": 0.57
@@ -1371,7 +1371,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Ryze",
       "winRate": 0.62
@@ -1385,7 +1385,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Shen",
       "winRate": 0.56
@@ -1415,7 +1415,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Xin Zhao",
       "winRate": 0.59
@@ -1429,7 +1429,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Anivia",
       "winRate": 0.58
@@ -1461,7 +1461,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.6
@@ -1475,7 +1475,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Senna",
       "winRate": 0.56
@@ -1509,7 +1509,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Swain",
       "winRate": 0.58
@@ -1523,7 +1523,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Malphite",
       "winRate": 0.55
@@ -1555,7 +1555,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Master Yi",
       "winRate": 0.57
@@ -1569,7 +1569,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Ornn",
       "winRate": 0.55
@@ -1601,7 +1601,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Karthus",
       "winRate": 0.56
@@ -1615,7 +1615,7 @@
       "winRate": 0.53
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Kog'Maw",
       "winRate": 0.55
@@ -1649,7 +1649,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Tristana",
       "winRate": 0.57
@@ -1663,7 +1663,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Riven",
       "winRate": 0.59
@@ -1695,7 +1695,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Smolder",
       "winRate": 0.59
@@ -1709,7 +1709,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Pantheon",
       "winRate": 0.55
@@ -1741,7 +1741,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Trundle",
       "winRate": 0.58
@@ -1755,7 +1755,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Singed",
       "winRate": 0.56
@@ -1785,7 +1785,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Trundle",
       "winRate": 0.6
@@ -1799,7 +1799,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Anivia",
       "winRate": 0.58
@@ -1831,7 +1831,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Ambessa",
       "winRate": 0.57
@@ -1845,7 +1845,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Rammus",
       "winRate": 0.59
@@ -1877,7 +1877,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Dr. Mundo",
       "winRate": 0.56
@@ -1891,7 +1891,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Warwick",
       "winRate": 0.6
@@ -1925,7 +1925,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Tristana",
       "winRate": 0.6
@@ -1939,7 +1939,7 @@
       "winRate": 0.58
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Pantheon",
       "winRate": 0.56
@@ -1969,7 +1969,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Warwick",
       "winRate": 0.6
@@ -1983,7 +1983,7 @@
       "winRate": 0.58
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Malzahar",
       "winRate": 0.57
@@ -2015,7 +2015,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Xin Zhao",
       "winRate": 0.58
@@ -2029,7 +2029,7 @@
       "winRate": 0.53
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Warwick",
       "winRate": 0.59
@@ -2063,7 +2063,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Sylas",
       "winRate": 0.61
@@ -2077,7 +2077,7 @@
       "winRate": 0.6
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Taric",
       "winRate": 0.54
@@ -2109,7 +2109,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Swain",
       "winRate": 0.59
@@ -2123,7 +2123,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Jax",
       "winRate": 0.58
@@ -2157,7 +2157,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.55
@@ -2171,7 +2171,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Talon",
       "winRate": 0.56
@@ -2205,7 +2205,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Orianna",
       "winRate": 0.58
@@ -2219,7 +2219,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Akali",
       "winRate": 0.53
@@ -2249,7 +2249,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Xin Zhao",
       "winRate": 0.59
@@ -2263,7 +2263,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Yorick",
       "winRate": 0.58
@@ -2295,7 +2295,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Malphite",
       "winRate": 0.62
@@ -2309,7 +2309,7 @@
       "winRate": 0.59
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Swain",
       "winRate": 0.55
@@ -2339,7 +2339,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Cassiopeia",
       "winRate": 0.56
@@ -2353,7 +2353,7 @@
       "winRate": 0.53
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Kayle",
       "winRate": 0.61
@@ -2383,7 +2383,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "K'Sante",
       "winRate": 0.53
@@ -2397,7 +2397,7 @@
       "winRate": 0.53
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Cassiopeia",
       "winRate": 0.63
@@ -2429,7 +2429,7 @@
    ],
    "counters": {
     "role": "top",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.55
@@ -2443,7 +2443,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Gnar",
       "winRate": 0.6
@@ -2474,7 +2474,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Pantheon",
       "winRate": 0.57
@@ -2488,7 +2488,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Sion",
       "winRate": 0.58
@@ -2520,7 +2520,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Swain",
       "winRate": 0.57
@@ -2534,7 +2534,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Zed",
       "winRate": 0.54
@@ -2566,7 +2566,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.6
@@ -2580,7 +2580,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Ivern",
       "winRate": 0.56
@@ -2612,7 +2612,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Riven",
       "winRate": 0.57
@@ -2626,7 +2626,7 @@
       "winRate": 0.52
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Vel'Koz",
       "winRate": 0.62
@@ -2658,7 +2658,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Smolder",
       "winRate": 0.55
@@ -2672,7 +2672,7 @@
       "winRate": 0.53
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Brand",
       "winRate": 0.59
@@ -2704,7 +2704,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Aurelion Sol",
       "winRate": 0.54
@@ -2718,7 +2718,7 @@
       "winRate": 0.51
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Karthus",
       "winRate": 0.64
@@ -2750,7 +2750,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.62
@@ -2764,7 +2764,7 @@
       "winRate": 0.58
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Nasus",
       "winRate": 0.56
@@ -2800,7 +2800,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Alistar",
       "winRate": 0.55
@@ -2814,7 +2814,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Hwei",
       "winRate": 0.59
@@ -2846,7 +2846,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Teemo",
       "winRate": 0.62
@@ -2860,7 +2860,7 @@
       "winRate": 0.58
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Nasus",
       "winRate": 0.56
@@ -2892,7 +2892,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Sylas",
       "winRate": 0.64
@@ -2906,7 +2906,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Taric",
       "winRate": 0.59
@@ -2936,7 +2936,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.57
@@ -2950,7 +2950,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Gwen",
       "winRate": 0.54
@@ -2983,7 +2983,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Malphite",
       "winRate": 0.61
@@ -2997,7 +2997,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Taliyah",
       "winRate": 0.56
@@ -3027,7 +3027,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.59
@@ -3041,7 +3041,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Nasus",
       "winRate": 0.57
@@ -3073,7 +3073,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Olaf",
       "winRate": 0.6
@@ -3087,7 +3087,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Nocturne",
       "winRate": 0.54
@@ -3117,7 +3117,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.56
@@ -3131,7 +3131,7 @@
       "winRate": 0.53
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Bel'Veth",
       "winRate": 0.55
@@ -3161,7 +3161,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.55
@@ -3175,7 +3175,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Naafiri",
       "winRate": 0.54
@@ -3205,7 +3205,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.57
@@ -3219,7 +3219,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Ivern",
       "winRate": 0.56
@@ -3249,7 +3249,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.58
@@ -3263,7 +3263,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Nasus",
       "winRate": 0.56
@@ -3293,7 +3293,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.59
@@ -3307,7 +3307,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Ivern",
       "winRate": 0.53
@@ -3339,7 +3339,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.59
@@ -3353,7 +3353,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Karthus",
       "winRate": 0.54
@@ -3383,7 +3383,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.61
@@ -3397,7 +3397,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Sylas",
       "winRate": 0.58
@@ -3427,7 +3427,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Quinn",
       "winRate": 0.59
@@ -3441,7 +3441,7 @@
       "winRate": 0.58
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Shyvana",
       "winRate": 0.55
@@ -3473,7 +3473,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.59
@@ -3487,7 +3487,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Fizz",
       "winRate": 0.56
@@ -3517,7 +3517,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Gwen",
       "winRate": 0.61
@@ -3531,7 +3531,7 @@
       "winRate": 0.58
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Wukong",
       "winRate": 0.53
@@ -3561,7 +3561,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.59
@@ -3575,7 +3575,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Naafiri",
       "winRate": 0.55
@@ -3607,7 +3607,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Smolder",
       "winRate": 0.59
@@ -3621,7 +3621,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Sion",
       "winRate": 0.58
@@ -3651,7 +3651,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Teemo",
       "winRate": 0.61
@@ -3665,7 +3665,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Ivern",
       "winRate": 0.56
@@ -3697,7 +3697,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.61
@@ -3711,7 +3711,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Sejuani",
       "winRate": 0.56
@@ -3743,7 +3743,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.57
@@ -3757,7 +3757,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Evelynn",
       "winRate": 0.54
@@ -3787,7 +3787,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Olaf",
       "winRate": 0.64
@@ -3801,7 +3801,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Taliyah",
       "winRate": 0.56
@@ -3831,7 +3831,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.58
@@ -3845,7 +3845,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Fizz",
       "winRate": 0.56
@@ -3875,7 +3875,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.59
@@ -3889,7 +3889,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Ivern",
       "winRate": 0.56
@@ -3919,7 +3919,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Gwen",
       "winRate": 0.62
@@ -3933,7 +3933,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Rammus",
       "winRate": 0.58
@@ -3963,7 +3963,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Kindred",
       "winRate": 0.59
@@ -3977,7 +3977,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Olaf",
       "winRate": 0.53
@@ -4007,7 +4007,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Poppy",
       "winRate": 0.58
@@ -4021,7 +4021,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Teemo",
       "winRate": 0.64
@@ -4051,7 +4051,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Teemo",
       "winRate": 0.58
@@ -4065,7 +4065,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Darius",
       "winRate": 0.63
@@ -4095,7 +4095,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.58
@@ -4109,7 +4109,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Taliyah",
       "winRate": 0.63
@@ -4141,7 +4141,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.58
@@ -4155,7 +4155,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Taric",
       "winRate": 0.62
@@ -4187,7 +4187,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Karthus",
       "winRate": 0.58
@@ -4201,7 +4201,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Aatrox",
       "winRate": 0.62
@@ -4231,7 +4231,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Quinn",
       "winRate": 0.59
@@ -4245,7 +4245,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Lillia",
       "winRate": 0.57
@@ -4275,7 +4275,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.58
@@ -4289,7 +4289,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Darius",
       "winRate": 0.59
@@ -4321,7 +4321,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Volibear",
       "winRate": 0.6
@@ -4335,7 +4335,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Rammus",
       "winRate": 0.58
@@ -4365,7 +4365,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Malphite",
       "winRate": 0.6
@@ -4379,7 +4379,7 @@
       "winRate": 0.58
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Warwick",
       "winRate": 0.56
@@ -4409,7 +4409,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Jax",
       "winRate": 0.59
@@ -4423,7 +4423,7 @@
       "winRate": 0.58
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Shyvana",
       "winRate": 0.56
@@ -4455,7 +4455,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.56
@@ -4469,7 +4469,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Darius",
       "winRate": 0.61
@@ -4501,7 +4501,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.55
@@ -4515,7 +4515,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Fizz",
       "winRate": 0.58
@@ -4547,7 +4547,7 @@
    ],
    "counters": {
     "role": "jungle",
-    "strong": [
+    "beats": [
      {
       "name": "Locke",
       "winRate": 0.56
@@ -4561,7 +4561,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Amumu",
       "winRate": 0.58
@@ -4593,7 +4593,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Brand",
       "winRate": 0.64
@@ -4607,7 +4607,7 @@
       "winRate": 0.59
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Riven",
       "winRate": 0.59
@@ -4639,7 +4639,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Smolder",
       "winRate": 0.63
@@ -4653,7 +4653,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Riven",
       "winRate": 0.56
@@ -4683,7 +4683,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Yone",
       "winRate": 0.56
@@ -4697,7 +4697,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Veigar",
       "winRate": 0.52
@@ -4731,7 +4731,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.61
@@ -4745,7 +4745,7 @@
       "winRate": 0.59
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Cho'Gath",
       "winRate": 0.57
@@ -4776,7 +4776,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Yone",
       "winRate": 0.57
@@ -4790,7 +4790,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Cho'Gath",
       "winRate": 0.55
@@ -4821,7 +4821,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Smolder",
       "winRate": 0.64
@@ -4835,7 +4835,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Fizz",
       "winRate": 0.54
@@ -4865,7 +4865,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.59
@@ -4879,7 +4879,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Syndra",
       "winRate": 0.53
@@ -4909,7 +4909,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Azir",
       "winRate": 0.59
@@ -4923,7 +4923,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Swain",
       "winRate": 0.54
@@ -4953,7 +4953,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Tristana",
       "winRate": 0.61
@@ -4967,7 +4967,7 @@
       "winRate": 0.58
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Swain",
       "winRate": 0.64
@@ -5001,7 +5001,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Smolder",
       "winRate": 0.59
@@ -5015,7 +5015,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Ziggs",
       "winRate": 0.54
@@ -5048,7 +5048,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.55
@@ -5062,7 +5062,7 @@
       "winRate": 0.51
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Amumu",
       "winRate": 0.58
@@ -5094,7 +5094,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Smolder",
       "winRate": 0.62
@@ -5108,7 +5108,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Riven",
       "winRate": 0.59
@@ -5140,7 +5140,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Irelia",
       "winRate": 0.58
@@ -5154,7 +5154,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Hwei",
       "winRate": 0.56
@@ -5184,7 +5184,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Brand",
       "winRate": 0.59
@@ -5198,7 +5198,7 @@
       "winRate": 0.58
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Kassadin",
       "winRate": 0.55
@@ -5228,7 +5228,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.58
@@ -5242,7 +5242,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Cho'Gath",
       "winRate": 0.61
@@ -5274,7 +5274,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Pantheon",
       "winRate": 0.59
@@ -5288,7 +5288,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Naafiri",
       "winRate": 0.55
@@ -5318,7 +5318,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Sion",
       "winRate": 0.56
@@ -5332,7 +5332,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Swain",
       "winRate": 0.58
@@ -5364,7 +5364,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Azir",
       "winRate": 0.57
@@ -5378,7 +5378,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Naafiri",
       "winRate": 0.58
@@ -5412,7 +5412,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Fiddlesticks",
       "winRate": 0.6
@@ -5426,7 +5426,7 @@
       "winRate": 0.58
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Amumu",
       "winRate": 0.59
@@ -5458,7 +5458,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.59
@@ -5472,7 +5472,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Swain",
       "winRate": 0.61
@@ -5504,7 +5504,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.57
@@ -5518,7 +5518,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Karthus",
       "winRate": 0.59
@@ -5552,7 +5552,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Swain",
       "winRate": 0.58
@@ -5566,7 +5566,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Galio",
       "winRate": 0.58
@@ -5596,7 +5596,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Pantheon",
       "winRate": 0.57
@@ -5610,7 +5610,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Locke",
       "winRate": 0.58
@@ -5644,7 +5644,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Tristana",
       "winRate": 0.57
@@ -5658,7 +5658,7 @@
       "winRate": 0.5
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Xerath",
       "winRate": 0.61
@@ -5688,7 +5688,7 @@
    ],
    "counters": {
     "role": "mid",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.54
@@ -5702,7 +5702,7 @@
       "winRate": 0.53
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Vel'Koz",
       "winRate": 0.61
@@ -5733,7 +5733,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Ezreal",
       "winRate": 0.54
@@ -5747,7 +5747,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Veigar",
       "winRate": 0.57
@@ -5778,7 +5778,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Varus",
       "winRate": 0.54
@@ -5792,7 +5792,7 @@
       "winRate": 0.53
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Lux",
       "winRate": 0.56
@@ -5824,7 +5824,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Ezreal",
       "winRate": 0.57
@@ -5838,7 +5838,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Aurelion Sol",
       "winRate": 0.53
@@ -5868,7 +5868,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Varus",
       "winRate": 0.56
@@ -5882,7 +5882,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Lux",
       "winRate": 0.56
@@ -5914,7 +5914,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.57
@@ -5928,7 +5928,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Zilean",
       "winRate": 0.53
@@ -5958,7 +5958,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Yunara",
       "winRate": 0.54
@@ -5972,7 +5972,7 @@
       "winRate": 0.53
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Karthus",
       "winRate": 0.58
@@ -6002,7 +6002,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Yunara",
       "winRate": 0.53
@@ -6016,7 +6016,7 @@
       "winRate": 0.52
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Seraphine",
       "winRate": 0.58
@@ -6046,7 +6046,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.53
@@ -6060,7 +6060,7 @@
       "winRate": 0.52
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Katarina",
       "winRate": 0.57
@@ -6090,7 +6090,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Ezreal",
       "winRate": 0.53
@@ -6104,7 +6104,7 @@
       "winRate": 0.51
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Karthus",
       "winRate": 0.57
@@ -6134,7 +6134,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Varus",
       "winRate": 0.54
@@ -6148,7 +6148,7 @@
       "winRate": 0.52
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Xerath",
       "winRate": 0.56
@@ -6178,7 +6178,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Varus",
       "winRate": 0.55
@@ -6192,7 +6192,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Katarina",
       "winRate": 0.59
@@ -6222,7 +6222,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Katarina",
       "winRate": 0.57
@@ -6236,7 +6236,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Veigar",
       "winRate": 0.59
@@ -6266,7 +6266,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Yasuo",
       "winRate": 0.61
@@ -6280,7 +6280,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Seraphine",
       "winRate": 0.57
@@ -6310,7 +6310,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Varus",
       "winRate": 0.58
@@ -6324,7 +6324,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Karthus",
       "winRate": 0.59
@@ -6354,7 +6354,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Varus",
       "winRate": 0.61
@@ -6368,7 +6368,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Vel'Koz",
       "winRate": 0.57
@@ -6398,7 +6398,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Lux",
       "winRate": 0.55
@@ -6412,7 +6412,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Katarina",
       "winRate": 0.59
@@ -6442,7 +6442,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Ezreal",
       "winRate": 0.52
@@ -6456,7 +6456,7 @@
       "winRate": 0.52
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Vel'Koz",
       "winRate": 0.57
@@ -6486,7 +6486,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Varus",
       "winRate": 0.51
@@ -6500,7 +6500,7 @@
       "winRate": 0.5
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Senna",
       "winRate": 0.57
@@ -6530,7 +6530,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Vayne",
       "winRate": 0.54
@@ -6544,7 +6544,7 @@
       "winRate": 0.52
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Aurelion Sol",
       "winRate": 0.58
@@ -6574,7 +6574,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.56
@@ -6588,7 +6588,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Syndra",
       "winRate": 0.58
@@ -6618,7 +6618,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Kalista",
       "winRate": 0.55
@@ -6632,7 +6632,7 @@
       "winRate": 0.52
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Veigar",
       "winRate": 0.61
@@ -6662,7 +6662,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Corki",
       "winRate": 0.53
@@ -6676,7 +6676,7 @@
       "winRate": 0.51
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Hwei",
       "winRate": 0.6
@@ -6706,7 +6706,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.56
@@ -6720,7 +6720,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Karthus",
       "winRate": 0.57
@@ -6750,7 +6750,7 @@
    ],
    "counters": {
     "role": "adc",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.57
@@ -6764,7 +6764,7 @@
       "winRate": 0.53
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Seraphine",
       "winRate": 0.58
@@ -6794,7 +6794,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Yuumi",
       "winRate": 0.57
@@ -6808,7 +6808,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Fiddlesticks",
       "winRate": 0.56
@@ -6838,7 +6838,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.62
@@ -6852,7 +6852,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Soraka",
       "winRate": 0.52
@@ -6882,7 +6882,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.6
@@ -6896,7 +6896,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Taric",
       "winRate": 0.56
@@ -6926,7 +6926,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.6
@@ -6940,7 +6940,7 @@
       "winRate": 0.58
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Senna",
       "winRate": 0.55
@@ -6970,7 +6970,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.59
@@ -6984,7 +6984,7 @@
       "winRate": 0.52
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Amumu",
       "winRate": 0.55
@@ -7014,7 +7014,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.61
@@ -7028,7 +7028,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Senna",
       "winRate": 0.53
@@ -7058,7 +7058,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Hwei",
       "winRate": 0.56
@@ -7072,7 +7072,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Braum",
       "winRate": 0.54
@@ -7102,7 +7102,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.58
@@ -7116,7 +7116,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Poppy",
       "winRate": 0.55
@@ -7146,7 +7146,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.6
@@ -7160,7 +7160,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Hwei",
       "winRate": 0.54
@@ -7190,7 +7190,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.63
@@ -7204,7 +7204,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Senna",
       "winRate": 0.52
@@ -7234,7 +7234,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.56
@@ -7248,7 +7248,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Maokai",
       "winRate": 0.55
@@ -7278,7 +7278,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Swain",
       "winRate": 0.56
@@ -7292,7 +7292,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Amumu",
       "winRate": 0.57
@@ -7322,7 +7322,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "LeBlanc",
       "winRate": 0.6
@@ -7336,7 +7336,7 @@
       "winRate": 0.57
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Sylas",
       "winRate": 0.59
@@ -7366,7 +7366,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.61
@@ -7380,7 +7380,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Sylas",
       "winRate": 0.54
@@ -7410,7 +7410,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Xerath",
       "winRate": 0.56
@@ -7424,7 +7424,7 @@
       "winRate": 0.56
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Janna",
       "winRate": 0.54
@@ -7454,7 +7454,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.6
@@ -7468,7 +7468,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Senna",
       "winRate": 0.56
@@ -7498,7 +7498,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.59
@@ -7512,7 +7512,7 @@
       "winRate": 0.53
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Fiddlesticks",
       "winRate": 0.56
@@ -7542,7 +7542,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Sylas",
       "winRate": 0.56
@@ -7556,7 +7556,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Sona",
       "winRate": 0.56
@@ -7586,7 +7586,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Zyra",
       "winRate": 0.62
@@ -7600,7 +7600,7 @@
       "winRate": 0.59
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Seraphine",
       "winRate": 0.53
@@ -7630,7 +7630,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.58
@@ -7644,7 +7644,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Poppy",
       "winRate": 0.57
@@ -7674,7 +7674,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Swain",
       "winRate": 0.55
@@ -7688,7 +7688,7 @@
       "winRate": 0.53
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Morgana",
       "winRate": 0.55
@@ -7718,7 +7718,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Swain",
       "winRate": 0.55
@@ -7732,7 +7732,7 @@
       "winRate": 0.54
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Galio",
       "winRate": 0.6
@@ -7762,7 +7762,7 @@
    ],
    "counters": {
     "role": "support",
-    "strong": [
+    "beats": [
      {
       "name": "Mel",
       "winRate": 0.56
@@ -7776,7 +7776,7 @@
       "winRate": 0.55
      }
     ],
-    "weak": [
+    "beatenBy": [
      {
       "name": "Taric",
       "winRate": 0.59

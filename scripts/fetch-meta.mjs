@@ -132,13 +132,17 @@ async function main() {
           position: role,
           desired_output_fields: CFIELDS,
         });
-        const strong = [...text.matchAll(/StrongCounter\("([^"]+)",([\d.]+),\d+/g)]
+        // ATTENTION : la doc OP.GG est trompeuse. Verifie empiriquement (Teemo
+        // weak_counters = Olaf/Yasuo, ses counters connus) :
+        //   strong_counters = champions que CE champion bat  -> beats
+        //   weak_counters   = champions qui battent ce champion -> beatenBy
+        const beats = [...text.matchAll(/StrongCounter\("([^"]+)",([\d.]+),\d+/g)]
           .slice(0, 3)
           .map((m) => ({ name: m[1], winRate: Number(m[2]) }));
-        const weak = [...text.matchAll(/WeakCounter\("([^"]+)",([\d.]+)\)/g)]
+        const beatenBy = [...text.matchAll(/WeakCounter\("([^"]+)",([\d.]+)\)/g)]
           .slice(0, 3)
           .map((m) => ({ name: m[1], winRate: Number(m[2]) }));
-        c.counters = { role, strong, weak };
+        c.counters = { role, beats, beatenBy };
       } catch {
         c.counters = null;
       }
