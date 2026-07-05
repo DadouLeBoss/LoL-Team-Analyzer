@@ -106,7 +106,8 @@ function BanScore({ b }) {
             {num2(d.winrate)} + 0.10·{num2(d.kda)}) = {num2(d.force)}
           </div>
           <div className="tip-line mono">
-            Score = force x flex(x{num2(d.flexFactor)}) x meta(x{num2(d.metaFactor)})
+            Score = force x flex-jeu(x{num2(d.gameFlexFactor)}, {d.roleCount} role
+            {d.roleCount > 1 ? "s" : ""}) x meta(x{num2(d.metaFactor)})
             {d.masteryBoost > 0 ? ` + ${num2(d.masteryBoost)}` : ""} = {b.score}/100
           </div>
         </div>

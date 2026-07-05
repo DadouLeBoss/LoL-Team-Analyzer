@@ -27,7 +27,8 @@
     "mid": 0.09
    },
    "flexRoles": [
-    "top"
+    "top",
+    "jungle"
    ]
   },
   "Gangplank": {
@@ -54,7 +55,8 @@
     "support": 0.14
    },
    "flexRoles": [
-    "top"
+    "top",
+    "support"
    ]
   },
   "Kayle": {
@@ -280,7 +282,9 @@
    },
    "flexRoles": [
     "support",
-    "top"
+    "top",
+    "jungle",
+    "mid"
    ]
   },
   "Warwick": {
@@ -447,7 +451,8 @@
    },
    "flexRoles": [
     "top",
-    "jungle"
+    "jungle",
+    "mid"
    ]
   },
   "Tahm Kench": {
@@ -523,7 +528,8 @@
    },
    "flexRoles": [
     "mid",
-    "top"
+    "top",
+    "adc"
    ]
   },
   "Akali": {
@@ -612,7 +618,8 @@
    },
    "flexRoles": [
     "mid",
-    "top"
+    "top",
+    "adc"
    ]
   },
   "Heimerdinger": {
@@ -705,7 +712,8 @@
    },
    "flexRoles": [
     "mid",
-    "jungle"
+    "jungle",
+    "top"
    ]
   },
   "Kennen": {
@@ -732,7 +740,8 @@
     "mid": 0.84
    },
    "flexRoles": [
-    "mid"
+    "mid",
+    "top"
    ]
   },
   "Rumble": {
@@ -816,7 +825,8 @@
     "jungle": 0.86
    },
    "flexRoles": [
-    "jungle"
+    "jungle",
+    "top"
    ]
   },
   "Cassiopeia": {
@@ -893,7 +903,9 @@
    },
    "flexRoles": [
     "support",
-    "adc"
+    "adc",
+    "mid",
+    "top"
    ]
   },
   "Xin Zhao": {
@@ -1445,7 +1457,8 @@
     "mid": 0.86
    },
    "flexRoles": [
-    "mid"
+    "mid",
+    "jungle"
    ]
   },
   "Zed": {
@@ -1489,7 +1502,8 @@
    },
    "flexRoles": [
     "mid",
-    "support"
+    "support",
+    "adc"
    ]
   },
   "Katarina": {
@@ -1572,7 +1586,8 @@
    },
    "flexRoles": [
     "mid",
-    "adc"
+    "adc",
+    "support"
    ]
   },
   "Lux": {
@@ -1686,7 +1701,8 @@
     "support": 0.14
    },
    "flexRoles": [
-    "mid"
+    "mid",
+    "support"
    ]
   },
   "Vel'Koz": {
@@ -1749,7 +1765,8 @@
    },
    "flexRoles": [
     "support",
-    "adc"
+    "adc",
+    "mid"
    ]
   },
   "Orianna": {

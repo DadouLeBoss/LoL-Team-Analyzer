@@ -15,7 +15,7 @@ const POSITIONS = ["top", "jungle", "mid", "adc", "support"];
 // tier OP.GG : 1=OP, 2=Fort, 3=Bon, 4=Moyen, 5=Faible
 const TIER_LABEL = { 1: "OP", 2: "Fort", 3: "Bon", 4: "Moyen", 5: "Faible" };
 // Un role ne "compte" pour un champion que s'il y joue au moins ce taux.
-const ROLE_MIN_RATE = 0.15;
+const ROLE_MIN_RATE = 0.1;
 
 async function callMcp(name, args) {
   const res = await fetch(MCP_URL, {
