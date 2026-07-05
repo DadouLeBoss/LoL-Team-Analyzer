@@ -153,9 +153,14 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [expanded, setExpanded] = useState({}); // puuid -> affiche 12 lignes
+  const [roleFilter, setRoleFilter] = useState({}); // puuid -> role filtre (ou undefined)
 
   function toggleExpanded(puuid) {
     setExpanded((prev) => ({ ...prev, [puuid]: !prev[puuid] }));
+  }
+
+  function toggleRole(puuid, role) {
+    setRoleFilter((prev) => ({ ...prev, [puuid]: prev[puuid] === role ? undefined : role }));
   }
 
   function setAccount(i, value) {
@@ -286,6 +291,10 @@ export default function Home() {
         <h2>Detail par joueur</h2>
         {data.players.map((p) => {
           const rows = expanded[p.puuid] ? 12 : 6;
+          const activeRole = roleFilter[p.puuid];
+          const roleData = activeRole ? p.byRole?.[activeRole] : null;
+          const champs = roleData ? roleData.champions : p.champions;
+          const recents = roleData ? roleData.recentMatches : p.recentMatches;
           return (
           <div className="card player" key={p.puuid}>
             <h3>
@@ -312,9 +321,14 @@ export default function Home() {
                 {p.roles
                   .filter((r) => r.pct >= 0.1)
                   .map((r) => (
-                    <span className="role-tag" key={r.role}>
+                    <button
+                      className={`role-tag${activeRole === r.role ? " active" : ""}`}
+                      onClick={() => toggleRole(p.puuid, r.role)}
+                      title={`Filtrer sur ${roleLabel(r.role)}`}
+                      key={r.role}
+                    >
                       {roleLabel(r.role)} {pct(r.pct)}
-                    </span>
+                    </button>
                   ))}
               </div>
             )}
@@ -322,12 +336,15 @@ export default function Home() {
             <div className="player-cols">
               {/* Champions les plus joues */}
               <div className="col">
-                <div className="col-title">Champions les plus joues</div>
-                {p.champions.length === 0 ? (
+                <div className="col-title">
+                  Champions les plus joues
+                  {activeRole && <span className="col-filter">{roleLabel(activeRole)}</span>}
+                </div>
+                {champs.length === 0 ? (
                   <div className="empty">Aucune partie.</div>
                 ) : (
                   <ul className="champ-list">
-                    {p.champions.slice(0, rows).map((c, i) => (
+                    {champs.slice(0, rows).map((c, i) => (
                       <li className="champ-entry" key={i}>
                         <ChampIcon version={version} image={c.image} name={c.name} className="detail-icon" />
                         <div className="champ-info">
@@ -366,12 +383,15 @@ export default function Home() {
 
               {/* Parties recentes */}
               <div className="col">
-                <div className="col-title">Parties recentes</div>
-                {p.recentMatches.length === 0 ? (
+                <div className="col-title">
+                  Parties recentes
+                  {activeRole && <span className="col-filter">{roleLabel(activeRole)}</span>}
+                </div>
+                {recents.length === 0 ? (
                   <div className="empty">Aucune partie recente.</div>
                 ) : (
                   <ul className="mini-list">
-                    {p.recentMatches.slice(0, rows).map((m, i) => (
+                    {recents.slice(0, rows).map((m, i) => (
                       <li key={i}>
                         <ChampIcon version={version} image={m.image} name={m.name} className="detail-icon" />
                         <span className="mini-name">{m.name}</span>
