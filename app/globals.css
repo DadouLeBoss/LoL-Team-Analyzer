@@ -87,12 +87,25 @@ button.refresh.ghost { background: transparent; color: var(--gold); border: 1px 
 .ban .body { flex: 1; }
 .ban .name { font-weight: 600; font-size: 15px; }
 .meta-badge {
-  display: inline-block; margin-left: 8px; font-size: 10px; font-weight: 700;
-  padding: 1px 7px; border-radius: 20px; vertical-align: middle; letter-spacing: .02em;
+  position: relative; display: inline-block; margin-left: 8px; font-size: 10px; font-weight: 700;
+  padding: 1px 7px; border-radius: 20px; vertical-align: middle; letter-spacing: .02em; cursor: help;
 }
 .meta-badge.tier1 { background: #e05265; color: #2a0308; } /* OP */
 .meta-badge.tier2 { background: #e0a052; color: #2a1a04; } /* Fort */
 .meta-badge.tier3 { background: #4d9fec; color: #041121; } /* Bon */
+
+/* Tooltip du badge meta : detail pick/ban */
+.meta-tip {
+  position: absolute; top: calc(100% + 6px); right: 0; left: auto; z-index: 25;
+  width: 158px; background: #0c1420; border: 1px solid var(--border); border-radius: 7px;
+  padding: 8px 10px; box-shadow: 0 8px 22px rgba(0, 0, 0, .55);
+  font-weight: 400; letter-spacing: 0; text-transform: none;
+  opacity: 0; visibility: hidden; transform: translateY(3px);
+  transition: opacity .12s ease, transform .12s ease; pointer-events: none;
+}
+.meta-badge:hover .meta-tip { opacity: 1; visibility: visible; transform: translateY(0); }
+.mt-row { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); line-height: 1.7; }
+.mt-row b { color: var(--text); font-weight: 600; }
 .ban .who { color: var(--muted); font-size: 13px; }
 .ban .reasons { margin: 8px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
 .ban .reasons li { background: var(--panel-2); border: 1px solid var(--border); color: var(--muted); font-size: 11px; padding: 2px 8px; border-radius: 20px; }

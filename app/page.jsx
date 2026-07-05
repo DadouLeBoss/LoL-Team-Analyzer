@@ -77,6 +77,10 @@ function pct(x) {
   return `${Math.round(x * 100)}%`;
 }
 
+function pct1(x) {
+  return `${((x || 0) * 100).toFixed(1)}%`;
+}
+
 function scoreColor(score) {
   if (score >= 60) return "#e05265";
   if (score >= 40) return "#e0a052";
@@ -414,6 +418,12 @@ export default function Home() {
                       {b.meta && b.meta.tier <= 3 && (
                         <span className={`meta-badge tier${b.meta.tier}`}>
                           {b.meta.tierLabel} {pct(b.meta.winRate)}
+                          <span className="meta-tip">
+                            <span className="mt-row"><span>Tier</span><b>{b.meta.tierLabel}</b></span>
+                            <span className="mt-row"><span>Winrate</span><b>{pct1(b.meta.winRate)}</b></span>
+                            <span className="mt-row"><span>Pickrate</span><b>{pct1(b.meta.pickRate)}</b></span>
+                            <span className="mt-row"><span>Banrate</span><b>{pct1(b.meta.banRate)}</b></span>
+                          </span>
                         </span>
                       )}
                     </div>
