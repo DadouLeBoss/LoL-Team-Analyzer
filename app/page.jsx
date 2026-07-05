@@ -288,40 +288,40 @@ export default function Home() {
                 {p.champions.length === 0 ? (
                   <div className="empty">Aucune partie.</div>
                 ) : (
-                  <ul className="mini-list champ-list">
+                  <ul className="champ-list">
                     {p.champions.slice(0, 5).map((c, i) => (
-                      <li key={i}>
-                        <div className="champ-main">
-                          {champImg(version, c.image) && (
-                            <img className="champ-img sm" src={champImg(version, c.image)} alt={c.name} />
-                          )}
-                          <span className="mini-name">{c.name}</span>
-                          <span className="mini-stat mono">
-                            {c.games}p · {c.kda.kills}/{c.kda.deaths}/{c.kda.assists}
-                          </span>
-                          <span
-                            className="mini-stat mono"
-                            style={{ color: c.winrate >= 0.5 ? "var(--green)" : "var(--red)" }}
-                          >
-                            {pct(c.winrate)}
-                          </span>
-                        </div>
-                        {c.counters && (c.counters.beatenBy.length > 0 || c.counters.beats.length > 0) && (
-                          <div className="champ-counters">
-                            {c.counters.beatenBy.length > 0 && (
-                              <div className="ctr bad">
+                      <li className="champ-entry" key={i}>
+                        {champImg(version, c.image) && (
+                          <img className="champ-icon-lg" src={champImg(version, c.image)} alt={c.name} />
+                        )}
+                        <div className="champ-info">
+                          <div className="champ-line1">
+                            <span className="mini-name">{c.name}</span>
+                            <span className="champ-stats mono">
+                              {c.games}p · {c.kda.kills}/{c.kda.deaths}/{c.kda.assists}
+                            </span>
+                            <span
+                              className="champ-wr mono"
+                              style={{ color: c.winrate >= 0.5 ? "var(--green)" : "var(--red)" }}
+                            >
+                              {pct(c.winrate)}
+                            </span>
+                          </div>
+                          <div className="champ-line2">
+                            {c.counters && c.counters.beatenBy.length > 0 && (
+                              <span className="ctr bad">
                                 <span className="ctr-lbl">contre par</span>
                                 {c.counters.beatenBy.map((x) => x.name).join(" · ")}
-                              </div>
+                              </span>
                             )}
-                            {c.counters.beats.length > 0 && (
-                              <div className="ctr good">
+                            {c.counters && c.counters.beats.length > 0 && (
+                              <span className="ctr good">
                                 <span className="ctr-lbl">bat</span>
                                 {c.counters.beats.map((x) => x.name).join(" · ")}
-                              </div>
+                              </span>
                             )}
                           </div>
-                        )}
+                        </div>
                       </li>
                     ))}
                   </ul>

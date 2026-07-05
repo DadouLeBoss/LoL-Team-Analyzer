@@ -21,7 +21,7 @@ body {
   line-height: 1.5;
 }
 
-.wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 80px; }
+.wrap { max-width: 1600px; margin: 0 auto; padding: 32px 28px 80px; }
 
 header.top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 8px; }
 header.top.center { flex-direction: column; justify-content: center; text-align: center; gap: 12px; margin-top: 12px; }
@@ -168,11 +168,17 @@ button.refresh.ghost { background: transparent; color: var(--gold); border: 1px 
 .mini-list li { display: flex; align-items: center; gap: 10px; }
 .mini-name { flex: 1; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-/* --- Champions les plus joues : counters sous chaque champion --- */
-.champ-list li { display: block; }
-.champ-main { display: flex; align-items: center; gap: 10px; }
-.champ-counters { margin: 3px 0 2px 42px; display: flex; flex-direction: column; gap: 1px; }
-.ctr { font-size: 10.5px; line-height: 1.5; color: var(--muted); }
+/* --- Champions les plus joues : grosse icone sur 2 lignes + counters --- */
+.champ-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.champ-entry { display: flex; align-items: center; gap: 12px; }
+.champ-icon-lg { width: 46px; height: 46px; border-radius: 9px; border: 1px solid var(--border); background: var(--panel-2); flex-shrink: 0; }
+.champ-info { flex: 1; min-width: 0; }
+.champ-line1 { display: flex; align-items: baseline; gap: 10px; }
+.champ-line1 .mini-name { flex: 1; font-size: 14px; }
+.champ-stats { font-size: 12px; color: var(--muted); white-space: nowrap; }
+.champ-wr { font-size: 12px; white-space: nowrap; }
+.champ-line2 { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 4px; }
+.ctr { font-size: 11px; line-height: 1.4; color: var(--muted); }
 .ctr .ctr-lbl { font-weight: 700; text-transform: uppercase; letter-spacing: .03em; font-size: 9px; margin-right: 5px; }
 .ctr.bad .ctr-lbl { color: var(--red); }
 .ctr.good .ctr-lbl { color: var(--green); }
