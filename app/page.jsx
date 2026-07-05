@@ -540,11 +540,11 @@ export default function Home() {
                     <div className="who">
                       {b.bestPlayer} · {b.games} parties · {pct(b.winrate)} WR ·{" "}
                       {b.kdaAvg ? (
-                        <span
-                          className="kda-hint"
-                          title={`${b.kdaAvg.kills} / ${b.kdaAvg.deaths} / ${b.kdaAvg.assists} (K/D/A moyen)`}
-                        >
+                        <span className="kda-hint">
                           KDA {b.kda}
+                          <span className="kda-tip">
+                            {b.kdaAvg.kills} / {b.kdaAvg.deaths} / {b.kdaAvg.assists}
+                          </span>
                         </span>
                       ) : (
                         `KDA ${b.kda}`
