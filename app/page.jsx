@@ -29,6 +29,12 @@ function roleLabel(r) {
   return ROLE_LABEL[r] || "";
 }
 
+// Roles cote meta (OP.GG) : top/jungle/mid/adc/support.
+const META_ROLE_LABEL = { top: "TOP", jungle: "JUNGLE", mid: "MID", adc: "BOT", support: "SUPPORT" };
+function metaRoleLabel(r) {
+  return META_ROLE_LABEL[r] || (r || "").toUpperCase();
+}
+
 // Lien vers la fiche League of Graphs du joueur.
 // "Caca super cool#prout" -> .../summoner/euw/Caca+super+cool-prout
 function logUrl(riotId, logRegion) {
@@ -75,6 +81,38 @@ function scoreColor(score) {
   if (score >= 60) return "#e05265";
   if (score >= 40) return "#e0a052";
   return "#c8aa6e";
+}
+
+function num2(x) {
+  return (Math.round((x || 0) * 100) / 100).toFixed(2);
+}
+
+// Pastille de score de ban avec tooltip detaillant le calcul au survol.
+function BanScore({ b }) {
+  const d = b.breakdown;
+  return (
+    <div className="score-wrap">
+      <div className="score" style={{ background: scoreColor(b.score) }}>
+        {b.score}
+      </div>
+      {d && (
+        <div className="score-tip">
+          <div className="tip-title">Detail du score</div>
+          <div className="tip-line">
+            Force = confiance x (0.40·volume + 0.25·recent + 0.25·WR + 0.10·KDA)
+          </div>
+          <div className="tip-line mono">
+            = {num2(d.confidence)} x (0.40·{num2(d.volume)} + 0.25·{num2(d.recent)} + 0.25·
+            {num2(d.winrate)} + 0.10·{num2(d.kda)}) = {num2(d.force)}
+          </div>
+          <div className="tip-line mono">
+            Score = force x flex(x{num2(d.flexFactor)}) x meta(x{num2(d.metaFactor)})
+            {d.masteryBoost > 0 ? ` + ${num2(d.masteryBoost)}` : ""} = {b.score}/100
+          </div>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export default function Home() {
@@ -221,14 +259,22 @@ export default function Home() {
               >
                 {p.name}
               </a>
-              {p.mainRole && <span className="role-tag">{roleLabel(p.mainRole)}</span>}
+              <RankBadge label="Solo/Duo" r={p.rank?.solo} />
+              <RankBadge label="Flex" r={p.rank?.flex} />
               <span className="count">{p.totalGames} parties analysees</span>
             </h3>
 
-            <div className="player-ranks">
-              <RankBadge label="Solo/Duo" r={p.rank?.solo} />
-              <RankBadge label="Flex" r={p.rank?.flex} />
-            </div>
+            {p.roles.length > 0 && (
+              <div className="player-roles">
+                {p.roles
+                  .filter((r) => r.pct >= 0.1)
+                  .map((r) => (
+                    <span className="role-tag" key={r.role}>
+                      {roleLabel(r.role)} {pct(r.pct)}
+                    </span>
+                  ))}
+              </div>
+            )}
 
             <div className="player-cols">
               {/* Champions les plus joues */}
@@ -314,10 +360,10 @@ export default function Home() {
       <section className="section">
         <h2>
           Champions flex
-          <span className="hint">jouables par plusieurs joueurs de l'equipe</span>
+          <span className="hint">joues par plusieurs joueurs et jouables sur plusieurs roles</span>
         </h2>
         {data.flex.length === 0 ? (
-          <div className="notice">Aucun champion joue par 2 joueurs ou plus sur les parties recentes.</div>
+          <div className="notice">Aucun champion multi-roles joue par 2 joueurs ou plus.</div>
         ) : (
           <div className="grid flex">
             {data.flex.map((f) => (
@@ -328,7 +374,9 @@ export default function Home() {
                   )}
                   <div>
                     <strong>{f.name}</strong>
-                    <span className="badge">{f.players.length} joueurs</span>
+                    {f.roles?.length > 0 && (
+                      <span className="flex-roles">{f.roles.map(metaRoleLabel).join(" · ")}</span>
+                    )}
                   </div>
                 </div>
                 <div className="players">
@@ -348,14 +396,12 @@ export default function Home() {
       <section className="section">
         <h2>
           Bans recommandes
-          <span className="hint">score de danger : winrate, KDA, volume et flexibilite</span>
+          <span className="hint">score de danger (survolez le score pour le detail du calcul)</span>
         </h2>
         <div className="grid bans">
           {data.bans.slice(0, 12).map((b) => (
             <div className="card ban" key={b.championId}>
-              <div className="score" style={{ background: scoreColor(b.score) }}>
-                {b.score}
-              </div>
+              <BanScore b={b} />
               <div className="body">
                 <div className="champ-row">
                   {champImg(version, b.image) && (

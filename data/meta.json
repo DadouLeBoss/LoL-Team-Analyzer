@@ -7,1211 +7,2410 @@
    "tierLabel": "OP",
    "winRate": 0.52,
    "pickRate": 0.08,
-   "banRate": 0.07
+   "banRate": 0.07,
+   "roles": {
+    "top": 0.93
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Malphite": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.52,
    "pickRate": 0.07,
-   "banRate": 0.18
+   "banRate": 0.18,
+   "roles": {
+    "top": 0.78,
+    "jungle": 0.1,
+    "mid": 0.09
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Gangplank": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.06,
-   "banRate": 0.07
+   "banRate": 0.07,
+   "roles": {
+    "top": 0.93
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Shen": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.52,
    "pickRate": 0.04,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.77,
+    "support": 0.14
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Kayle": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.52,
    "pickRate": 0.03,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "top": 0.82
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Singed": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.52,
    "pickRate": 0.02,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.83
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Sett": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.05,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "top": 0.93
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Jax": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.5,
    "pickRate": 0.06,
-   "banRate": 0.11
+   "banRate": 0.11,
+   "roles": {
+    "top": 0.74,
+    "jungle": 0.23
+   },
+   "flexRoles": [
+    "top",
+    "jungle"
+   ]
   },
   "Aatrox": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.5,
    "pickRate": 0.06,
-   "banRate": 0.08
+   "banRate": 0.08,
+   "roles": {
+    "top": 0.79,
+    "jungle": 0.18
+   },
+   "flexRoles": [
+    "top",
+    "jungle"
+   ]
   },
   "Darius": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.5,
    "pickRate": 0.07,
-   "banRate": 0.13
+   "banRate": 0.13,
+   "roles": {
+    "top": 0.89,
+    "jungle": 0.09
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Teemo": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.04,
-   "banRate": 0.07
+   "banRate": 0.07,
+   "roles": {
+    "top": 0.74,
+    "jungle": 0.09
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Ornn": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.04,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.96
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Urgot": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.52,
    "pickRate": 0.03,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.96
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Dr. Mundo": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.04,
-   "banRate": 0.03
+   "banRate": 0.03,
+   "roles": {
+    "top": 0.87
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Olaf": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.52,
    "pickRate": 0.03,
-   "banRate": 0.03
+   "banRate": 0.03,
+   "roles": {
+    "top": 0.72,
+    "jungle": 0.24
+   },
+   "flexRoles": [
+    "top",
+    "jungle"
+   ]
   },
   "Irelia": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.5,
    "pickRate": 0.04,
-   "banRate": 0.13
+   "banRate": 0.13,
+   "roles": {
+    "top": 0.6,
+    "mid": 0.39
+   },
+   "flexRoles": [
+    "top",
+    "mid"
+   ]
   },
   "Yone": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.5,
    "pickRate": 0.07,
-   "banRate": 0.06
+   "banRate": 0.06,
+   "roles": {
+    "top": 0.53,
+    "mid": 0.45
+   },
+   "flexRoles": [
+    "top",
+    "mid"
+   ]
   },
   "Riven": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.53,
    "pickRate": 0.01,
-   "banRate": 0.03
+   "banRate": 0.03,
+   "roles": {
+    "top": 0.69,
+    "mid": 0.26
+   },
+   "flexRoles": [
+    "top",
+    "mid"
+   ]
   },
   "Tryndamere": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.03,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "top": 0.85
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Pantheon": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.03,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "top": 0.35,
+    "jungle": 0.12,
+    "mid": 0.11,
+    "support": 0.41
+   },
+   "flexRoles": [
+    "support",
+    "top"
+   ]
   },
   "Warwick": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.52,
    "pickRate": 0.01,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "top": 0.32,
+    "jungle": 0.67
+   },
+   "flexRoles": [
+    "jungle",
+    "top"
+   ]
   },
   "Renekton": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.5,
    "pickRate": 0.05,
-   "banRate": 0.04
+   "banRate": 0.04,
+   "roles": {
+    "top": 0.95
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Kled": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.52,
    "pickRate": 0.02,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.91
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Yorick": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.04,
-   "banRate": 0.07
+   "banRate": 0.07,
+   "roles": {
+    "top": 0.94
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Zaahen": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.03,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "top": 0.83
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Nasus": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.53,
    "pickRate": 0.03,
-   "banRate": 0.06
+   "banRate": 0.06,
+   "roles": {
+    "top": 0.43,
+    "jungle": 0.5
+   },
+   "flexRoles": [
+    "jungle",
+    "top"
+   ]
   },
   "Fiora": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.03,
-   "banRate": 0.05
+   "banRate": 0.05,
+   "roles": {
+    "top": 0.94
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Illaoi": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.51,
    "pickRate": 0.03,
-   "banRate": 0.04
+   "banRate": 0.04,
+   "roles": {
+    "top": 0.97
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Camille": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.03,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "top": 0.44,
+    "support": 0.53
+   },
+   "flexRoles": [
+    "support",
+    "top"
+   ]
   },
   "Wukong": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.52,
    "pickRate": 0.06,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "top": 0.15,
+    "jungle": 0.82
+   },
+   "flexRoles": [
+    "jungle",
+    "top"
+   ]
   },
   "Mordekaiser": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.49,
    "pickRate": 0.05,
-   "banRate": 0.06
+   "banRate": 0.06,
+   "roles": {
+    "top": 0.91
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Jayce": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.49,
    "pickRate": 0.06,
-   "banRate": 0.07
+   "banRate": 0.07,
+   "roles": {
+    "top": 0.63,
+    "jungle": 0.26,
+    "mid": 0.1
+   },
+   "flexRoles": [
+    "top",
+    "jungle"
+   ]
   },
   "Tahm Kench": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.51,
    "pickRate": 0.02,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "top": 0.39,
+    "support": 0.52
+   },
+   "flexRoles": [
+    "support",
+    "top"
+   ]
   },
   "Sion": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.49,
    "pickRate": 0.05,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.76,
+    "mid": 0.15
+   },
+   "flexRoles": [
+    "top",
+    "mid"
+   ]
   },
   "Vayne": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.03,
-   "banRate": 0.11
+   "banRate": 0.11,
+   "roles": {
+    "top": 0.36,
+    "adc": 0.61
+   },
+   "flexRoles": [
+    "adc",
+    "top"
+   ]
   },
   "Cho'Gath": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.02,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.68,
+    "mid": 0.15
+   },
+   "flexRoles": [
+    "top",
+    "mid"
+   ]
   },
   "Yasuo": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.49,
    "pickRate": 0.08,
-   "banRate": 0.16
+   "banRate": 0.16,
+   "roles": {
+    "top": 0.27,
+    "mid": 0.62,
+    "adc": 0.1
+   },
+   "flexRoles": [
+    "mid",
+    "top"
+   ]
   },
   "Akali": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.5,
    "pickRate": 0.06,
-   "banRate": 0.16
+   "banRate": 0.16,
+   "roles": {
+    "top": 0.31,
+    "mid": 0.69
+   },
+   "flexRoles": [
+    "mid",
+    "top"
+   ]
   },
   "Gragas": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.03,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.63,
+    "jungle": 0.18
+   },
+   "flexRoles": [
+    "top",
+    "jungle"
+   ]
   },
   "Gnar": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.49,
    "pickRate": 0.04,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.99
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Quinn": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.52,
    "pickRate": 0.01,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.31,
+    "jungle": 0.55
+   },
+   "flexRoles": [
+    "jungle",
+    "top"
+   ]
   },
   "Gwen": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.5,
    "pickRate": 0.02,
-   "banRate": 0.03
+   "banRate": 0.03,
+   "roles": {
+    "top": 0.65,
+    "jungle": 0.21
+   },
+   "flexRoles": [
+    "top",
+    "jungle"
+   ]
   },
   "Vladimir": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.52,
    "pickRate": 0.04,
-   "banRate": 0.06
+   "banRate": 0.06,
+   "roles": {
+    "top": 0.23,
+    "mid": 0.66,
+    "adc": 0.11
+   },
+   "flexRoles": [
+    "mid",
+    "top"
+   ]
   },
   "Heimerdinger": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.51,
    "pickRate": 0.01,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "top": 0.65
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Ambessa": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.49,
    "pickRate": 0.04,
-   "banRate": 0.05
+   "banRate": 0.05,
+   "roles": {
+    "top": 0.72,
+    "jungle": 0.21
+   },
+   "flexRoles": [
+    "top",
+    "jungle"
+   ]
   },
   "Poppy": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.52,
    "pickRate": 0.02,
-   "banRate": 0.03
+   "banRate": 0.03,
+   "roles": {
+    "top": 0.28,
+    "jungle": 0.23,
+    "support": 0.48
+   },
+   "flexRoles": [
+    "support",
+    "top",
+    "jungle"
+   ]
   },
   "Volibear": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.49,
    "pickRate": 0.03,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.73,
+    "jungle": 0.25
+   },
+   "flexRoles": [
+    "top",
+    "jungle"
+   ]
   },
   "Anivia": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.02,
-   "banRate": 0.03
+   "banRate": 0.03,
+   "roles": {
+    "top": 0.2,
+    "mid": 0.62,
+    "support": 0.15
+   },
+   "flexRoles": [
+    "mid",
+    "top",
+    "support"
+   ]
   },
   "Locke": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.5,
    "pickRate": 0.12,
-   "banRate": 0.68
+   "banRate": 0.68,
+   "roles": {
+    "top": 0.1,
+    "jungle": 0.25,
+    "mid": 0.61
+   },
+   "flexRoles": [
+    "mid",
+    "jungle"
+   ]
   },
   "Kennen": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.5,
    "pickRate": 0.02,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.77
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Lissandra": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.51,
    "pickRate": 0.05,
-   "banRate": 0.03
+   "banRate": 0.03,
+   "roles": {
+    "top": 0.1,
+    "mid": 0.84
+   },
+   "flexRoles": [
+    "mid"
+   ]
   },
   "Rumble": {
    "tier": 5,
    "tierLabel": "Faible",
    "winRate": 0.49,
    "pickRate": 0.02,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.84
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "K'Sante": {
    "tier": 5,
    "tierLabel": "Faible",
    "winRate": 0.47,
    "pickRate": 0.04,
-   "banRate": 0.03
+   "banRate": 0.03,
+   "roles": {
+    "top": 0.95
+   },
+   "flexRoles": [
+    "top"
+   ]
   },
   "Trundle": {
    "tier": 5,
    "tierLabel": "Faible",
    "winRate": 0.5,
    "pickRate": 0.01,
-   "banRate": 0
+   "banRate": 0,
+   "roles": {
+    "top": 0.67,
+    "jungle": 0.27
+   },
+   "flexRoles": [
+    "top",
+    "jungle"
+   ]
   },
   "Aurora": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.49,
    "pickRate": 0.02,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "top": 0.19,
+    "mid": 0.78
+   },
+   "flexRoles": [
+    "mid",
+    "top"
+   ]
   },
   "Malzahar": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.06,
-   "banRate": 0.1
+   "banRate": 0.1,
+   "roles": {
+    "top": 0.09,
+    "mid": 0.86
+   },
+   "flexRoles": [
+    "mid"
+   ]
   },
   "Master Yi": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.06,
-   "banRate": 0.13
+   "banRate": 0.13,
+   "roles": {
+    "top": 0.1,
+    "jungle": 0.86
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Cassiopeia": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.48,
    "pickRate": 0.01,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "top": 0.25,
+    "mid": 0.62
+   },
+   "flexRoles": [
+    "mid",
+    "top"
+   ]
   },
   "Varus": {
    "tier": 5,
    "tierLabel": "Faible",
    "winRate": 0.49,
    "pickRate": 0.01,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "top": 0.21,
+    "adc": 0.73
+   },
+   "flexRoles": [
+    "adc",
+    "top"
+   ]
   },
   "Ryze": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.47,
    "pickRate": 0.03,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.2,
+    "mid": 0.79
+   },
+   "flexRoles": [
+    "mid",
+    "top"
+   ]
   },
   "Udyr": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.52,
    "pickRate": 0.02,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.22,
+    "jungle": 0.76
+   },
+   "flexRoles": [
+    "jungle",
+    "top"
+   ]
   },
   "Swain": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.52,
    "pickRate": 0.01,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "top": 0.1,
+    "mid": 0.14,
+    "adc": 0.23,
+    "support": 0.53
+   },
+   "flexRoles": [
+    "support",
+    "adc"
+   ]
   },
   "Xin Zhao": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.5,
    "pickRate": 0.03,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "top": 0.18,
+    "jungle": 0.75
+   },
+   "flexRoles": [
+    "jungle",
+    "top"
+   ]
   },
   "Maokai": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.51,
    "pickRate": 0.02,
-   "banRate": 0
+   "banRate": 0,
+   "roles": {
+    "top": 0.21,
+    "support": 0.65
+   },
+   "flexRoles": [
+    "support",
+    "top"
+   ]
   },
   "Nocturne": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.52,
    "pickRate": 0.07,
-   "banRate": 0.13
+   "banRate": 0.13,
+   "roles": {
+    "jungle": 0.98
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Sylas": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.51,
    "pickRate": 0.09,
-   "banRate": 0.19
+   "banRate": 0.19,
+   "roles": {
+    "jungle": 0.43,
+    "mid": 0.43,
+    "support": 0.07
+   },
+   "flexRoles": [
+    "jungle",
+    "mid"
+   ]
   },
   "Naafiri": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.51,
    "pickRate": 0.07,
-   "banRate": 0.29
+   "banRate": 0.29,
+   "roles": {
+    "jungle": 0.69,
+    "mid": 0.24
+   },
+   "flexRoles": [
+    "jungle",
+    "mid"
+   ]
   },
   "Briar": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.52,
    "pickRate": 0.05,
-   "banRate": 0.08
+   "banRate": 0.08,
+   "roles": {
+    "jungle": 0.9
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Graves": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.5,
    "pickRate": 0.11,
-   "banRate": 0.12
+   "banRate": 0.12,
+   "roles": {
+    "jungle": 0.98
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Lee Sin": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.49,
    "pickRate": 0.13,
-   "banRate": 0.16
+   "banRate": 0.16,
+   "roles": {
+    "jungle": 0.96
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Kayn": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.07,
-   "banRate": 0.05
+   "banRate": 0.05,
+   "roles": {
+    "jungle": 0.95
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Viego": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.5,
    "pickRate": 0.09,
-   "banRate": 0.07
+   "banRate": 0.07,
+   "roles": {
+    "jungle": 0.97
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Shaco": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.05,
-   "banRate": 0.16
+   "banRate": 0.16,
+   "roles": {
+    "jungle": 0.75,
+    "support": 0.23
+   },
+   "flexRoles": [
+    "jungle",
+    "support"
+   ]
   },
   "Jarvan IV": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.5,
    "pickRate": 0.06,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "jungle": 0.92
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Shyvana": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.51,
    "pickRate": 0.04,
-   "banRate": 0.04
+   "banRate": 0.04,
+   "roles": {
+    "jungle": 0.92
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Rammus": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.53,
    "pickRate": 0.02,
-   "banRate": 0.03
+   "banRate": 0.03,
+   "roles": {
+    "jungle": 0.9
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Talon": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.05,
-   "banRate": 0.07
+   "banRate": 0.07,
+   "roles": {
+    "jungle": 0.69,
+    "mid": 0.3
+   },
+   "flexRoles": [
+    "jungle",
+    "mid"
+   ]
   },
   "Kha'Zix": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.05,
-   "banRate": 0.03
+   "banRate": 0.03,
+   "roles": {
+    "jungle": 0.99
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Bel'Veth": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.52,
    "pickRate": 0.02,
-   "banRate": 0.03
+   "banRate": 0.03,
+   "roles": {
+    "jungle": 0.97
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Vi": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.05,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "jungle": 0.94
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Diana": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.52,
    "pickRate": 0.04,
-   "banRate": 0.05
+   "banRate": 0.05,
+   "roles": {
+    "jungle": 0.48,
+    "mid": 0.5
+   },
+   "flexRoles": [
+    "mid",
+    "jungle"
+   ]
   },
   "Fiddlesticks": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.52,
    "pickRate": 0.02,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "jungle": 0.67,
+    "support": 0.19
+   },
+   "flexRoles": [
+    "jungle",
+    "support"
+   ]
   },
   "Ekko": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.03,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "jungle": 0.53,
+    "mid": 0.43
+   },
+   "flexRoles": [
+    "jungle",
+    "mid"
+   ]
   },
   "Nidalee": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.51,
    "pickRate": 0.03,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "jungle": 0.89
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Nunu & Willump": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.51,
    "pickRate": 0.02,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "jungle": 0.79
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Hecarim": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.04,
-   "banRate": 0.03
+   "banRate": 0.03,
+   "roles": {
+    "jungle": 1
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Evelynn": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.51,
    "pickRate": 0.02,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "jungle": 0.97
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Ivern": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.52,
    "pickRate": 0.01,
-   "banRate": 0
+   "banRate": 0,
+   "roles": {
+    "jungle": 0.79
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Kindred": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.5,
    "pickRate": 0.02,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "jungle": 0.97
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Lillia": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.5,
    "pickRate": 0.02,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "jungle": 0.98
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Rek'Sai": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.51,
    "pickRate": 0.02,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "jungle": 0.89
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Zyra": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.52,
    "pickRate": 0.01,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "jungle": 0.25,
+    "support": 0.67
+   },
+   "flexRoles": [
+    "support",
+    "jungle"
+   ]
   },
   "Amumu": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.52,
    "pickRate": 0.01,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "jungle": 0.77,
+    "support": 0.22
+   },
+   "flexRoles": [
+    "jungle",
+    "support"
+   ]
   },
   "Sejuani": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.5,
    "pickRate": 0.02,
-   "banRate": 0
+   "banRate": 0,
+   "roles": {
+    "jungle": 0.8
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Rengar": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.48,
    "pickRate": 0.04,
-   "banRate": 0.08
+   "banRate": 0.08,
+   "roles": {
+    "jungle": 0.91
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Elise": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.51,
    "pickRate": 0.01,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "jungle": 0.67,
+    "support": 0.28
+   },
+   "flexRoles": [
+    "jungle",
+    "support"
+   ]
   },
   "Zac": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.49,
    "pickRate": 0.02,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "jungle": 0.72
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Skarner": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.5,
    "pickRate": 0.01,
-   "banRate": 0
+   "banRate": 0,
+   "roles": {
+    "jungle": 0.65
+   },
+   "flexRoles": [
+    "jungle"
+   ]
   },
   "Qiyana": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.49,
    "pickRate": 0.02,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "jungle": 0.52,
+    "mid": 0.42
+   },
+   "flexRoles": [
+    "jungle",
+    "mid"
+   ]
   },
   "Taliyah": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.49,
    "pickRate": 0.01,
-   "banRate": 0
+   "banRate": 0,
+   "roles": {
+    "jungle": 0.3,
+    "mid": 0.57
+   },
+   "flexRoles": [
+    "mid",
+    "jungle"
+   ]
   },
   "Karthus": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.54,
    "pickRate": 0.01,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "jungle": 0.58,
+    "adc": 0.3
+   },
+   "flexRoles": [
+    "jungle",
+    "adc"
+   ]
   },
   "Fizz": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.52,
    "pickRate": 0.05,
-   "banRate": 0.07
+   "banRate": 0.07,
+   "roles": {
+    "jungle": 0.1,
+    "mid": 0.86
+   },
+   "flexRoles": [
+    "mid"
+   ]
   },
   "Zed": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.5,
    "pickRate": 0.07,
-   "banRate": 0.21
+   "banRate": 0.21,
+   "roles": {
+    "jungle": 0.22,
+    "mid": 0.71
+   },
+   "flexRoles": [
+    "mid",
+    "jungle"
+   ]
   },
   "Ahri": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.51,
    "pickRate": 0.09,
-   "banRate": 0.03
+   "banRate": 0.03,
+   "roles": {
+    "mid": 0.96
+   },
+   "flexRoles": [
+    "mid"
+   ]
   },
   "Xerath": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.52,
    "pickRate": 0.05,
-   "banRate": 0.07
+   "banRate": 0.07,
+   "roles": {
+    "mid": 0.52,
+    "adc": 0.11,
+    "support": 0.37
+   },
+   "flexRoles": [
+    "mid",
+    "support"
+   ]
   },
   "Katarina": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.51,
    "pickRate": 0.07,
-   "banRate": 0.1
+   "banRate": 0.1,
+   "roles": {
+    "mid": 0.89,
+    "adc": 0.08
+   },
+   "flexRoles": [
+    "mid"
+   ]
   },
   "Syndra": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.51,
    "pickRate": 0.07,
-   "banRate": 0.04
+   "banRate": 0.04,
+   "roles": {
+    "mid": 0.88,
+    "adc": 0.09
+   },
+   "flexRoles": [
+    "mid"
+   ]
   },
   "Viktor": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.5,
    "pickRate": 0.09,
-   "banRate": 0.09
+   "banRate": 0.09,
+   "roles": {
+    "mid": 0.92
+   },
+   "flexRoles": [
+    "mid"
+   ]
   },
   "Twisted Fate": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.05,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "mid": 0.87
+   },
+   "flexRoles": [
+    "mid"
+   ]
   },
   "Vex": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.52,
    "pickRate": 0.03,
-   "banRate": 0.03
+   "banRate": 0.03,
+   "roles": {
+    "mid": 0.94
+   },
+   "flexRoles": [
+    "mid"
+   ]
   },
   "Hwei": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.05,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "mid": 0.69,
+    "adc": 0.19,
+    "support": 0.1
+   },
+   "flexRoles": [
+    "mid",
+    "adc"
+   ]
   },
   "Lux": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.04,
-   "banRate": 0.03
+   "banRate": 0.03,
+   "roles": {
+    "mid": 0.34,
+    "adc": 0.09,
+    "support": 0.57
+   },
+   "flexRoles": [
+    "support",
+    "mid"
+   ]
   },
   "Veigar": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.03,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "mid": 0.67,
+    "adc": 0.22
+   },
+   "flexRoles": [
+    "mid",
+    "adc"
+   ]
   },
   "Galio": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.5,
    "pickRate": 0.04,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "mid": 0.79,
+    "support": 0.16
+   },
+   "flexRoles": [
+    "mid",
+    "support"
+   ]
   },
   "Annie": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.02,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "mid": 0.82
+   },
+   "flexRoles": [
+    "mid"
+   ]
   },
   "Kassadin": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.5,
    "pickRate": 0.03,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "mid": 0.95
+   },
+   "flexRoles": [
+    "mid"
+   ]
   },
   "Zoe": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.5,
    "pickRate": 0.03,
-   "banRate": 0.04
+   "banRate": 0.04,
+   "roles": {
+    "mid": 0.71,
+    "support": 0.24
+   },
+   "flexRoles": [
+    "mid",
+    "support"
+   ]
   },
   "Akshan": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.03,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "mid": 0.86
+   },
+   "flexRoles": [
+    "mid"
+   ]
   },
   "LeBlanc": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.49,
    "pickRate": 0.04,
-   "banRate": 0.13
+   "banRate": 0.13,
+   "roles": {
+    "mid": 0.83,
+    "support": 0.14
+   },
+   "flexRoles": [
+    "mid"
+   ]
   },
   "Vel'Koz": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.52,
    "pickRate": 0.01,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "mid": 0.18,
+    "adc": 0.16,
+    "support": 0.63
+   },
+   "flexRoles": [
+    "support",
+    "mid",
+    "adc"
+   ]
   },
   "Aurelion Sol": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.53,
    "pickRate": 0.01,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "mid": 0.63,
+    "adc": 0.25
+   },
+   "flexRoles": [
+    "mid",
+    "adc"
+   ]
   },
   "Ziggs": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.52,
    "pickRate": 0.03,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "mid": 0.19,
+    "adc": 0.77
+   },
+   "flexRoles": [
+    "adc",
+    "mid"
+   ]
   },
   "Brand": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.52,
    "pickRate": 0.02,
-   "banRate": 0.07
+   "banRate": 0.07,
+   "roles": {
+    "mid": 0.13,
+    "adc": 0.31,
+    "support": 0.46
+   },
+   "flexRoles": [
+    "support",
+    "adc"
+   ]
   },
   "Orianna": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.47,
    "pickRate": 0.03,
-   "banRate": 0
+   "banRate": 0,
+   "roles": {
+    "mid": 0.96
+   },
+   "flexRoles": [
+    "mid"
+   ]
   },
   "Mel": {
    "tier": 5,
    "tierLabel": "Faible",
    "winRate": 0.47,
    "pickRate": 0.02,
-   "banRate": 0.2
+   "banRate": 0.2,
+   "roles": {
+    "mid": 0.41,
+    "adc": 0.31,
+    "support": 0.28
+   },
+   "flexRoles": [
+    "mid",
+    "adc",
+    "support"
+   ]
   },
   "Azir": {
    "tier": 5,
    "tierLabel": "Faible",
    "winRate": 0.46,
    "pickRate": 0.01,
-   "banRate": 0
+   "banRate": 0,
+   "roles": {
+    "mid": 0.89
+   },
+   "flexRoles": [
+    "mid"
+   ]
   },
   "Tristana": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.07,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "mid": 0.07,
+    "adc": 0.91
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Smolder": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.51,
    "pickRate": 0.05,
-   "banRate": 0.05
+   "banRate": 0.05,
+   "roles": {
+    "mid": 0.09,
+    "adc": 0.85
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Senna": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.53,
    "pickRate": 0.1,
-   "banRate": 0.24
+   "banRate": 0.24,
+   "roles": {
+    "adc": 0.55,
+    "support": 0.44
+   },
+   "flexRoles": [
+    "adc",
+    "support"
+   ]
   },
   "Jinx": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.52,
    "pickRate": 0.12,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "adc": 1
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Seraphine": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.54,
    "pickRate": 0.03,
-   "banRate": 0.11
+   "banRate": 0.11,
+   "roles": {
+    "adc": 0.2,
+    "support": 0.79
+   },
+   "flexRoles": [
+    "support",
+    "adc"
+   ]
   },
   "Ashe": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.51,
    "pickRate": 0.11,
-   "banRate": 0.06
+   "banRate": 0.06,
+   "roles": {
+    "adc": 0.93
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Jhin": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.5,
    "pickRate": 0.16,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "adc": 0.98
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Caitlyn": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.49,
    "pickRate": 0.16,
-   "banRate": 0.2
+   "banRate": 0.2,
+   "roles": {
+    "adc": 0.99
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Kai'Sa": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.49,
    "pickRate": 0.15,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "adc": 0.97
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Miss Fortune": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.07,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "adc": 0.97
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Twitch": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.51,
    "pickRate": 0.05,
-   "banRate": 0.05
+   "banRate": 0.05,
+   "roles": {
+    "adc": 0.89
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Samira": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.51,
    "pickRate": 0.05,
-   "banRate": 0.06
+   "banRate": 0.06,
+   "roles": {
+    "adc": 0.99
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Nilah": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.53,
    "pickRate": 0.01,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "adc": 0.99
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Xayah": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.51,
    "pickRate": 0.04,
-   "banRate": 0
+   "banRate": 0,
+   "roles": {
+    "adc": 0.99
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Kog'Maw": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.52,
    "pickRate": 0.02,
-   "banRate": 0
+   "banRate": 0,
+   "roles": {
+    "adc": 0.81
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Sivir": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.05,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "adc": 0.99
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Lucian": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.49,
    "pickRate": 0.08,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "adc": 0.97
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Ezreal": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.47,
    "pickRate": 0.16,
-   "banRate": 0.07
+   "banRate": 0.07,
+   "roles": {
+    "adc": 0.96
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Aphelios": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.49,
    "pickRate": 0.07,
-   "banRate": 0.03
+   "banRate": 0.03,
+   "roles": {
+    "adc": 0.99
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Zeri": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.04,
-   "banRate": 0
+   "banRate": 0,
+   "roles": {
+    "adc": 0.96
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Draven": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.04,
-   "banRate": 0.13
+   "banRate": 0.13,
+   "roles": {
+    "adc": 0.96
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Yunara": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.48,
    "pickRate": 0.05,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "adc": 0.99
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Kalista": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.49,
    "pickRate": 0.02,
-   "banRate": 0
+   "banRate": 0,
+   "roles": {
+    "adc": 0.91
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Corki": {
    "tier": 5,
    "tierLabel": "Faible",
    "winRate": 0.49,
    "pickRate": 0.01,
-   "banRate": 0
+   "banRate": 0,
+   "roles": {
+    "adc": 0.85
+   },
+   "flexRoles": [
+    "adc"
+   ]
   },
   "Thresh": {
    "tier": 1,
    "tierLabel": "OP",
    "winRate": 0.52,
    "pickRate": 0.14,
-   "banRate": 0.08
+   "banRate": 0.08,
+   "roles": {
+    "support": 1
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Leona": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.52,
    "pickRate": 0.08,
-   "banRate": 0.07
+   "banRate": 0.07,
+   "roles": {
+    "support": 1
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Nautilus": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.5,
    "pickRate": 0.11,
-   "banRate": 0.14
+   "banRate": 0.14,
+   "roles": {
+    "support": 0.98
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Braum": {
    "tier": 2,
    "tierLabel": "Fort",
    "winRate": 0.52,
    "pickRate": 0.05,
-   "banRate": 0.06
+   "banRate": 0.06,
+   "roles": {
+    "support": 1
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Rell": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.52,
    "pickRate": 0.04,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "support": 0.99
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Lulu": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.09,
-   "banRate": 0.08
+   "banRate": 0.08,
+   "roles": {
+    "support": 0.99
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Blitzcrank": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.51,
    "pickRate": 0.06,
-   "banRate": 0.11
+   "banRate": 0.11,
+   "roles": {
+    "support": 0.99
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Milio": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.51,
    "pickRate": 0.06,
-   "banRate": 0.04
+   "banRate": 0.04,
+   "roles": {
+    "support": 1
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Janna": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.52,
    "pickRate": 0.04,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "support": 0.99
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Soraka": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.51,
    "pickRate": 0.05,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "support": 0.98
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Pyke": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.07,
-   "banRate": 0.26
+   "banRate": 0.26,
+   "roles": {
+    "support": 0.99
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Nami": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.08,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "support": 1
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Sona": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.52,
    "pickRate": 0.03,
-   "banRate": 0
+   "banRate": 0,
+   "roles": {
+    "support": 0.99
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Zilean": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.52,
    "pickRate": 0.03,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "support": 0.84
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Alistar": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.04,
-   "banRate": 0.02
+   "banRate": 0.02,
+   "roles": {
+    "support": 0.97
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Karma": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.49,
    "pickRate": 0.08,
-   "banRate": 0.05
+   "banRate": 0.05,
+   "roles": {
+    "support": 0.95
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Rakan": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.51,
    "pickRate": 0.04,
-   "banRate": 0
+   "banRate": 0,
+   "roles": {
+    "support": 0.99
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Morgana": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.04,
-   "banRate": 0.15
+   "banRate": 0.15,
+   "roles": {
+    "support": 0.85
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Taric": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.53,
    "pickRate": 0.01,
-   "banRate": 0
+   "banRate": 0,
+   "roles": {
+    "support": 0.96
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Bard": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.49,
    "pickRate": 0.06,
-   "banRate": 0.04
+   "banRate": 0.04,
+   "roles": {
+    "support": 1
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Renata Glasc": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.51,
    "pickRate": 0.01,
-   "banRate": 0
+   "banRate": 0,
+   "roles": {
+    "support": 0.99
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Yuumi": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.47,
    "pickRate": 0.05,
-   "banRate": 0.07
+   "banRate": 0.07,
+   "roles": {
+    "support": 1
+   },
+   "flexRoles": [
+    "support"
+   ]
   },
   "Neeko": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.49,
    "pickRate": 0.02,
-   "banRate": 0.01
+   "banRate": 0.01,
+   "roles": {
+    "support": 0.78
+   },
+   "flexRoles": [
+    "support"
+   ]
   }
  }
 }
