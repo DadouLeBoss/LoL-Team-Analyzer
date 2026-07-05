@@ -11,17 +11,32 @@ const DEFAULT_ACCOUNTS = [
 ];
 
 const REGIONS = [
-  { key: "EUW", label: "Europe de l'Ouest (EUW)", platform: "euw1", regional: "europe" },
-  { key: "EUNE", label: "Europe Nord & Est (EUNE)", platform: "eun1", regional: "europe" },
-  { key: "NA", label: "Amerique du Nord (NA)", platform: "na1", regional: "americas" },
-  { key: "KR", label: "Coree (KR)", platform: "kr", regional: "asia" },
-  { key: "BR", label: "Bresil (BR)", platform: "br1", regional: "americas" },
-  { key: "LAN", label: "Latine Nord (LAN)", platform: "la1", regional: "americas" },
-  { key: "LAS", label: "Latine Sud (LAS)", platform: "la2", regional: "americas" },
-  { key: "OCE", label: "Oceanie (OCE)", platform: "oc1", regional: "sea" },
-  { key: "TR", label: "Turquie (TR)", platform: "tr1", regional: "europe" },
-  { key: "JP", label: "Japon (JP)", platform: "jp1", regional: "asia" },
+  { key: "EUW", label: "Europe de l'Ouest (EUW)", platform: "euw1", regional: "europe", log: "euw" },
+  { key: "EUNE", label: "Europe Nord & Est (EUNE)", platform: "eun1", regional: "europe", log: "eune" },
+  { key: "NA", label: "Amerique du Nord (NA)", platform: "na1", regional: "americas", log: "na" },
+  { key: "KR", label: "Coree (KR)", platform: "kr", regional: "asia", log: "kr" },
+  { key: "BR", label: "Bresil (BR)", platform: "br1", regional: "americas", log: "br" },
+  { key: "LAN", label: "Latine Nord (LAN)", platform: "la1", regional: "americas", log: "lan" },
+  { key: "LAS", label: "Latine Sud (LAS)", platform: "la2", regional: "americas", log: "las" },
+  { key: "OCE", label: "Oceanie (OCE)", platform: "oc1", regional: "sea", log: "oce" },
+  { key: "TR", label: "Turquie (TR)", platform: "tr1", regional: "europe", log: "tr" },
+  { key: "JP", label: "Japon (JP)", platform: "jp1", regional: "asia", log: "jp" },
 ];
+
+// Libelles de roles affiches (l'API renvoie TOP/JUNGLE/MIDDLE/BOTTOM/UTILITY).
+const ROLE_LABEL = { TOP: "TOP", JUNGLE: "JUNGLE", MIDDLE: "MID", BOTTOM: "BOT", UTILITY: "SUPPORT" };
+function roleLabel(r) {
+  return ROLE_LABEL[r] || "";
+}
+
+// Lien vers la fiche League of Graphs du joueur.
+// "Caca super cool#prout" -> .../summoner/euw/Caca+super+cool-prout
+function logUrl(riotId, logRegion) {
+  const i = riotId.lastIndexOf("#");
+  const name = riotId.slice(0, i).trim().split(/\s+/).join("+");
+  const tag = riotId.slice(i + 1);
+  return `https://www.leagueofgraphs.com/summoner/${logRegion}/${name}-${tag}`;
+}
 
 function champImg(version, image) {
   if (!image) return null;
@@ -78,17 +93,19 @@ export default function Home() {
   }
 
   const version = data?.ddragonVersion;
+  const logRegion = REGIONS.find((r) => r.key === regionKey)?.log || "euw";
 
   // -------------------- Vue formulaire --------------------
   if (!data) {
     return (
       <div className="wrap">
-        <header className="top">
+        <header className="top center">
+          <img className="logo big" src="/logo.png" alt="LoL Team Analyzer" />
           <h1>
             LoL <span className="accent">Team Analyzer</span>
           </h1>
         </header>
-        <p className="sub">
+        <p className="sub center-text">
           Renseigne jusqu'a 5 comptes (format Pseudo#TAG) et lance l'analyse des 20 dernieres parties.
         </p>
 
@@ -133,9 +150,12 @@ export default function Home() {
   return (
     <div className="wrap">
       <header className="top">
-        <h1>
-          LoL <span className="accent">Team Analyzer</span>
-        </h1>
+        <div className="brand">
+          <img className="logo" src="/logo.png" alt="LoL Team Analyzer" />
+          <h1>
+            LoL <span className="accent">Team Analyzer</span>
+          </h1>
+        </div>
         <button className="refresh ghost" onClick={() => setData(null)}>
           Nouvelle analyse
         </button>
@@ -158,8 +178,15 @@ export default function Home() {
         {data.players.map((p) => (
           <div className="card player" key={p.puuid}>
             <h3>
-              {p.name}
-              <span className="tag">{p.riotId}</span>
+              <a
+                className="player-link"
+                href={logUrl(p.riotId, logRegion)}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {p.name}
+              </a>
+              {p.mainRole && <span className="role-tag">{roleLabel(p.mainRole)}</span>}
               <span className="count">{p.totalGames} parties analysees</span>
             </h3>
 
@@ -183,7 +210,7 @@ export default function Home() {
                         <span className="mini-stat mono">
                           {m.kills}/{m.deaths}/{m.assists}
                         </span>
-                        <span className="mini-role">{m.role}</span>
+                        <span className="mini-role">{roleLabel(m.role)}</span>
                       </li>
                     ))}
                   </ul>

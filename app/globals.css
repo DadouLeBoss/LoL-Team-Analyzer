@@ -24,9 +24,14 @@ body {
 .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 80px; }
 
 header.top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; margin-bottom: 8px; }
+header.top.center { flex-direction: column; justify-content: center; text-align: center; gap: 12px; margin-top: 12px; }
+.brand { display: flex; align-items: center; gap: 14px; }
+.logo { height: 46px; width: auto; }
+.logo.big { height: 104px; width: auto; }
 h1 { font-size: 26px; margin: 0; }
 h1 .accent { color: var(--gold); }
 .sub { color: var(--muted); font-size: 14px; margin: 4px 0 24px; }
+.sub.center-text { text-align: center; }
 
 button.refresh {
   background: var(--gold); color: #1a1204; border: none; font-weight: 600;
@@ -79,6 +84,13 @@ button.refresh.ghost { background: transparent; color: var(--gold); border: 1px 
 .player h3 { margin: 0 0 14px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .player h3 .tag { color: var(--muted); font-weight: 400; font-size: 13px; }
 .player h3 .count { margin-left: auto; color: var(--muted); font-size: 13px; font-weight: 400; }
+.player-link { color: var(--text); text-decoration: none; border-bottom: 1px dotted var(--muted); }
+.player-link:hover { color: var(--gold); border-bottom-color: var(--gold); }
+.role-tag {
+  font-size: 11px; color: var(--gold); background: var(--panel-2);
+  border: 1px solid var(--border); padding: 2px 9px; border-radius: 20px;
+  font-weight: 600; letter-spacing: .04em;
+}
 
 /* --- Detail joueur : deux colonnes --- */
 .player-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
