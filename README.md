@@ -7,10 +7,20 @@ champions flex (jouables par plusieurs coequipiers) et bans recommandes.
 ## Fonctionnalites
 
 - Saisie de 5 comptes (format Pseudo#TAG) et choix de la region.
-- Detail par joueur : 5 parties recentes et 5 meilleures maitrises.
+- Analyse de toutes les parties classees de la saison (Solo/Duo et Flex).
+- Detail par joueur : rang Solo/Duo et Flex, 5 parties recentes, 5 meilleures
+  maitrises. Joueurs tries par role (TOP, JUNGLE, MID, BOT, SUPPORT).
 - Champions flex : joues par 2 joueurs ou plus dans l'equipe.
 - Bans recommandes : score de danger base sur le winrate, le KDA, le volume
   de parties et la flexibilite du champion.
+
+## Limite de debit et cache
+
+L'API Riot plafonne l'application a 100 requetes / 2 min. Le premier chargement
+d'une saison complete peut donc prendre une quinzaine de minutes. Les parties
+sont mises en cache (JSON, dossier `cache/`, cloisonne par cle API) : s'il est
+interrompu, un nouveau lancement reprend la ou il s'etait arrete, et les
+analyses suivantes sont instantanees.
 
 ## Prerequis
 

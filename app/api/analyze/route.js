@@ -2,7 +2,8 @@ import { NextResponse } from "next/server";
 import {
   getAccount,
   getMasteries,
-  getMatchIds,
+  getRank,
+  getSeasonMatchIds,
   getMatch,
   getDDragon,
 } from "../../../lib/riot.js";
@@ -10,7 +11,31 @@ import { analyzeTeam } from "../../../lib/analysis.js";
 
 export const dynamic = "force-dynamic";
 
-const MATCH_COUNT = 20;
+// Debut de la saison courante (epoch en secondes). A ajuster si le decoupage
+// de saison/split change : seules les parties classees posterieures sont lues.
+const SEASON_START = Math.floor(new Date("2026-01-10T00:00:00Z").getTime() / 1000);
+
+// Filet de securite : nombre maximal de parties remontees par joueur. Eleve
+// pour couvrir toute la saison (la pagination s'arrete de toute facon des que
+// l'on remonte avant SEASON_START).
+const MATCH_CAP = 1000;
+
+// Transforme les entrees league-v4 en { solo, flex }.
+function pickRank(entries) {
+  const out = { solo: null, flex: null };
+  for (const e of entries) {
+    const r = {
+      tier: e.tier,
+      rank: e.rank,
+      lp: e.leaguePoints,
+      wins: e.wins,
+      losses: e.losses,
+    };
+    if (e.queueType === "RANKED_SOLO_5x5") out.solo = r;
+    else if (e.queueType === "RANKED_FLEX_SR") out.flex = r;
+  }
+  return out;
+}
 
 export async function POST(request) {
   if (!process.env.RIOT_API_KEY || process.env.RIOT_API_KEY.includes("PASTE")) {
@@ -56,26 +81,38 @@ export async function POST(request) {
         continue;
       }
 
-      const [masteries, matchIds] = await Promise.all([
-        getMasteries(account.puuid, platform),
-        getMatchIds(account.puuid, regional, MATCH_COUNT),
-      ]);
-      matchIds.forEach((id) => wantedMatchIds.add(id));
-      playerRaws.push({
-        riotId,
-        name: account.gameName || shortName,
-        puuid: account.puuid,
-        masteries,
-        matchIds,
-      });
+      try {
+        const [masteries, matchIds, rankEntries] = await Promise.all([
+          getMasteries(account.puuid, platform),
+          getSeasonMatchIds(account.puuid, regional, { startTime: SEASON_START, cap: MATCH_CAP }),
+          getRank(account.puuid, platform),
+        ]);
+        matchIds.forEach((id) => wantedMatchIds.add(id));
+        playerRaws.push({
+          riotId,
+          name: account.gameName || shortName,
+          puuid: account.puuid,
+          masteries,
+          matchIds,
+          rank: pickRank(rankEntries),
+        });
+      } catch (e) {
+        playerRaws.push({ riotId, name: shortName, error: "recuperation partielle echouee" });
+      }
     }
 
     // 2) Telecharger chaque partie UNE seule fois (dedoublonnage d'equipe).
+    // Une partie qui echoue est ignoree, l'analyse continue.
     const matchMap = new Map();
+    let matchesFailed = 0;
     await Promise.all(
       [...wantedMatchIds].map(async (id) => {
-        const match = await getMatch(id, regional);
-        if (match) matchMap.set(id, match);
+        try {
+          const match = await getMatch(id, regional);
+          if (match) matchMap.set(id, match);
+        } catch {
+          matchesFailed++;
+        }
       })
     );
 
@@ -87,6 +124,7 @@ export async function POST(request) {
         name: p.name,
         puuid: p.puuid,
         masteries: p.masteries,
+        rank: p.rank,
         matches: p.matchIds.map((id) => matchMap.get(id)).filter(Boolean),
       }));
 
@@ -95,6 +133,7 @@ export async function POST(request) {
       .filter((p) => p.error)
       .map((p) => ({ riotId: p.riotId, error: p.error }));
     analysis.matchesDownloaded = matchMap.size;
+    analysis.matchesFailed = matchesFailed;
 
     return NextResponse.json(analysis);
   } catch (err) {

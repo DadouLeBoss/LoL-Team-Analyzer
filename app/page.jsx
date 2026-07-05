@@ -38,6 +38,30 @@ function logUrl(riotId, logRegion) {
   return `https://www.leagueofgraphs.com/summoner/${logRegion}/${name}-${tag}`;
 }
 
+const APEX = ["MASTER", "GRANDMASTER", "CHALLENGER"];
+function fmtTier(t) {
+  return t ? t.charAt(0) + t.slice(1).toLowerCase() : "";
+}
+
+// Badge de rang pour une file (Solo/Duo ou Flex).
+function RankBadge({ label, r }) {
+  if (!r) {
+    return (
+      <span className="rank none">
+        <b>{label}</b> Non classe
+      </span>
+    );
+  }
+  const div = APEX.includes(r.tier) ? "" : ` ${r.rank}`;
+  const total = r.wins + r.losses;
+  const wr = total ? Math.round((r.wins / total) * 100) : 0;
+  return (
+    <span className={`rank tier-${r.tier}`}>
+      <b>{label}</b> {fmtTier(r.tier)}{div} · {r.lp} LP · {wr}% ({total})
+    </span>
+  );
+}
+
 function champImg(version, image) {
   if (!image) return null;
   return `https://ddragon.leagueoflegends.com/cdn/${version}/img/champion/${image}`;
@@ -106,7 +130,7 @@ export default function Home() {
           </h1>
         </header>
         <p className="sub center-text">
-          Renseigne jusqu'a 5 comptes (format Pseudo#TAG) et lance l'analyse des 20 dernieres parties.
+          Renseigne jusqu'a 5 comptes (format Pseudo#TAG) et lance l'analyse de leurs parties classees de la saison.
         </p>
 
         <div className="card form">
@@ -141,7 +165,17 @@ export default function Home() {
           </button>
         </div>
 
-        {loading && <div className="loading">Recuperation des donnees Riot...</div>}
+        {loading && (
+          <div className="loading">
+            Recuperation des donnees Riot...
+            <br />
+            <span style={{ fontSize: 12 }}>
+              Le premier chargement d'une saison complete peut prendre une quinzaine de minutes
+              (limite Riot de 100 requetes / 2 min). S'il est interrompu, relance : le chargement
+              reprend la ou il s'etait arrete grace au cache. Les analyses suivantes sont instantanees.
+            </span>
+          </div>
+        )}
       </div>
     );
   }
@@ -161,7 +195,7 @@ export default function Home() {
         </button>
       </header>
       <p className="sub">
-        {data.players.length} joueurs analyses sur leurs 20 dernieres parties · {data.matchesDownloaded} parties uniques · patch {version}
+        {data.players.length} joueurs analyses sur leurs parties classees de la saison · {data.matchesDownloaded} parties uniques · patch {version}
       </p>
 
       {error && <div className="notice error">{error}</div>}
@@ -189,6 +223,11 @@ export default function Home() {
               {p.mainRole && <span className="role-tag">{roleLabel(p.mainRole)}</span>}
               <span className="count">{p.totalGames} parties analysees</span>
             </h3>
+
+            <div className="player-ranks">
+              <RankBadge label="Solo/Duo" r={p.rank?.solo} />
+              <RankBadge label="Flex" r={p.rank?.flex} />
+            </div>
 
             <div className="player-cols">
               {/* Parties recentes */}

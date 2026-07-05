@@ -92,6 +92,26 @@ button.refresh.ghost { background: transparent; color: var(--gold); border: 1px 
   font-weight: 600; letter-spacing: .04em;
 }
 
+/* --- Badges de rang --- */
+.player-ranks { display: flex; flex-wrap: wrap; gap: 8px; margin: -4px 0 14px; }
+.rank {
+  font-size: 12px; color: var(--text); background: var(--panel-2);
+  border: 1px solid var(--border); border-left: 3px solid var(--muted);
+  padding: 4px 10px; border-radius: 6px;
+}
+.rank b { color: var(--muted); font-weight: 600; margin-right: 6px; font-size: 11px; text-transform: uppercase; letter-spacing: .03em; }
+.rank.none { color: var(--muted); }
+.rank.tier-IRON { border-left-color: #7c7c7c; }
+.rank.tier-BRONZE { border-left-color: #a86b3c; }
+.rank.tier-SILVER { border-left-color: #9aa4ad; }
+.rank.tier-GOLD { border-left-color: #d4af37; }
+.rank.tier-PLATINUM { border-left-color: #4ea89b; }
+.rank.tier-EMERALD { border-left-color: #2ecc71; }
+.rank.tier-DIAMOND { border-left-color: #4d9fec; }
+.rank.tier-MASTER { border-left-color: #b45be0; }
+.rank.tier-GRANDMASTER { border-left-color: #e05265; }
+.rank.tier-CHALLENGER { border-left-color: #e6c34d; }
+
 /* --- Detail joueur : deux colonnes --- */
 .player-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 @media (max-width: 720px) { .player-cols { grid-template-columns: 1fr; } }
