@@ -103,6 +103,49 @@ async function main() {
       .map(([r]) => r);
   }
 
+  // --- Counters par champion, sur son role principal en meta ---
+  // strong = champions qui nous battent ; weak = champions qu'on bat.
+  // Le win_rate affiche est celui du camp favori du matchup.
+  console.log("Recuperation des counters (~2 min)...");
+  const toKey = (n) => n.toUpperCase().replace(/[.']/g, "").replace(/\s+/g, "_");
+  // On demande un champ de plus pour strong (play) afin que strong et weak
+  // aient des formes differentes -> OP.GG leur donne des noms de classe
+  // distincts (StrongCounter / WeakCounter), sinon ils sont confondus.
+  const CFIELDS = [
+    "data.strong_counters[].champion_name",
+    "data.strong_counters[].win_rate",
+    "data.strong_counters[].play",
+    "data.weak_counters[].champion_name",
+    "data.weak_counters[].win_rate",
+  ];
+  const names = Object.keys(champions);
+  let idx = 0;
+  async function counterWorker() {
+    while (idx < names.length) {
+      const name = names[idx++];
+      const c = champions[name];
+      const role = c.flexRoles[0] || Object.entries(c.roles).sort((a, b) => b[1] - a[1])[0]?.[0] || "mid";
+      try {
+        const text = await callMcp("lol_get_champion_analysis", {
+          game_mode: "ranked",
+          champion: toKey(name),
+          position: role,
+          desired_output_fields: CFIELDS,
+        });
+        const strong = [...text.matchAll(/StrongCounter\("([^"]+)",([\d.]+),\d+/g)]
+          .slice(0, 3)
+          .map((m) => ({ name: m[1], winRate: Number(m[2]) }));
+        const weak = [...text.matchAll(/WeakCounter\("([^"]+)",([\d.]+)\)/g)]
+          .slice(0, 3)
+          .map((m) => ({ name: m[1], winRate: Number(m[2]) }));
+        c.counters = { role, strong, weak };
+      } catch {
+        c.counters = null;
+      }
+    }
+  }
+  await Promise.all(Array.from({ length: 6 }, () => counterWorker()));
+
   const patch = await getPatch();
   const out = { patch, source: "OP.GG (lol_list_lane_meta_champions)", champions };
 

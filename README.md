@@ -17,10 +17,12 @@ champions flex (jouables par plusieurs coequipiers) et bans recommandes.
 
 ## Force en meta (OP.GG)
 
-Le tier et le winrate global de chaque champion (patch courant) sont figes dans
-`data/meta.json` et servent a prioriser les bans (un champion fort en meta ET
-joue par un joueur monte dans la liste). La donnee provient de l'endpoint MCP
-public d'OP.GG. Pour rafraichir a chaque nouveau patch :
+Le tier et le winrate global de chaque champion (patch courant), ses roles
+jouables, et ses counters (champions forts/faibles contre lui) sont figes dans
+`data/meta.json`. Ils servent a prioriser les bans (un champion fort en meta ET
+joue par un joueur monte dans la liste) et a afficher, sous les champions de
+chaque joueur, ce qui les contre / ce qu'ils battent. La donnee provient de
+l'endpoint MCP public d'OP.GG. Pour rafraichir a chaque nouveau patch :
 
 ```bash
 node scripts/fetch-meta.mjs

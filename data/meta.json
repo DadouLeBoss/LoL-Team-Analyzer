@@ -13,7 +13,38 @@
    },
    "flexRoles": [
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "K'Sante",
+      "winRate": 0.57
+     },
+     {
+      "name": "Xin Zhao",
+      "winRate": 0.57
+     },
+     {
+      "name": "Jax",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Kayle",
+      "winRate": 0.56
+     },
+     {
+      "name": "Camille",
+      "winRate": 0.54
+     },
+     {
+      "name": "Tryndamere",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Malphite": {
    "tier": 1,
@@ -29,7 +60,38 @@
    "flexRoles": [
     "top",
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Vayne",
+      "winRate": 0.62
+     },
+     {
+      "name": "Xin Zhao",
+      "winRate": 0.59
+     },
+     {
+      "name": "Fiora",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Sion",
+      "winRate": 0.55
+     },
+     {
+      "name": "Shen",
+      "winRate": 0.55
+     },
+     {
+      "name": "Singed",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Gangplank": {
    "tier": 2,
@@ -42,7 +104,38 @@
    },
    "flexRoles": [
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Swain",
+      "winRate": 0.62
+     },
+     {
+      "name": "Malzahar",
+      "winRate": 0.59
+     },
+     {
+      "name": "Vayne",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Kayle",
+      "winRate": 0.54
+     },
+     {
+      "name": "Gwen",
+      "winRate": 0.54
+     },
+     {
+      "name": "Tahm Kench",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Shen": {
    "tier": 2,
@@ -57,20 +150,38 @@
    "flexRoles": [
     "top",
     "support"
-   ]
-  },
-  "Kayle": {
-   "tier": 2,
-   "tierLabel": "Fort",
-   "winRate": 0.52,
-   "pickRate": 0.03,
-   "banRate": 0.02,
-   "roles": {
-    "top": 0.82
-   },
-   "flexRoles": [
-    "top"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Ornn",
+      "winRate": 0.56
+     },
+     {
+      "name": "Sion",
+      "winRate": 0.56
+     },
+     {
+      "name": "Yorick",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Swain",
+      "winRate": 0.57
+     },
+     {
+      "name": "Cassiopeia",
+      "winRate": 0.54
+     },
+     {
+      "name": "Lissandra",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Singed": {
    "tier": 2,
@@ -83,35 +194,82 @@
    },
    "flexRoles": [
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Maokai",
+      "winRate": 0.65
+     },
+     {
+      "name": "Poppy",
+      "winRate": 0.62
+     },
+     {
+      "name": "K'Sante",
+      "winRate": 0.58
+     }
+    ],
+    "weak": [
+     {
+      "name": "Lissandra",
+      "winRate": 0.6
+     },
+     {
+      "name": "Anivia",
+      "winRate": 0.57
+     },
+     {
+      "name": "Udyr",
+      "winRate": 0.57
+     }
+    ]
+   }
   },
-  "Sett": {
+  "Kayle": {
    "tier": 2,
    "tierLabel": "Fort",
-   "winRate": 0.51,
-   "pickRate": 0.05,
+   "winRate": 0.52,
+   "pickRate": 0.03,
    "banRate": 0.02,
    "roles": {
-    "top": 0.93
+    "top": 0.82
    },
    "flexRoles": [
     "top"
-   ]
-  },
-  "Jax": {
-   "tier": 2,
-   "tierLabel": "Fort",
-   "winRate": 0.5,
-   "pickRate": 0.06,
-   "banRate": 0.11,
-   "roles": {
-    "top": 0.74,
-    "jungle": 0.23
-   },
-   "flexRoles": [
-    "top",
-    "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "K'Sante",
+      "winRate": 0.61
+     },
+     {
+      "name": "Udyr",
+      "winRate": 0.61
+     },
+     {
+      "name": "Trundle",
+      "winRate": 0.58
+     }
+    ],
+    "weak": [
+     {
+      "name": "Aurora",
+      "winRate": 0.59
+     },
+     {
+      "name": "Quinn",
+      "winRate": 0.57
+     },
+     {
+      "name": "Irelia",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Aatrox": {
    "tier": 2,
@@ -126,7 +284,128 @@
    "flexRoles": [
     "top",
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Vladimir",
+      "winRate": 0.58
+     },
+     {
+      "name": "Trundle",
+      "winRate": 0.55
+     },
+     {
+      "name": "Dr. Mundo",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Malzahar",
+      "winRate": 0.58
+     },
+     {
+      "name": "Singed",
+      "winRate": 0.55
+     },
+     {
+      "name": "Irelia",
+      "winRate": 0.54
+     }
+    ]
+   }
+  },
+  "Sett": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.05,
+   "banRate": 0.02,
+   "roles": {
+    "top": 0.93
+   },
+   "flexRoles": [
+    "top"
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Xin Zhao",
+      "winRate": 0.6
+     },
+     {
+      "name": "Master Yi",
+      "winRate": 0.59
+     },
+     {
+      "name": "Yasuo",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Singed",
+      "winRate": 0.56
+     },
+     {
+      "name": "Vayne",
+      "winRate": 0.55
+     },
+     {
+      "name": "Urgot",
+      "winRate": 0.54
+     }
+    ]
+   }
+  },
+  "Jax": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.06,
+   "banRate": 0.11,
+   "roles": {
+    "top": 0.74,
+    "jungle": 0.23
+   },
+   "flexRoles": [
+    "top",
+    "jungle"
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Volibear",
+      "winRate": 0.58
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.58
+     },
+     {
+      "name": "Xin Zhao",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Lissandra",
+      "winRate": 0.58
+     },
+     {
+      "name": "Garen",
+      "winRate": 0.56
+     },
+     {
+      "name": "Vladimir",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Darius": {
    "tier": 2,
@@ -140,7 +419,82 @@
    },
    "flexRoles": [
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Yasuo",
+      "winRate": 0.55
+     },
+     {
+      "name": "Poppy",
+      "winRate": 0.55
+     },
+     {
+      "name": "K'Sante",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Varus",
+      "winRate": 0.56
+     },
+     {
+      "name": "Malzahar",
+      "winRate": 0.56
+     },
+     {
+      "name": "Urgot",
+      "winRate": 0.55
+     }
+    ]
+   }
+  },
+  "Ornn": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.04,
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.96
+   },
+   "flexRoles": [
+    "top"
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Udyr",
+      "winRate": 0.6
+     },
+     {
+      "name": "Tahm Kench",
+      "winRate": 0.57
+     },
+     {
+      "name": "Rumble",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Shen",
+      "winRate": 0.56
+     },
+     {
+      "name": "Yone",
+      "winRate": 0.53
+     },
+     {
+      "name": "Warwick",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Teemo": {
    "tier": 2,
@@ -154,20 +508,38 @@
    },
    "flexRoles": [
     "top"
-   ]
-  },
-  "Ornn": {
-   "tier": 2,
-   "tierLabel": "Fort",
-   "winRate": 0.51,
-   "pickRate": 0.04,
-   "banRate": 0.01,
-   "roles": {
-    "top": 0.96
-   },
-   "flexRoles": [
-    "top"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Vayne",
+      "winRate": 0.58
+     },
+     {
+      "name": "Volibear",
+      "winRate": 0.58
+     },
+     {
+      "name": "Udyr",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Swain",
+      "winRate": 0.58
+     },
+     {
+      "name": "Olaf",
+      "winRate": 0.56
+     },
+     {
+      "name": "Yasuo",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Urgot": {
    "tier": 2,
@@ -180,7 +552,38 @@
    },
    "flexRoles": [
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Master Yi",
+      "winRate": 0.61
+     },
+     {
+      "name": "Riven",
+      "winRate": 0.56
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Aurora",
+      "winRate": 0.55
+     },
+     {
+      "name": "Wukong",
+      "winRate": 0.54
+     },
+     {
+      "name": "Yasuo",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Dr. Mundo": {
    "tier": 2,
@@ -193,7 +596,38 @@
    },
    "flexRoles": [
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Malzahar",
+      "winRate": 0.61
+     },
+     {
+      "name": "Varus",
+      "winRate": 0.6
+     },
+     {
+      "name": "Lissandra",
+      "winRate": 0.58
+     }
+    ],
+    "weak": [
+     {
+      "name": "Kled",
+      "winRate": 0.58
+     },
+     {
+      "name": "Master Yi",
+      "winRate": 0.57
+     },
+     {
+      "name": "Gwen",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Olaf": {
    "tier": 2,
@@ -203,12 +637,43 @@
    "banRate": 0.03,
    "roles": {
     "top": 0.72,
-    "jungle": 0.24
+    "jungle": 0.23
    },
    "flexRoles": [
     "top",
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Swain",
+      "winRate": 0.63
+     },
+     {
+      "name": "Varus",
+      "winRate": 0.61
+     },
+     {
+      "name": "Xin Zhao",
+      "winRate": 0.61
+     }
+    ],
+    "weak": [
+     {
+      "name": "Tryndamere",
+      "winRate": 0.55
+     },
+     {
+      "name": "Camille",
+      "winRate": 0.55
+     },
+     {
+      "name": "Master Yi",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Irelia": {
    "tier": 2,
@@ -223,7 +688,38 @@
    "flexRoles": [
     "top",
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Ryze",
+      "winRate": 0.6
+     },
+     {
+      "name": "Aurora",
+      "winRate": 0.59
+     },
+     {
+      "name": "Malzahar",
+      "winRate": 0.58
+     }
+    ],
+    "weak": [
+     {
+      "name": "Warwick",
+      "winRate": 0.59
+     },
+     {
+      "name": "Wukong",
+      "winRate": 0.57
+     },
+     {
+      "name": "Malphite",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Yone": {
    "tier": 2,
@@ -233,12 +729,43 @@
    "banRate": 0.06,
    "roles": {
     "top": 0.53,
-    "mid": 0.45
+    "mid": 0.46
    },
    "flexRoles": [
     "top",
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "K'Sante",
+      "winRate": 0.56
+     },
+     {
+      "name": "Varus",
+      "winRate": 0.56
+     },
+     {
+      "name": "Swain",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Quinn",
+      "winRate": 0.57
+     },
+     {
+      "name": "Gangplank",
+      "winRate": 0.55
+     },
+     {
+      "name": "Irelia",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Riven": {
    "tier": 2,
@@ -247,13 +774,44 @@
    "pickRate": 0.01,
    "banRate": 0.03,
    "roles": {
-    "top": 0.69,
+    "top": 0.68,
     "mid": 0.26
    },
    "flexRoles": [
     "top",
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Xin Zhao",
+      "winRate": 0.62
+     },
+     {
+      "name": "Gwen",
+      "winRate": 0.59
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.58
+     }
+    ],
+    "weak": [
+     {
+      "name": "Quinn",
+      "winRate": 0.57
+     },
+     {
+      "name": "Zaahen",
+      "winRate": 0.56
+     },
+     {
+      "name": "Urgot",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Tryndamere": {
    "tier": 2,
@@ -266,7 +824,82 @@
    },
    "flexRoles": [
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Master Yi",
+      "winRate": 0.65
+     },
+     {
+      "name": "Malzahar",
+      "winRate": 0.63
+     },
+     {
+      "name": "Xin Zhao",
+      "winRate": 0.61
+     }
+    ],
+    "weak": [
+     {
+      "name": "Cassiopeia",
+      "winRate": 0.58
+     },
+     {
+      "name": "Malphite",
+      "winRate": 0.55
+     },
+     {
+      "name": "Tahm Kench",
+      "winRate": 0.55
+     }
+    ]
+   }
+  },
+  "Renekton": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.05,
+   "banRate": 0.04,
+   "roles": {
+    "top": 0.95
+   },
+   "flexRoles": [
+    "top"
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Xin Zhao",
+      "winRate": 0.58
+     },
+     {
+      "name": "Udyr",
+      "winRate": 0.58
+     },
+     {
+      "name": "Riven",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Swain",
+      "winRate": 0.59
+     },
+     {
+      "name": "Dr. Mundo",
+      "winRate": 0.56
+     },
+     {
+      "name": "Illaoi",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Pantheon": {
    "tier": 2,
@@ -285,7 +918,82 @@
     "top",
     "jungle",
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.63
+     },
+     {
+      "name": "LeBlanc",
+      "winRate": 0.57
+     },
+     {
+      "name": "Zoe",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Fiddlesticks",
+      "winRate": 0.62
+     },
+     {
+      "name": "Taric",
+      "winRate": 0.59
+     },
+     {
+      "name": "Poppy",
+      "winRate": 0.56
+     }
+    ]
+   }
+  },
+  "Kled": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.52,
+   "pickRate": 0.02,
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.91
+   },
+   "flexRoles": [
+    "top"
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "K'Sante",
+      "winRate": 0.57
+     },
+     {
+      "name": "Dr. Mundo",
+      "winRate": 0.57
+     },
+     {
+      "name": "Nasus",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Singed",
+      "winRate": 0.55
+     },
+     {
+      "name": "Fiora",
+      "winRate": 0.54
+     },
+     {
+      "name": "Gwen",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Warwick": {
    "tier": 2,
@@ -300,33 +1008,38 @@
    "flexRoles": [
     "jungle",
     "top"
-   ]
-  },
-  "Renekton": {
-   "tier": 2,
-   "tierLabel": "Fort",
-   "winRate": 0.5,
-   "pickRate": 0.05,
-   "banRate": 0.04,
-   "roles": {
-    "top": 0.95
-   },
-   "flexRoles": [
-    "top"
-   ]
-  },
-  "Kled": {
-   "tier": 2,
-   "tierLabel": "Fort",
-   "winRate": 0.52,
-   "pickRate": 0.02,
-   "banRate": 0.01,
-   "roles": {
-    "top": 0.91
-   },
-   "flexRoles": [
-    "top"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.61
+     },
+     {
+      "name": "Gwen",
+      "winRate": 0.61
+     },
+     {
+      "name": "Ambessa",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Taliyah",
+      "winRate": 0.59
+     },
+     {
+      "name": "Nasus",
+      "winRate": 0.57
+     },
+     {
+      "name": "Zyra",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Yorick": {
    "tier": 3,
@@ -339,7 +1052,38 @@
    },
    "flexRoles": [
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Swain",
+      "winRate": 0.66
+     },
+     {
+      "name": "Vayne",
+      "winRate": 0.57
+     },
+     {
+      "name": "Kennen",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Shen",
+      "winRate": 0.56
+     },
+     {
+      "name": "Yone",
+      "winRate": 0.55
+     },
+     {
+      "name": "Singed",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Zaahen": {
    "tier": 3,
@@ -352,7 +1096,38 @@
    },
    "flexRoles": [
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Maokai",
+      "winRate": 0.57
+     },
+     {
+      "name": "Sion",
+      "winRate": 0.56
+     },
+     {
+      "name": "Riven",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Heimerdinger",
+      "winRate": 0.58
+     },
+     {
+      "name": "Teemo",
+      "winRate": 0.56
+     },
+     {
+      "name": "Aurora",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Nasus": {
    "tier": 1,
@@ -367,7 +1142,38 @@
    "flexRoles": [
     "jungle",
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Pantheon",
+      "winRate": 0.63
+     },
+     {
+      "name": "Malphite",
+      "winRate": 0.63
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.62
+     }
+    ],
+    "weak": [
+     {
+      "name": "Volibear",
+      "winRate": 0.54
+     },
+     {
+      "name": "Lillia",
+      "winRate": 0.53
+     },
+     {
+      "name": "Master Yi",
+      "winRate": 0.52
+     }
+    ]
+   }
   },
   "Fiora": {
    "tier": 3,
@@ -380,7 +1186,38 @@
    },
    "flexRoles": [
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "K'Sante",
+      "winRate": 0.55
+     },
+     {
+      "name": "Malzahar",
+      "winRate": 0.55
+     },
+     {
+      "name": "Yone",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Malphite",
+      "winRate": 0.57
+     },
+     {
+      "name": "Warwick",
+      "winRate": 0.56
+     },
+     {
+      "name": "Heimerdinger",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Illaoi": {
    "tier": 3,
@@ -393,7 +1230,38 @@
    },
    "flexRoles": [
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Xin Zhao",
+      "winRate": 0.58
+     },
+     {
+      "name": "Renekton",
+      "winRate": 0.56
+     },
+     {
+      "name": "Maokai",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Ryze",
+      "winRate": 0.62
+     },
+     {
+      "name": "Varus",
+      "winRate": 0.6
+     },
+     {
+      "name": "Aurora",
+      "winRate": 0.57
+     }
+    ]
+   }
   },
   "Camille": {
    "tier": 3,
@@ -408,7 +1276,38 @@
    "flexRoles": [
     "support",
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.59
+     },
+     {
+      "name": "Shaco",
+      "winRate": 0.55
+     },
+     {
+      "name": "Anivia",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Taric",
+      "winRate": 0.59
+     },
+     {
+      "name": "Poppy",
+      "winRate": 0.57
+     },
+     {
+      "name": "Thresh",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Wukong": {
    "tier": 1,
@@ -423,7 +1322,84 @@
    "flexRoles": [
     "jungle",
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Malphite",
+      "winRate": 0.59
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.58
+     },
+     {
+      "name": "Olaf",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Ivern",
+      "winRate": 0.57
+     },
+     {
+      "name": "Aatrox",
+      "winRate": 0.54
+     },
+     {
+      "name": "Zyra",
+      "winRate": 0.54
+     }
+    ]
+   }
+  },
+  "Sion": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.49,
+   "pickRate": 0.05,
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.76,
+    "mid": 0.15
+   },
+   "flexRoles": [
+    "top",
+    "mid"
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Ryze",
+      "winRate": 0.62
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.57
+     },
+     {
+      "name": "Varus",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Shen",
+      "winRate": 0.56
+     },
+     {
+      "name": "Zaahen",
+      "winRate": 0.56
+     },
+     {
+      "name": "Singed",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Mordekaiser": {
    "tier": 3,
@@ -436,7 +1412,84 @@
    },
    "flexRoles": [
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Xin Zhao",
+      "winRate": 0.59
+     },
+     {
+      "name": "Maokai",
+      "winRate": 0.58
+     },
+     {
+      "name": "Illaoi",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Anivia",
+      "winRate": 0.58
+     },
+     {
+      "name": "Cassiopeia",
+      "winRate": 0.58
+     },
+     {
+      "name": "Singed",
+      "winRate": 0.56
+     }
+    ]
+   }
+  },
+  "Tahm Kench": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.51,
+   "pickRate": 0.02,
+   "banRate": 0.02,
+   "roles": {
+    "top": 0.39,
+    "support": 0.52
+   },
+   "flexRoles": [
+    "support",
+    "top"
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.6
+     },
+     {
+      "name": "Zoe",
+      "winRate": 0.59
+     },
+     {
+      "name": "Amumu",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Senna",
+      "winRate": 0.56
+     },
+     {
+      "name": "Fiddlesticks",
+      "winRate": 0.55
+     },
+     {
+      "name": "Braum",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Jayce": {
    "tier": 3,
@@ -453,37 +1506,84 @@
     "top",
     "jungle",
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Swain",
+      "winRate": 0.58
+     },
+     {
+      "name": "Varus",
+      "winRate": 0.57
+     },
+     {
+      "name": "Gwen",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Malphite",
+      "winRate": 0.55
+     },
+     {
+      "name": "Quinn",
+      "winRate": 0.55
+     },
+     {
+      "name": "Master Yi",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
-  "Tahm Kench": {
+  "Cho'Gath": {
    "tier": 3,
    "tierLabel": "Bon",
-   "winRate": 0.51,
+   "winRate": 0.5,
    "pickRate": 0.02,
-   "banRate": 0.02,
-   "roles": {
-    "top": 0.39,
-    "support": 0.52
-   },
-   "flexRoles": [
-    "support",
-    "top"
-   ]
-  },
-  "Sion": {
-   "tier": 3,
-   "tierLabel": "Bon",
-   "winRate": 0.49,
-   "pickRate": 0.05,
    "banRate": 0.01,
    "roles": {
-    "top": 0.76,
+    "top": 0.69,
     "mid": 0.15
    },
    "flexRoles": [
     "top",
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Master Yi",
+      "winRate": 0.57
+     },
+     {
+      "name": "Renekton",
+      "winRate": 0.56
+     },
+     {
+      "name": "Xin Zhao",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Ornn",
+      "winRate": 0.55
+     },
+     {
+      "name": "Wukong",
+      "winRate": 0.55
+     },
+     {
+      "name": "Dr. Mundo",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Vayne": {
    "tier": 3,
@@ -498,22 +1598,38 @@
    "flexRoles": [
     "adc",
     "top"
-   ]
-  },
-  "Cho'Gath": {
-   "tier": 3,
-   "tierLabel": "Bon",
-   "winRate": 0.5,
-   "pickRate": 0.02,
-   "banRate": 0.01,
-   "roles": {
-    "top": 0.68,
-    "mid": 0.15
-   },
-   "flexRoles": [
-    "top",
-    "mid"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Karthus",
+      "winRate": 0.56
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.54
+     },
+     {
+      "name": "Ezreal",
+      "winRate": 0.53
+     }
+    ],
+    "weak": [
+     {
+      "name": "Kog'Maw",
+      "winRate": 0.55
+     },
+     {
+      "name": "Syndra",
+      "winRate": 0.55
+     },
+     {
+      "name": "Aphelios",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Yasuo": {
    "tier": 2,
@@ -530,7 +1646,38 @@
     "mid",
     "top",
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Tristana",
+      "winRate": 0.57
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.55
+     },
+     {
+      "name": "Akshan",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Riven",
+      "winRate": 0.59
+     },
+     {
+      "name": "Lissandra",
+      "winRate": 0.57
+     },
+     {
+      "name": "Vladimir",
+      "winRate": 0.57
+     }
+    ]
+   }
   },
   "Akali": {
    "tier": 2,
@@ -545,7 +1692,38 @@
    "flexRoles": [
     "mid",
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Smolder",
+      "winRate": 0.59
+     },
+     {
+      "name": "Yone",
+      "winRate": 0.55
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Pantheon",
+      "winRate": 0.55
+     },
+     {
+      "name": "Galio",
+      "winRate": 0.54
+     },
+     {
+      "name": "Twisted Fate",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Gragas": {
    "tier": 3,
@@ -560,7 +1738,38 @@
    "flexRoles": [
     "top",
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Trundle",
+      "winRate": 0.58
+     },
+     {
+      "name": "Lissandra",
+      "winRate": 0.58
+     },
+     {
+      "name": "Master Yi",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Singed",
+      "winRate": 0.56
+     },
+     {
+      "name": "Heimerdinger",
+      "winRate": 0.56
+     },
+     {
+      "name": "Kled",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Gnar": {
    "tier": 3,
@@ -573,7 +1782,38 @@
    },
    "flexRoles": [
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Trundle",
+      "winRate": 0.6
+     },
+     {
+      "name": "K'Sante",
+      "winRate": 0.54
+     },
+     {
+      "name": "Lissandra",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Anivia",
+      "winRate": 0.58
+     },
+     {
+      "name": "Malphite",
+      "winRate": 0.56
+     },
+     {
+      "name": "Irelia",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Quinn": {
    "tier": 4,
@@ -583,19 +1823,50 @@
    "banRate": 0.01,
    "roles": {
     "top": 0.31,
-    "jungle": 0.55
+    "jungle": 0.56
    },
    "flexRoles": [
     "jungle",
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Ambessa",
+      "winRate": 0.57
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.56
+     },
+     {
+      "name": "Udyr",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Rammus",
+      "winRate": 0.59
+     },
+     {
+      "name": "Fiddlesticks",
+      "winRate": 0.59
+     },
+     {
+      "name": "Sejuani",
+      "winRate": 0.59
+     }
+    ]
+   }
   },
   "Gwen": {
    "tier": 4,
    "tierLabel": "Moyen",
    "winRate": 0.5,
    "pickRate": 0.02,
-   "banRate": 0.03,
+   "banRate": 0.02,
    "roles": {
     "top": 0.65,
     "jungle": 0.21
@@ -603,7 +1874,38 @@
    "flexRoles": [
     "top",
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Dr. Mundo",
+      "winRate": 0.56
+     },
+     {
+      "name": "K'Sante",
+      "winRate": 0.55
+     },
+     {
+      "name": "Irelia",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Warwick",
+      "winRate": 0.6
+     },
+     {
+      "name": "Riven",
+      "winRate": 0.59
+     },
+     {
+      "name": "Singed",
+      "winRate": 0.58
+     }
+    ]
+   }
   },
   "Vladimir": {
    "tier": 1,
@@ -620,7 +1922,38 @@
     "mid",
     "top",
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Tristana",
+      "winRate": 0.6
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.59
+     },
+     {
+      "name": "Azir",
+      "winRate": 0.58
+     }
+    ],
+    "weak": [
+     {
+      "name": "Pantheon",
+      "winRate": 0.56
+     },
+     {
+      "name": "Malzahar",
+      "winRate": 0.54
+     },
+     {
+      "name": "Cho'Gath",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Heimerdinger": {
    "tier": 4,
@@ -633,7 +1966,38 @@
    },
    "flexRoles": [
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Warwick",
+      "winRate": 0.6
+     },
+     {
+      "name": "Zaahen",
+      "winRate": 0.58
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.58
+     }
+    ],
+    "weak": [
+     {
+      "name": "Malzahar",
+      "winRate": 0.57
+     },
+     {
+      "name": "Gangplank",
+      "winRate": 0.56
+     },
+     {
+      "name": "Ryze",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Ambessa": {
    "tier": 4,
@@ -648,7 +2012,38 @@
    "flexRoles": [
     "top",
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Xin Zhao",
+      "winRate": 0.58
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.54
+     },
+     {
+      "name": "Sion",
+      "winRate": 0.53
+     }
+    ],
+    "weak": [
+     {
+      "name": "Warwick",
+      "winRate": 0.59
+     },
+     {
+      "name": "Malzahar",
+      "winRate": 0.57
+     },
+     {
+      "name": "Irelia",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Poppy": {
    "tier": 3,
@@ -665,7 +2060,38 @@
     "support",
     "top",
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Sylas",
+      "winRate": 0.61
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.6
+     },
+     {
+      "name": "Zoe",
+      "winRate": 0.6
+     }
+    ],
+    "weak": [
+     {
+      "name": "Taric",
+      "winRate": 0.54
+     },
+     {
+      "name": "Braum",
+      "winRate": 0.53
+     },
+     {
+      "name": "Galio",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Volibear": {
    "tier": 4,
@@ -680,7 +2106,38 @@
    "flexRoles": [
     "top",
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Swain",
+      "winRate": 0.59
+     },
+     {
+      "name": "Xin Zhao",
+      "winRate": 0.58
+     },
+     {
+      "name": "Irelia",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Jax",
+      "winRate": 0.58
+     },
+     {
+      "name": "Teemo",
+      "winRate": 0.58
+     },
+     {
+      "name": "Varus",
+      "winRate": 0.57
+     }
+    ]
+   }
   },
   "Anivia": {
    "tier": 3,
@@ -697,7 +2154,38 @@
     "mid",
     "top",
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.55
+     },
+     {
+      "name": "Sion",
+      "winRate": 0.55
+     },
+     {
+      "name": "Yone",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Talon",
+      "winRate": 0.56
+     },
+     {
+      "name": "Hwei",
+      "winRate": 0.54
+     },
+     {
+      "name": "Veigar",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Locke": {
    "tier": 1,
@@ -714,7 +2202,38 @@
     "mid",
     "jungle",
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Orianna",
+      "winRate": 0.58
+     },
+     {
+      "name": "Smolder",
+      "winRate": 0.57
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Akali",
+      "winRate": 0.53
+     },
+     {
+      "name": "Katarina",
+      "winRate": 0.53
+     },
+     {
+      "name": "Kassadin",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Kennen": {
    "tier": 4,
@@ -727,7 +2246,38 @@
    },
    "flexRoles": [
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Xin Zhao",
+      "winRate": 0.59
+     },
+     {
+      "name": "K'Sante",
+      "winRate": 0.58
+     },
+     {
+      "name": "Riven",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Yorick",
+      "winRate": 0.58
+     },
+     {
+      "name": "Dr. Mundo",
+      "winRate": 0.56
+     },
+     {
+      "name": "Gangplank",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Lissandra": {
    "tier": 1,
@@ -737,25 +2287,43 @@
    "banRate": 0.03,
    "roles": {
     "top": 0.1,
-    "mid": 0.84
+    "mid": 0.85
    },
    "flexRoles": [
     "mid",
     "top"
-   ]
-  },
-  "Rumble": {
-   "tier": 5,
-   "tierLabel": "Faible",
-   "winRate": 0.49,
-   "pickRate": 0.02,
-   "banRate": 0.01,
-   "roles": {
-    "top": 0.84
-   },
-   "flexRoles": [
-    "top"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Malphite",
+      "winRate": 0.62
+     },
+     {
+      "name": "Smolder",
+      "winRate": 0.6
+     },
+     {
+      "name": "Jayce",
+      "winRate": 0.59
+     }
+    ],
+    "weak": [
+     {
+      "name": "Swain",
+      "winRate": 0.55
+     },
+     {
+      "name": "Xerath",
+      "winRate": 0.53
+     },
+     {
+      "name": "Hwei",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "K'Sante": {
    "tier": 5,
@@ -768,7 +2336,82 @@
    },
    "flexRoles": [
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Cassiopeia",
+      "winRate": 0.56
+     },
+     {
+      "name": "Xin Zhao",
+      "winRate": 0.54
+     },
+     {
+      "name": "Cho'Gath",
+      "winRate": 0.53
+     }
+    ],
+    "weak": [
+     {
+      "name": "Kayle",
+      "winRate": 0.61
+     },
+     {
+      "name": "Lissandra",
+      "winRate": 0.6
+     },
+     {
+      "name": "Wukong",
+      "winRate": 0.59
+     }
+    ]
+   }
+  },
+  "Rumble": {
+   "tier": 5,
+   "tierLabel": "Faible",
+   "winRate": 0.49,
+   "pickRate": 0.02,
+   "banRate": 0.01,
+   "roles": {
+    "top": 0.84
+   },
+   "flexRoles": [
+    "top"
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "K'Sante",
+      "winRate": 0.53
+     },
+     {
+      "name": "Yasuo",
+      "winRate": 0.53
+     },
+     {
+      "name": "Volibear",
+      "winRate": 0.53
+     }
+    ],
+    "weak": [
+     {
+      "name": "Cassiopeia",
+      "winRate": 0.63
+     },
+     {
+      "name": "Lissandra",
+      "winRate": 0.59
+     },
+     {
+      "name": "Ornn",
+      "winRate": 0.58
+     }
+    ]
+   }
   },
   "Trundle": {
    "tier": 5,
@@ -783,7 +2426,83 @@
    "flexRoles": [
     "top",
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "top",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.55
+     },
+     {
+      "name": "Sion",
+      "winRate": 0.54
+     },
+     {
+      "name": "Poppy",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Gnar",
+      "winRate": 0.6
+     },
+     {
+      "name": "Kayle",
+      "winRate": 0.58
+     },
+     {
+      "name": "Gragas",
+      "winRate": 0.57
+     }
+    ]
+   }
+  },
+  "Malzahar": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.51,
+   "pickRate": 0.06,
+   "banRate": 0.1,
+   "roles": {
+    "top": 0.09,
+    "mid": 0.86
+   },
+   "flexRoles": [
+    "mid"
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Pantheon",
+      "winRate": 0.57
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.56
+     },
+     {
+      "name": "LeBlanc",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Sion",
+      "winRate": 0.58
+     },
+     {
+      "name": "Diana",
+      "winRate": 0.54
+     },
+     {
+      "name": "Viktor",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Aurora": {
    "tier": 3,
@@ -798,21 +2517,38 @@
    "flexRoles": [
     "mid",
     "top"
-   ]
-  },
-  "Malzahar": {
-   "tier": 2,
-   "tierLabel": "Fort",
-   "winRate": 0.51,
-   "pickRate": 0.06,
-   "banRate": 0.1,
-   "roles": {
-    "top": 0.09,
-    "mid": 0.86
-   },
-   "flexRoles": [
-    "mid"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Swain",
+      "winRate": 0.57
+     },
+     {
+      "name": "Sion",
+      "winRate": 0.56
+     },
+     {
+      "name": "Pantheon",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Zed",
+      "winRate": 0.54
+     },
+     {
+      "name": "Xerath",
+      "winRate": 0.54
+     },
+     {
+      "name": "Fizz",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Master Yi": {
    "tier": 2,
@@ -827,12 +2563,43 @@
    "flexRoles": [
     "jungle",
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.6
+     },
+     {
+      "name": "Zed",
+      "winRate": 0.56
+     },
+     {
+      "name": "Ambessa",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Ivern",
+      "winRate": 0.56
+     },
+     {
+      "name": "Rammus",
+      "winRate": 0.55
+     },
+     {
+      "name": "Trundle",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Cassiopeia": {
    "tier": 4,
    "tierLabel": "Moyen",
-   "winRate": 0.48,
+   "winRate": 0.49,
    "pickRate": 0.01,
    "banRate": 0.02,
    "roles": {
@@ -842,22 +2609,38 @@
    "flexRoles": [
     "mid",
     "top"
-   ]
-  },
-  "Varus": {
-   "tier": 5,
-   "tierLabel": "Faible",
-   "winRate": 0.49,
-   "pickRate": 0.01,
-   "banRate": 0.02,
-   "roles": {
-    "top": 0.21,
-    "adc": 0.73
-   },
-   "flexRoles": [
-    "adc",
-    "top"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Riven",
+      "winRate": 0.57
+     },
+     {
+      "name": "Aurelion Sol",
+      "winRate": 0.55
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.52
+     }
+    ],
+    "weak": [
+     {
+      "name": "Vel'Koz",
+      "winRate": 0.62
+     },
+     {
+      "name": "Syndra",
+      "winRate": 0.56
+     },
+     {
+      "name": "Lux",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Ryze": {
    "tier": 4,
@@ -872,7 +2655,84 @@
    "flexRoles": [
     "mid",
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Smolder",
+      "winRate": 0.55
+     },
+     {
+      "name": "Malphite",
+      "winRate": 0.54
+     },
+     {
+      "name": "Aurora",
+      "winRate": 0.53
+     }
+    ],
+    "weak": [
+     {
+      "name": "Brand",
+      "winRate": 0.59
+     },
+     {
+      "name": "Naafiri",
+      "winRate": 0.58
+     },
+     {
+      "name": "Annie",
+      "winRate": 0.58
+     }
+    ]
+   }
+  },
+  "Varus": {
+   "tier": 5,
+   "tierLabel": "Faible",
+   "winRate": 0.48,
+   "pickRate": 0.01,
+   "banRate": 0.02,
+   "roles": {
+    "top": 0.21,
+    "adc": 0.73
+   },
+   "flexRoles": [
+    "adc",
+    "top"
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Aurelion Sol",
+      "winRate": 0.54
+     },
+     {
+      "name": "Corki",
+      "winRate": 0.52
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.51
+     }
+    ],
+    "weak": [
+     {
+      "name": "Karthus",
+      "winRate": 0.64
+     },
+     {
+      "name": "Kog'Maw",
+      "winRate": 0.61
+     },
+     {
+      "name": "Syndra",
+      "winRate": 0.59
+     }
+    ]
+   }
   },
   "Udyr": {
    "tier": 3,
@@ -887,7 +2747,38 @@
    "flexRoles": [
     "jungle",
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.62
+     },
+     {
+      "name": "Zed",
+      "winRate": 0.58
+     },
+     {
+      "name": "Malphite",
+      "winRate": 0.58
+     }
+    ],
+    "weak": [
+     {
+      "name": "Nasus",
+      "winRate": 0.56
+     },
+     {
+      "name": "Quinn",
+      "winRate": 0.54
+     },
+     {
+      "name": "Jarvan IV",
+      "winRate": 0.52
+     }
+    ]
+   }
   },
   "Swain": {
    "tier": 3,
@@ -899,14 +2790,45 @@
     "top": 0.1,
     "mid": 0.14,
     "adc": 0.23,
-    "support": 0.53
+    "support": 0.52
    },
    "flexRoles": [
     "support",
     "adc",
     "mid",
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Alistar",
+      "winRate": 0.55
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.55
+     },
+     {
+      "name": "Galio",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Hwei",
+      "winRate": 0.59
+     },
+     {
+      "name": "Brand",
+      "winRate": 0.58
+     },
+     {
+      "name": "Janna",
+      "winRate": 0.58
+     }
+    ]
+   }
   },
   "Xin Zhao": {
    "tier": 4,
@@ -921,7 +2843,38 @@
    "flexRoles": [
     "jungle",
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Teemo",
+      "winRate": 0.62
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.58
+     },
+     {
+      "name": "Fizz",
+      "winRate": 0.58
+     }
+    ],
+    "weak": [
+     {
+      "name": "Nasus",
+      "winRate": 0.56
+     },
+     {
+      "name": "Bel'Veth",
+      "winRate": 0.56
+     },
+     {
+      "name": "Udyr",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Maokai": {
    "tier": 4,
@@ -936,7 +2889,38 @@
    "flexRoles": [
     "support",
     "top"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Sylas",
+      "winRate": 0.64
+     },
+     {
+      "name": "Elise",
+      "winRate": 0.6
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Taric",
+      "winRate": 0.59
+     },
+     {
+      "name": "Senna",
+      "winRate": 0.54
+     },
+     {
+      "name": "Braum",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Nocturne": {
    "tier": 1,
@@ -949,7 +2933,38 @@
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.57
+     },
+     {
+      "name": "Jayce",
+      "winRate": 0.56
+     },
+     {
+      "name": "Zed",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Gwen",
+      "winRate": 0.54
+     },
+     {
+      "name": "Teemo",
+      "winRate": 0.54
+     },
+     {
+      "name": "Wukong",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Sylas": {
    "tier": 1,
@@ -965,7 +2980,82 @@
    "flexRoles": [
     "jungle",
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Malphite",
+      "winRate": 0.61
+     },
+     {
+      "name": "Shyvana",
+      "winRate": 0.58
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Taliyah",
+      "winRate": 0.56
+     },
+     {
+      "name": "Briar",
+      "winRate": 0.54
+     },
+     {
+      "name": "Ivern",
+      "winRate": 0.54
+     }
+    ]
+   }
+  },
+  "Briar": {
+   "tier": 1,
+   "tierLabel": "OP",
+   "winRate": 0.52,
+   "pickRate": 0.05,
+   "banRate": 0.08,
+   "roles": {
+    "jungle": 0.9
+   },
+   "flexRoles": [
+    "jungle"
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.59
+     },
+     {
+      "name": "Pantheon",
+      "winRate": 0.57
+     },
+     {
+      "name": "Zed",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Nasus",
+      "winRate": 0.57
+     },
+     {
+      "name": "Zyra",
+      "winRate": 0.55
+     },
+     {
+      "name": "Taliyah",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Naafiri": {
    "tier": 1,
@@ -980,20 +3070,38 @@
    "flexRoles": [
     "jungle",
     "mid"
-   ]
-  },
-  "Briar": {
-   "tier": 1,
-   "tierLabel": "OP",
-   "winRate": 0.52,
-   "pickRate": 0.05,
-   "banRate": 0.08,
-   "roles": {
-    "jungle": 0.9
-   },
-   "flexRoles": [
-    "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Olaf",
+      "winRate": 0.6
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.57
+     },
+     {
+      "name": "Kha'Zix",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Nocturne",
+      "winRate": 0.54
+     },
+     {
+      "name": "Kayn",
+      "winRate": 0.54
+     },
+     {
+      "name": "Hecarim",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Graves": {
    "tier": 2,
@@ -1006,7 +3114,38 @@
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.56
+     },
+     {
+      "name": "Zed",
+      "winRate": 0.54
+     },
+     {
+      "name": "Qiyana",
+      "winRate": 0.53
+     }
+    ],
+    "weak": [
+     {
+      "name": "Bel'Veth",
+      "winRate": 0.55
+     },
+     {
+      "name": "Evelynn",
+      "winRate": 0.54
+     },
+     {
+      "name": "Zyra",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Lee Sin": {
    "tier": 2,
@@ -1019,7 +3158,38 @@
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.55
+     },
+     {
+      "name": "Trundle",
+      "winRate": 0.55
+     },
+     {
+      "name": "Zed",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Naafiri",
+      "winRate": 0.54
+     },
+     {
+      "name": "Briar",
+      "winRate": 0.54
+     },
+     {
+      "name": "Nasus",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Kayn": {
    "tier": 2,
@@ -1032,7 +3202,38 @@
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.57
+     },
+     {
+      "name": "Volibear",
+      "winRate": 0.57
+     },
+     {
+      "name": "Teemo",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Ivern",
+      "winRate": 0.56
+     },
+     {
+      "name": "Bel'Veth",
+      "winRate": 0.54
+     },
+     {
+      "name": "Gragas",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Viego": {
    "tier": 2,
@@ -1045,7 +3246,82 @@
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.58
+     },
+     {
+      "name": "Skarner",
+      "winRate": 0.54
+     },
+     {
+      "name": "Olaf",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Nasus",
+      "winRate": 0.56
+     },
+     {
+      "name": "Rammus",
+      "winRate": 0.55
+     },
+     {
+      "name": "Rek'Sai",
+      "winRate": 0.55
+     }
+    ]
+   }
+  },
+  "Jarvan IV": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.06,
+   "banRate": 0.01,
+   "roles": {
+    "jungle": 0.92
+   },
+   "flexRoles": [
+    "jungle"
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.59
+     },
+     {
+      "name": "Teemo",
+      "winRate": 0.56
+     },
+     {
+      "name": "Zed",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Ivern",
+      "winRate": 0.53
+     },
+     {
+      "name": "Vi",
+      "winRate": 0.52
+     },
+     {
+      "name": "Talon",
+      "winRate": 0.52
+     }
+    ]
+   }
   },
   "Shaco": {
    "tier": 2,
@@ -1060,20 +3336,38 @@
    "flexRoles": [
     "jungle",
     "support"
-   ]
-  },
-  "Jarvan IV": {
-   "tier": 2,
-   "tierLabel": "Fort",
-   "winRate": 0.5,
-   "pickRate": 0.06,
-   "banRate": 0.01,
-   "roles": {
-    "jungle": 0.92
-   },
-   "flexRoles": [
-    "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.59
+     },
+     {
+      "name": "Taliyah",
+      "winRate": 0.59
+     },
+     {
+      "name": "Pantheon",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Karthus",
+      "winRate": 0.54
+     },
+     {
+      "name": "Aatrox",
+      "winRate": 0.54
+     },
+     {
+      "name": "Talon",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Shyvana": {
    "tier": 3,
@@ -1086,7 +3380,38 @@
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.61
+     },
+     {
+      "name": "Gragas",
+      "winRate": 0.58
+     },
+     {
+      "name": "Ambessa",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Sylas",
+      "winRate": 0.58
+     },
+     {
+      "name": "Zyra",
+      "winRate": 0.56
+     },
+     {
+      "name": "Volibear",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Rammus": {
    "tier": 3,
@@ -1099,7 +3424,38 @@
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Quinn",
+      "winRate": 0.59
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.58
+     },
+     {
+      "name": "Evelynn",
+      "winRate": 0.58
+     }
+    ],
+    "weak": [
+     {
+      "name": "Shyvana",
+      "winRate": 0.55
+     },
+     {
+      "name": "Jarvan IV",
+      "winRate": 0.54
+     },
+     {
+      "name": "Aatrox",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Talon": {
    "tier": 3,
@@ -1114,20 +3470,38 @@
    "flexRoles": [
     "jungle",
     "mid"
-   ]
-  },
-  "Kha'Zix": {
-   "tier": 3,
-   "tierLabel": "Bon",
-   "winRate": 0.5,
-   "pickRate": 0.05,
-   "banRate": 0.03,
-   "roles": {
-    "jungle": 0.99
-   },
-   "flexRoles": [
-    "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.59
+     },
+     {
+      "name": "Gragas",
+      "winRate": 0.57
+     },
+     {
+      "name": "Pantheon",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Fizz",
+      "winRate": 0.56
+     },
+     {
+      "name": "Aatrox",
+      "winRate": 0.55
+     },
+     {
+      "name": "Warwick",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Bel'Veth": {
    "tier": 3,
@@ -1140,20 +3514,82 @@
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Gwen",
+      "winRate": 0.61
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.59
+     },
+     {
+      "name": "Fizz",
+      "winRate": 0.58
+     }
+    ],
+    "weak": [
+     {
+      "name": "Wukong",
+      "winRate": 0.53
+     },
+     {
+      "name": "Udyr",
+      "winRate": 0.52
+     },
+     {
+      "name": "Fiddlesticks",
+      "winRate": 0.52
+     }
+    ]
+   }
   },
-  "Vi": {
+  "Kha'Zix": {
    "tier": 3,
    "tierLabel": "Bon",
    "winRate": 0.5,
    "pickRate": 0.05,
-   "banRate": 0.01,
+   "banRate": 0.03,
    "roles": {
-    "jungle": 0.94
+    "jungle": 0.99
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.59
+     },
+     {
+      "name": "Ambessa",
+      "winRate": 0.56
+     },
+     {
+      "name": "Zed",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Naafiri",
+      "winRate": 0.55
+     },
+     {
+      "name": "Sejuani",
+      "winRate": 0.55
+     },
+     {
+      "name": "Rammus",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Diana": {
    "tier": 1,
@@ -1168,7 +3604,82 @@
    "flexRoles": [
     "mid",
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Smolder",
+      "winRate": 0.59
+     },
+     {
+      "name": "Malphite",
+      "winRate": 0.58
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Sion",
+      "winRate": 0.58
+     },
+     {
+      "name": "Riven",
+      "winRate": 0.57
+     },
+     {
+      "name": "Brand",
+      "winRate": 0.52
+     }
+    ]
+   }
+  },
+  "Vi": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.05,
+   "banRate": 0.01,
+   "roles": {
+    "jungle": 0.94
+   },
+   "flexRoles": [
+    "jungle"
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Teemo",
+      "winRate": 0.61
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.58
+     },
+     {
+      "name": "Zed",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Ivern",
+      "winRate": 0.56
+     },
+     {
+      "name": "Warwick",
+      "winRate": 0.55
+     },
+     {
+      "name": "Wukong",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Fiddlesticks": {
    "tier": 3,
@@ -1183,7 +3694,38 @@
    "flexRoles": [
     "jungle",
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.61
+     },
+     {
+      "name": "Quinn",
+      "winRate": 0.59
+     },
+     {
+      "name": "Malphite",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Sejuani",
+      "winRate": 0.56
+     },
+     {
+      "name": "Ivern",
+      "winRate": 0.56
+     },
+     {
+      "name": "Elise",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Ekko": {
    "tier": 2,
@@ -1198,7 +3740,38 @@
    "flexRoles": [
     "jungle",
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.57
+     },
+     {
+      "name": "Volibear",
+      "winRate": 0.56
+     },
+     {
+      "name": "Teemo",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Evelynn",
+      "winRate": 0.54
+     },
+     {
+      "name": "Nunu & Willump",
+      "winRate": 0.54
+     },
+     {
+      "name": "Nasus",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Nidalee": {
    "tier": 3,
@@ -1211,20 +3784,38 @@
    },
    "flexRoles": [
     "jungle"
-   ]
-  },
-  "Nunu & Willump": {
-   "tier": 3,
-   "tierLabel": "Bon",
-   "winRate": 0.51,
-   "pickRate": 0.02,
-   "banRate": 0.01,
-   "roles": {
-    "jungle": 0.79
-   },
-   "flexRoles": [
-    "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Olaf",
+      "winRate": 0.64
+     },
+     {
+      "name": "Zed",
+      "winRate": 0.57
+     },
+     {
+      "name": "Ambessa",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Taliyah",
+      "winRate": 0.56
+     },
+     {
+      "name": "Darius",
+      "winRate": 0.56
+     },
+     {
+      "name": "Udyr",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Hecarim": {
    "tier": 3,
@@ -1237,7 +3828,82 @@
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.58
+     },
+     {
+      "name": "Pantheon",
+      "winRate": 0.58
+     },
+     {
+      "name": "Rengar",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Fizz",
+      "winRate": 0.56
+     },
+     {
+      "name": "Darius",
+      "winRate": 0.55
+     },
+     {
+      "name": "Gwen",
+      "winRate": 0.55
+     }
+    ]
+   }
+  },
+  "Nunu & Willump": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.51,
+   "pickRate": 0.02,
+   "banRate": 0.01,
+   "roles": {
+    "jungle": 0.8
+   },
+   "flexRoles": [
+    "jungle"
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.59
+     },
+     {
+      "name": "Qiyana",
+      "winRate": 0.57
+     },
+     {
+      "name": "Ambessa",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Ivern",
+      "winRate": 0.56
+     },
+     {
+      "name": "Volibear",
+      "winRate": 0.56
+     },
+     {
+      "name": "Gragas",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Evelynn": {
    "tier": 3,
@@ -1250,7 +3916,38 @@
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Gwen",
+      "winRate": 0.62
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.58
+     },
+     {
+      "name": "Malphite",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Rammus",
+      "winRate": 0.58
+     },
+     {
+      "name": "Sejuani",
+      "winRate": 0.56
+     },
+     {
+      "name": "Shaco",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Ivern": {
    "tier": 4,
@@ -1263,7 +3960,38 @@
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Kindred",
+      "winRate": 0.59
+     },
+     {
+      "name": "Aatrox",
+      "winRate": 0.59
+     },
+     {
+      "name": "Wukong",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Olaf",
+      "winRate": 0.53
+     },
+     {
+      "name": "Naafiri",
+      "winRate": 0.52
+     },
+     {
+      "name": "Ekko",
+      "winRate": 0.52
+     }
+    ]
+   }
   },
   "Kindred": {
    "tier": 4,
@@ -1276,7 +4004,38 @@
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Poppy",
+      "winRate": 0.58
+     },
+     {
+      "name": "Volibear",
+      "winRate": 0.58
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Teemo",
+      "winRate": 0.64
+     },
+     {
+      "name": "Ivern",
+      "winRate": 0.59
+     },
+     {
+      "name": "Fizz",
+      "winRate": 0.58
+     }
+    ]
+   }
   },
   "Lillia": {
    "tier": 4,
@@ -1289,7 +4048,38 @@
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Teemo",
+      "winRate": 0.58
+     },
+     {
+      "name": "Sejuani",
+      "winRate": 0.57
+     },
+     {
+      "name": "Trundle",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Darius",
+      "winRate": 0.63
+     },
+     {
+      "name": "Ivern",
+      "winRate": 0.56
+     },
+     {
+      "name": "Jayce",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Rek'Sai": {
    "tier": 4,
@@ -1302,7 +4092,38 @@
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.58
+     },
+     {
+      "name": "Zed",
+      "winRate": 0.57
+     },
+     {
+      "name": "Ambessa",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Taliyah",
+      "winRate": 0.63
+     },
+     {
+      "name": "Olaf",
+      "winRate": 0.56
+     },
+     {
+      "name": "Malphite",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Zyra": {
    "tier": 4,
@@ -1317,7 +4138,38 @@
    "flexRoles": [
     "support",
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.58
+     },
+     {
+      "name": "Shaco",
+      "winRate": 0.58
+     },
+     {
+      "name": "Hwei",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Taric",
+      "winRate": 0.62
+     },
+     {
+      "name": "Shen",
+      "winRate": 0.59
+     },
+     {
+      "name": "Leona",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Amumu": {
    "tier": 4,
@@ -1332,7 +4184,38 @@
    "flexRoles": [
     "jungle",
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Karthus",
+      "winRate": 0.58
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.57
+     },
+     {
+      "name": "Malphite",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Aatrox",
+      "winRate": 0.62
+     },
+     {
+      "name": "Shaco",
+      "winRate": 0.56
+     },
+     {
+      "name": "Nasus",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Sejuani": {
    "tier": 4,
@@ -1345,7 +4228,38 @@
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Quinn",
+      "winRate": 0.59
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.57
+     },
+     {
+      "name": "Elise",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Lillia",
+      "winRate": 0.57
+     },
+     {
+      "name": "Darius",
+      "winRate": 0.56
+     },
+     {
+      "name": "Nasus",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Rengar": {
    "tier": 4,
@@ -1358,7 +4272,38 @@
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.58
+     },
+     {
+      "name": "Qiyana",
+      "winRate": 0.54
+     },
+     {
+      "name": "Zed",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Darius",
+      "winRate": 0.59
+     },
+     {
+      "name": "Hecarim",
+      "winRate": 0.56
+     },
+     {
+      "name": "Warwick",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Elise": {
    "tier": 4,
@@ -1373,7 +4318,38 @@
    "flexRoles": [
     "jungle",
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Volibear",
+      "winRate": 0.6
+     },
+     {
+      "name": "Poppy",
+      "winRate": 0.59
+     },
+     {
+      "name": "Malphite",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Rammus",
+      "winRate": 0.58
+     },
+     {
+      "name": "Zyra",
+      "winRate": 0.58
+     },
+     {
+      "name": "Sejuani",
+      "winRate": 0.57
+     }
+    ]
+   }
   },
   "Zac": {
    "tier": 4,
@@ -1382,11 +4358,42 @@
    "pickRate": 0.02,
    "banRate": 0.01,
    "roles": {
-    "jungle": 0.72
+    "jungle": 0.73
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Malphite",
+      "winRate": 0.6
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.59
+     },
+     {
+      "name": "Ambessa",
+      "winRate": 0.58
+     }
+    ],
+    "weak": [
+     {
+      "name": "Warwick",
+      "winRate": 0.56
+     },
+     {
+      "name": "Zed",
+      "winRate": 0.55
+     },
+     {
+      "name": "Taliyah",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Skarner": {
    "tier": 4,
@@ -1399,7 +4406,38 @@
    },
    "flexRoles": [
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Jax",
+      "winRate": 0.59
+     },
+     {
+      "name": "Quinn",
+      "winRate": 0.59
+     },
+     {
+      "name": "Trundle",
+      "winRate": 0.58
+     }
+    ],
+    "weak": [
+     {
+      "name": "Shyvana",
+      "winRate": 0.56
+     },
+     {
+      "name": "Briar",
+      "winRate": 0.55
+     },
+     {
+      "name": "Viego",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Qiyana": {
    "tier": 3,
@@ -1414,7 +4452,38 @@
    "flexRoles": [
     "jungle",
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.56
+     },
+     {
+      "name": "Jax",
+      "winRate": 0.55
+     },
+     {
+      "name": "Ambessa",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Darius",
+      "winRate": 0.61
+     },
+     {
+      "name": "Nunu & Willump",
+      "winRate": 0.57
+     },
+     {
+      "name": "Rammus",
+      "winRate": 0.57
+     }
+    ]
+   }
   },
   "Taliyah": {
    "tier": 4,
@@ -1429,11 +4498,42 @@
    "flexRoles": [
     "mid",
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.55
+     },
+     {
+      "name": "Riven",
+      "winRate": 0.55
+     },
+     {
+      "name": "LeBlanc",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Fizz",
+      "winRate": 0.58
+     },
+     {
+      "name": "Vel'Koz",
+      "winRate": 0.58
+     },
+     {
+      "name": "Katarina",
+      "winRate": 0.57
+     }
+    ]
+   }
   },
   "Karthus": {
-   "tier": 3,
-   "tierLabel": "Bon",
+   "tier": 4,
+   "tierLabel": "Moyen",
    "winRate": 0.54,
    "pickRate": 0.01,
    "banRate": 0.01,
@@ -1444,7 +4544,38 @@
    "flexRoles": [
     "jungle",
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "jungle",
+    "strong": [
+     {
+      "name": "Locke",
+      "winRate": 0.56
+     },
+     {
+      "name": "Qiyana",
+      "winRate": 0.55
+     },
+     {
+      "name": "Zed",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Amumu",
+      "winRate": 0.58
+     },
+     {
+      "name": "Udyr",
+      "winRate": 0.57
+     },
+     {
+      "name": "Rammus",
+      "winRate": 0.57
+     }
+    ]
+   }
   },
   "Fizz": {
    "tier": 1,
@@ -1459,7 +4590,38 @@
    "flexRoles": [
     "mid",
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Brand",
+      "winRate": 0.64
+     },
+     {
+      "name": "Smolder",
+      "winRate": 0.63
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.59
+     }
+    ],
+    "weak": [
+     {
+      "name": "Riven",
+      "winRate": 0.59
+     },
+     {
+      "name": "Tristana",
+      "winRate": 0.57
+     },
+     {
+      "name": "Diana",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Zed": {
    "tier": 2,
@@ -1474,7 +4636,38 @@
    "flexRoles": [
     "mid",
     "jungle"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Smolder",
+      "winRate": 0.63
+     },
+     {
+      "name": "Aurelion Sol",
+      "winRate": 0.57
+     },
+     {
+      "name": "Yone",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Riven",
+      "winRate": 0.56
+     },
+     {
+      "name": "Swain",
+      "winRate": 0.55
+     },
+     {
+      "name": "Malphite",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Ahri": {
    "tier": 1,
@@ -1487,7 +4680,38 @@
    },
    "flexRoles": [
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Yone",
+      "winRate": 0.56
+     },
+     {
+      "name": "Smolder",
+      "winRate": 0.56
+     },
+     {
+      "name": "Cassiopeia",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Veigar",
+      "winRate": 0.52
+     },
+     {
+      "name": "Akshan",
+      "winRate": 0.52
+     },
+     {
+      "name": "Vex",
+      "winRate": 0.52
+     }
+    ]
+   }
   },
   "Xerath": {
    "tier": 1,
@@ -1504,7 +4728,38 @@
     "mid",
     "support",
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.61
+     },
+     {
+      "name": "Pantheon",
+      "winRate": 0.6
+     },
+     {
+      "name": "Tristana",
+      "winRate": 0.59
+     }
+    ],
+    "weak": [
+     {
+      "name": "Cho'Gath",
+      "winRate": 0.57
+     },
+     {
+      "name": "Fizz",
+      "winRate": 0.54
+     },
+     {
+      "name": "Swain",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Katarina": {
    "tier": 1,
@@ -1518,7 +4773,38 @@
    },
    "flexRoles": [
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Yone",
+      "winRate": 0.57
+     },
+     {
+      "name": "Taliyah",
+      "winRate": 0.57
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Cho'Gath",
+      "winRate": 0.55
+     },
+     {
+      "name": "Vladimir",
+      "winRate": 0.54
+     },
+     {
+      "name": "Riven",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Syndra": {
    "tier": 1,
@@ -1532,7 +4818,38 @@
    },
    "flexRoles": [
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Smolder",
+      "winRate": 0.64
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.58
+     },
+     {
+      "name": "Ryze",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Fizz",
+      "winRate": 0.54
+     },
+     {
+      "name": "Xerath",
+      "winRate": 0.54
+     },
+     {
+      "name": "Katarina",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Viktor": {
    "tier": 1,
@@ -1545,7 +4862,38 @@
    },
    "flexRoles": [
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.59
+     },
+     {
+      "name": "Smolder",
+      "winRate": 0.58
+     },
+     {
+      "name": "Azir",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Syndra",
+      "winRate": 0.53
+     },
+     {
+      "name": "Xerath",
+      "winRate": 0.53
+     },
+     {
+      "name": "Locke",
+      "winRate": 0.52
+     }
+    ]
+   }
   },
   "Twisted Fate": {
    "tier": 2,
@@ -1558,7 +4906,38 @@
    },
    "flexRoles": [
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Azir",
+      "winRate": 0.59
+     },
+     {
+      "name": "Smolder",
+      "winRate": 0.58
+     },
+     {
+      "name": "Jayce",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Swain",
+      "winRate": 0.54
+     },
+     {
+      "name": "Annie",
+      "winRate": 0.53
+     },
+     {
+      "name": "Pantheon",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Vex": {
    "tier": 2,
@@ -1571,7 +4950,38 @@
    },
    "flexRoles": [
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Tristana",
+      "winRate": 0.61
+     },
+     {
+      "name": "Jayce",
+      "winRate": 0.59
+     },
+     {
+      "name": "Yone",
+      "winRate": 0.58
+     }
+    ],
+    "weak": [
+     {
+      "name": "Swain",
+      "winRate": 0.64
+     },
+     {
+      "name": "Annie",
+      "winRate": 0.55
+     },
+     {
+      "name": "Xerath",
+      "winRate": 0.52
+     }
+    ]
+   }
   },
   "Hwei": {
    "tier": 2,
@@ -1588,7 +4998,38 @@
     "mid",
     "adc",
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Smolder",
+      "winRate": 0.59
+     },
+     {
+      "name": "Galio",
+      "winRate": 0.56
+     },
+     {
+      "name": "Brand",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Ziggs",
+      "winRate": 0.54
+     },
+     {
+      "name": "Xerath",
+      "winRate": 0.53
+     },
+     {
+      "name": "Katarina",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Lux": {
    "tier": 2,
@@ -1604,7 +5045,38 @@
    "flexRoles": [
     "support",
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.55
+     },
+     {
+      "name": "Bard",
+      "winRate": 0.51
+     },
+     {
+      "name": "Brand",
+      "winRate": 0.51
+     }
+    ],
+    "weak": [
+     {
+      "name": "Amumu",
+      "winRate": 0.58
+     },
+     {
+      "name": "Poppy",
+      "winRate": 0.56
+     },
+     {
+      "name": "LeBlanc",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Veigar": {
    "tier": 2,
@@ -1619,7 +5091,38 @@
    "flexRoles": [
     "mid",
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Smolder",
+      "winRate": 0.62
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.57
+     },
+     {
+      "name": "Azir",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Riven",
+      "winRate": 0.59
+     },
+     {
+      "name": "Xerath",
+      "winRate": 0.55
+     },
+     {
+      "name": "Swain",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Galio": {
    "tier": 2,
@@ -1634,7 +5137,38 @@
    "flexRoles": [
     "mid",
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Irelia",
+      "winRate": 0.58
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.56
+     },
+     {
+      "name": "Jayce",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Hwei",
+      "winRate": 0.56
+     },
+     {
+      "name": "Cho'Gath",
+      "winRate": 0.56
+     },
+     {
+      "name": "Vel'Koz",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Annie": {
    "tier": 2,
@@ -1647,7 +5181,38 @@
    },
    "flexRoles": [
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Brand",
+      "winRate": 0.59
+     },
+     {
+      "name": "Ryze",
+      "winRate": 0.58
+     },
+     {
+      "name": "Ziggs",
+      "winRate": 0.58
+     }
+    ],
+    "weak": [
+     {
+      "name": "Kassadin",
+      "winRate": 0.55
+     },
+     {
+      "name": "Ekko",
+      "winRate": 0.54
+     },
+     {
+      "name": "Syndra",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Kassadin": {
    "tier": 2,
@@ -1660,12 +5225,43 @@
    },
    "flexRoles": [
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.58
+     },
+     {
+      "name": "Orianna",
+      "winRate": 0.57
+     },
+     {
+      "name": "Annie",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Cho'Gath",
+      "winRate": 0.61
+     },
+     {
+      "name": "Tristana",
+      "winRate": 0.56
+     },
+     {
+      "name": "Riven",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Zoe": {
    "tier": 2,
    "tierLabel": "Fort",
-   "winRate": 0.5,
+   "winRate": 0.51,
    "pickRate": 0.03,
    "banRate": 0.04,
    "roles": {
@@ -1675,7 +5271,38 @@
    "flexRoles": [
     "mid",
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Pantheon",
+      "winRate": 0.59
+     },
+     {
+      "name": "Jayce",
+      "winRate": 0.56
+     },
+     {
+      "name": "Ziggs",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Naafiri",
+      "winRate": 0.55
+     },
+     {
+      "name": "Swain",
+      "winRate": 0.55
+     },
+     {
+      "name": "Malzahar",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Akshan": {
    "tier": 3,
@@ -1688,7 +5315,38 @@
    },
    "flexRoles": [
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Sion",
+      "winRate": 0.56
+     },
+     {
+      "name": "Cho'Gath",
+      "winRate": 0.56
+     },
+     {
+      "name": "Yone",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Swain",
+      "winRate": 0.58
+     },
+     {
+      "name": "Vex",
+      "winRate": 0.56
+     },
+     {
+      "name": "Riven",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "LeBlanc": {
    "tier": 3,
@@ -1703,29 +5361,91 @@
    "flexRoles": [
     "mid",
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Azir",
+      "winRate": 0.57
+     },
+     {
+      "name": "Cho'Gath",
+      "winRate": 0.57
+     },
+     {
+      "name": "Smolder",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Naafiri",
+      "winRate": 0.58
+     },
+     {
+      "name": "Malphite",
+      "winRate": 0.58
+     },
+     {
+      "name": "Diana",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Vel'Koz": {
    "tier": 3,
    "tierLabel": "Bon",
-   "winRate": 0.52,
-   "pickRate": 0.01,
+   "winRate": 0.51,
+   "pickRate": 0.04,
    "banRate": 0.02,
    "roles": {
     "mid": 0.18,
-    "adc": 0.16,
+    "adc": 0.17,
     "support": 0.63
    },
    "flexRoles": [
     "support",
     "mid",
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Fiddlesticks",
+      "winRate": 0.6
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.58
+     },
+     {
+      "name": "Anivia",
+      "winRate": 0.58
+     }
+    ],
+    "weak": [
+     {
+      "name": "Amumu",
+      "winRate": 0.59
+     },
+     {
+      "name": "Elise",
+      "winRate": 0.54
+     },
+     {
+      "name": "LeBlanc",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Aurelion Sol": {
    "tier": 4,
    "tierLabel": "Moyen",
-   "winRate": 0.53,
+   "winRate": 0.49,
    "pickRate": 0.01,
    "banRate": 0.01,
    "roles": {
@@ -1735,7 +5455,38 @@
    "flexRoles": [
     "mid",
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.59
+     },
+     {
+      "name": "Orianna",
+      "winRate": 0.58
+     },
+     {
+      "name": "Ryze",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Swain",
+      "winRate": 0.61
+     },
+     {
+      "name": "Yone",
+      "winRate": 0.58
+     },
+     {
+      "name": "Fizz",
+      "winRate": 0.58
+     }
+    ]
+   }
   },
   "Ziggs": {
    "tier": 3,
@@ -1750,7 +5501,38 @@
    "flexRoles": [
     "adc",
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.57
+     },
+     {
+      "name": "Vel'Koz",
+      "winRate": 0.57
+     },
+     {
+      "name": "Aphelios",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Karthus",
+      "winRate": 0.59
+     },
+     {
+      "name": "Lux",
+      "winRate": 0.58
+     },
+     {
+      "name": "Aurelion Sol",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Brand": {
    "tier": 3,
@@ -1767,7 +5549,38 @@
     "support",
     "adc",
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Swain",
+      "winRate": 0.58
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.58
+     },
+     {
+      "name": "Shen",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Galio",
+      "winRate": 0.58
+     },
+     {
+      "name": "Anivia",
+      "winRate": 0.57
+     },
+     {
+      "name": "Vel'Koz",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Orianna": {
    "tier": 4,
@@ -1780,7 +5593,38 @@
    },
    "flexRoles": [
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Pantheon",
+      "winRate": 0.57
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.54
+     },
+     {
+      "name": "Brand",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Locke",
+      "winRate": 0.58
+     },
+     {
+      "name": "Aurelion Sol",
+      "winRate": 0.58
+     },
+     {
+      "name": "Xerath",
+      "winRate": 0.57
+     }
+    ]
+   }
   },
   "Mel": {
    "tier": 5,
@@ -1789,7 +5633,7 @@
    "pickRate": 0.02,
    "banRate": 0.2,
    "roles": {
-    "mid": 0.41,
+    "mid": 0.4,
     "adc": 0.31,
     "support": 0.28
    },
@@ -1797,7 +5641,38 @@
     "mid",
     "adc",
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Tristana",
+      "winRate": 0.57
+     },
+     {
+      "name": "Smolder",
+      "winRate": 0.52
+     },
+     {
+      "name": "Cassiopeia",
+      "winRate": 0.5
+     }
+    ],
+    "weak": [
+     {
+      "name": "Xerath",
+      "winRate": 0.61
+     },
+     {
+      "name": "Pantheon",
+      "winRate": 0.6
+     },
+     {
+      "name": "Viktor",
+      "winRate": 0.59
+     }
+    ]
+   }
   },
   "Azir": {
    "tier": 5,
@@ -1810,7 +5685,38 @@
    },
    "flexRoles": [
     "mid"
-   ]
+   ],
+   "counters": {
+    "role": "mid",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.54
+     },
+     {
+      "name": "Brand",
+      "winRate": 0.54
+     },
+     {
+      "name": "Ryze",
+      "winRate": 0.53
+     }
+    ],
+    "weak": [
+     {
+      "name": "Vel'Koz",
+      "winRate": 0.61
+     },
+     {
+      "name": "Twisted Fate",
+      "winRate": 0.59
+     },
+     {
+      "name": "Xerath",
+      "winRate": 0.58
+     }
+    ]
+   }
   },
   "Tristana": {
    "tier": 2,
@@ -1824,7 +5730,38 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Ezreal",
+      "winRate": 0.54
+     },
+     {
+      "name": "Yunara",
+      "winRate": 0.54
+     },
+     {
+      "name": "Kalista",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Veigar",
+      "winRate": 0.57
+     },
+     {
+      "name": "Karthus",
+      "winRate": 0.56
+     },
+     {
+      "name": "Vladimir",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Smolder": {
    "tier": 3,
@@ -1838,7 +5775,38 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Varus",
+      "winRate": 0.54
+     },
+     {
+      "name": "Kalista",
+      "winRate": 0.54
+     },
+     {
+      "name": "Ezreal",
+      "winRate": 0.53
+     }
+    ],
+    "weak": [
+     {
+      "name": "Lux",
+      "winRate": 0.56
+     },
+     {
+      "name": "Aurelion Sol",
+      "winRate": 0.56
+     },
+     {
+      "name": "Syndra",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Senna": {
    "tier": 1,
@@ -1853,7 +5821,38 @@
    "flexRoles": [
     "adc",
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Ezreal",
+      "winRate": 0.57
+     },
+     {
+      "name": "Lucian",
+      "winRate": 0.56
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Aurelion Sol",
+      "winRate": 0.53
+     },
+     {
+      "name": "Seraphine",
+      "winRate": 0.52
+     },
+     {
+      "name": "Hwei",
+      "winRate": 0.52
+     }
+    ]
+   }
   },
   "Jinx": {
    "tier": 1,
@@ -1866,7 +5865,38 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Varus",
+      "winRate": 0.56
+     },
+     {
+      "name": "Kai'Sa",
+      "winRate": 0.54
+     },
+     {
+      "name": "Corki",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Lux",
+      "winRate": 0.56
+     },
+     {
+      "name": "Seraphine",
+      "winRate": 0.54
+     },
+     {
+      "name": "Karthus",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Seraphine": {
    "tier": 1,
@@ -1881,7 +5911,38 @@
    "flexRoles": [
     "support",
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.57
+     },
+     {
+      "name": "Hwei",
+      "winRate": 0.56
+     },
+     {
+      "name": "LeBlanc",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Zilean",
+      "winRate": 0.53
+     },
+     {
+      "name": "Galio",
+      "winRate": 0.52
+     },
+     {
+      "name": "Fiddlesticks",
+      "winRate": 0.52
+     }
+    ]
+   }
   },
   "Ashe": {
    "tier": 2,
@@ -1894,20 +5955,38 @@
    },
    "flexRoles": [
     "adc"
-   ]
-  },
-  "Jhin": {
-   "tier": 2,
-   "tierLabel": "Fort",
-   "winRate": 0.5,
-   "pickRate": 0.16,
-   "banRate": 0.01,
-   "roles": {
-    "adc": 0.98
-   },
-   "flexRoles": [
-    "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Yunara",
+      "winRate": 0.54
+     },
+     {
+      "name": "Ezreal",
+      "winRate": 0.53
+     },
+     {
+      "name": "Kai'Sa",
+      "winRate": 0.53
+     }
+    ],
+    "weak": [
+     {
+      "name": "Karthus",
+      "winRate": 0.58
+     },
+     {
+      "name": "Katarina",
+      "winRate": 0.58
+     },
+     {
+      "name": "Xerath",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Caitlyn": {
    "tier": 2,
@@ -1920,7 +5999,82 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Yunara",
+      "winRate": 0.53
+     },
+     {
+      "name": "Vayne",
+      "winRate": 0.52
+     },
+     {
+      "name": "Varus",
+      "winRate": 0.52
+     }
+    ],
+    "weak": [
+     {
+      "name": "Seraphine",
+      "winRate": 0.58
+     },
+     {
+      "name": "Xerath",
+      "winRate": 0.57
+     },
+     {
+      "name": "Hwei",
+      "winRate": 0.56
+     }
+    ]
+   }
+  },
+  "Jhin": {
+   "tier": 2,
+   "tierLabel": "Fort",
+   "winRate": 0.5,
+   "pickRate": 0.16,
+   "banRate": 0.01,
+   "roles": {
+    "adc": 0.98
+   },
+   "flexRoles": [
+    "adc"
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.53
+     },
+     {
+      "name": "Caitlyn",
+      "winRate": 0.52
+     },
+     {
+      "name": "Ezreal",
+      "winRate": 0.52
+     }
+    ],
+    "weak": [
+     {
+      "name": "Katarina",
+      "winRate": 0.57
+     },
+     {
+      "name": "Veigar",
+      "winRate": 0.56
+     },
+     {
+      "name": "Karthus",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Kai'Sa": {
    "tier": 2,
@@ -1933,7 +6087,38 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Ezreal",
+      "winRate": 0.53
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.53
+     },
+     {
+      "name": "Jhin",
+      "winRate": 0.51
+     }
+    ],
+    "weak": [
+     {
+      "name": "Karthus",
+      "winRate": 0.57
+     },
+     {
+      "name": "Seraphine",
+      "winRate": 0.56
+     },
+     {
+      "name": "Nilah",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Miss Fortune": {
    "tier": 3,
@@ -1946,7 +6131,38 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Varus",
+      "winRate": 0.54
+     },
+     {
+      "name": "Ezreal",
+      "winRate": 0.52
+     },
+     {
+      "name": "Kai'Sa",
+      "winRate": 0.52
+     }
+    ],
+    "weak": [
+     {
+      "name": "Xerath",
+      "winRate": 0.56
+     },
+     {
+      "name": "Lux",
+      "winRate": 0.56
+     },
+     {
+      "name": "Seraphine",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Twitch": {
    "tier": 3,
@@ -1959,7 +6175,38 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Varus",
+      "winRate": 0.55
+     },
+     {
+      "name": "Sivir",
+      "winRate": 0.54
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Katarina",
+      "winRate": 0.59
+     },
+     {
+      "name": "Nilah",
+      "winRate": 0.58
+     },
+     {
+      "name": "Aurelion Sol",
+      "winRate": 0.58
+     }
+    ]
+   }
   },
   "Samira": {
    "tier": 3,
@@ -1972,7 +6219,38 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Katarina",
+      "winRate": 0.57
+     },
+     {
+      "name": "Varus",
+      "winRate": 0.55
+     },
+     {
+      "name": "Ezreal",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Veigar",
+      "winRate": 0.59
+     },
+     {
+      "name": "Syndra",
+      "winRate": 0.59
+     },
+     {
+      "name": "Karthus",
+      "winRate": 0.57
+     }
+    ]
+   }
   },
   "Nilah": {
    "tier": 3,
@@ -1985,7 +6263,38 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Yasuo",
+      "winRate": 0.61
+     },
+     {
+      "name": "Twitch",
+      "winRate": 0.58
+     },
+     {
+      "name": "Ezreal",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Seraphine",
+      "winRate": 0.57
+     },
+     {
+      "name": "Brand",
+      "winRate": 0.57
+     },
+     {
+      "name": "Xayah",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Xayah": {
    "tier": 3,
@@ -1998,11 +6307,42 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Varus",
+      "winRate": 0.58
+     },
+     {
+      "name": "Nilah",
+      "winRate": 0.55
+     },
+     {
+      "name": "Kai'Sa",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Karthus",
+      "winRate": 0.59
+     },
+     {
+      "name": "Seraphine",
+      "winRate": 0.56
+     },
+     {
+      "name": "Kog'Maw",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Kog'Maw": {
-   "tier": 3,
-   "tierLabel": "Bon",
+   "tier": 4,
+   "tierLabel": "Moyen",
    "winRate": 0.52,
    "pickRate": 0.02,
    "banRate": 0,
@@ -2011,11 +6351,42 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Varus",
+      "winRate": 0.61
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.57
+     },
+     {
+      "name": "Xayah",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Vel'Koz",
+      "winRate": 0.57
+     },
+     {
+      "name": "Syndra",
+      "winRate": 0.56
+     },
+     {
+      "name": "Hwei",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Sivir": {
-   "tier": 3,
-   "tierLabel": "Bon",
+   "tier": 4,
+   "tierLabel": "Moyen",
    "winRate": 0.5,
    "pickRate": 0.05,
    "banRate": 0.02,
@@ -2024,11 +6395,42 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Lux",
+      "winRate": 0.55
+     },
+     {
+      "name": "Ezreal",
+      "winRate": 0.54
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Katarina",
+      "winRate": 0.59
+     },
+     {
+      "name": "Twitch",
+      "winRate": 0.54
+     },
+     {
+      "name": "Aurelion Sol",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Lucian": {
-   "tier": 3,
-   "tierLabel": "Bon",
+   "tier": 4,
+   "tierLabel": "Moyen",
    "winRate": 0.49,
    "pickRate": 0.08,
    "banRate": 0.02,
@@ -2037,11 +6439,42 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Ezreal",
+      "winRate": 0.52
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.52
+     },
+     {
+      "name": "Corki",
+      "winRate": 0.52
+     }
+    ],
+    "weak": [
+     {
+      "name": "Vel'Koz",
+      "winRate": 0.57
+     },
+     {
+      "name": "Veigar",
+      "winRate": 0.57
+     },
+     {
+      "name": "Senna",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Ezreal": {
-   "tier": 3,
-   "tierLabel": "Bon",
+   "tier": 4,
+   "tierLabel": "Moyen",
    "winRate": 0.47,
    "pickRate": 0.16,
    "banRate": 0.07,
@@ -2050,11 +6483,42 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Varus",
+      "winRate": 0.51
+     },
+     {
+      "name": "Caitlyn",
+      "winRate": 0.5
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.5
+     }
+    ],
+    "weak": [
+     {
+      "name": "Senna",
+      "winRate": 0.57
+     },
+     {
+      "name": "Yasuo",
+      "winRate": 0.57
+     },
+     {
+      "name": "Nilah",
+      "winRate": 0.57
+     }
+    ]
+   }
   },
   "Aphelios": {
-   "tier": 3,
-   "tierLabel": "Bon",
+   "tier": 4,
+   "tierLabel": "Moyen",
    "winRate": 0.49,
    "pickRate": 0.07,
    "banRate": 0.03,
@@ -2063,11 +6527,42 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Vayne",
+      "winRate": 0.54
+     },
+     {
+      "name": "Kai'Sa",
+      "winRate": 0.53
+     },
+     {
+      "name": "Sivir",
+      "winRate": 0.52
+     }
+    ],
+    "weak": [
+     {
+      "name": "Aurelion Sol",
+      "winRate": 0.58
+     },
+     {
+      "name": "Seraphine",
+      "winRate": 0.57
+     },
+     {
+      "name": "Vel'Koz",
+      "winRate": 0.57
+     }
+    ]
+   }
   },
   "Zeri": {
-   "tier": 3,
-   "tierLabel": "Bon",
+   "tier": 4,
+   "tierLabel": "Moyen",
    "winRate": 0.5,
    "pickRate": 0.04,
    "banRate": 0,
@@ -2076,11 +6571,42 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.56
+     },
+     {
+      "name": "Kai'Sa",
+      "winRate": 0.54
+     },
+     {
+      "name": "Yunara",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Syndra",
+      "winRate": 0.58
+     },
+     {
+      "name": "Brand",
+      "winRate": 0.55
+     },
+     {
+      "name": "Nilah",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Draven": {
-   "tier": 3,
-   "tierLabel": "Bon",
+   "tier": 4,
+   "tierLabel": "Moyen",
    "winRate": 0.5,
    "pickRate": 0.04,
    "banRate": 0.13,
@@ -2089,11 +6615,42 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Kalista",
+      "winRate": 0.55
+     },
+     {
+      "name": "Ezreal",
+      "winRate": 0.53
+     },
+     {
+      "name": "Kai'Sa",
+      "winRate": 0.52
+     }
+    ],
+    "weak": [
+     {
+      "name": "Veigar",
+      "winRate": 0.61
+     },
+     {
+      "name": "Vel'Koz",
+      "winRate": 0.61
+     },
+     {
+      "name": "Lux",
+      "winRate": 0.6
+     }
+    ]
+   }
   },
   "Yunara": {
-   "tier": 4,
-   "tierLabel": "Moyen",
+   "tier": 5,
+   "tierLabel": "Faible",
    "winRate": 0.48,
    "pickRate": 0.05,
    "banRate": 0.01,
@@ -2102,11 +6659,42 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Corki",
+      "winRate": 0.53
+     },
+     {
+      "name": "Sivir",
+      "winRate": 0.52
+     },
+     {
+      "name": "Kai'Sa",
+      "winRate": 0.51
+     }
+    ],
+    "weak": [
+     {
+      "name": "Hwei",
+      "winRate": 0.6
+     },
+     {
+      "name": "Seraphine",
+      "winRate": 0.59
+     },
+     {
+      "name": "Veigar",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Kalista": {
-   "tier": 4,
-   "tierLabel": "Moyen",
+   "tier": 5,
+   "tierLabel": "Faible",
    "winRate": 0.49,
    "pickRate": 0.02,
    "banRate": 0,
@@ -2115,7 +6703,38 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.56
+     },
+     {
+      "name": "Yasuo",
+      "winRate": 0.56
+     },
+     {
+      "name": "Lux",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Karthus",
+      "winRate": 0.57
+     },
+     {
+      "name": "Vel'Koz",
+      "winRate": 0.56
+     },
+     {
+      "name": "Syndra",
+      "winRate": 0.56
+     }
+    ]
+   }
   },
   "Corki": {
    "tier": 5,
@@ -2128,7 +6747,38 @@
    },
    "flexRoles": [
     "adc"
-   ]
+   ],
+   "counters": {
+    "role": "adc",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.57
+     },
+     {
+      "name": "Yasuo",
+      "winRate": 0.55
+     },
+     {
+      "name": "Samira",
+      "winRate": 0.53
+     }
+    ],
+    "weak": [
+     {
+      "name": "Seraphine",
+      "winRate": 0.58
+     },
+     {
+      "name": "Swain",
+      "winRate": 0.57
+     },
+     {
+      "name": "Senna",
+      "winRate": 0.55
+     }
+    ]
+   }
   },
   "Thresh": {
    "tier": 1,
@@ -2141,7 +6791,38 @@
    },
    "flexRoles": [
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Yuumi",
+      "winRate": 0.57
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.57
+     },
+     {
+      "name": "Camille",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Fiddlesticks",
+      "winRate": 0.56
+     },
+     {
+      "name": "Zilean",
+      "winRate": 0.51
+     },
+     {
+      "name": "Amumu",
+      "winRate": 0.51
+     }
+    ]
+   }
   },
   "Leona": {
    "tier": 2,
@@ -2154,7 +6835,38 @@
    },
    "flexRoles": [
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.62
+     },
+     {
+      "name": "Yuumi",
+      "winRate": 0.56
+     },
+     {
+      "name": "Camille",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Soraka",
+      "winRate": 0.52
+     },
+     {
+      "name": "Taric",
+      "winRate": 0.52
+     },
+     {
+      "name": "Renata Glasc",
+      "winRate": 0.52
+     }
+    ]
+   }
   },
   "Nautilus": {
    "tier": 2,
@@ -2167,7 +6879,38 @@
    },
    "flexRoles": [
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.6
+     },
+     {
+      "name": "Zoe",
+      "winRate": 0.58
+     },
+     {
+      "name": "Yuumi",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Taric",
+      "winRate": 0.56
+     },
+     {
+      "name": "Rell",
+      "winRate": 0.55
+     },
+     {
+      "name": "Braum",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Braum": {
    "tier": 2,
@@ -2180,20 +6923,38 @@
    },
    "flexRoles": [
     "support"
-   ]
-  },
-  "Rell": {
-   "tier": 3,
-   "tierLabel": "Bon",
-   "winRate": 0.52,
-   "pickRate": 0.04,
-   "banRate": 0.01,
-   "roles": {
-    "support": 0.99
-   },
-   "flexRoles": [
-    "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.6
+     },
+     {
+      "name": "LeBlanc",
+      "winRate": 0.59
+     },
+     {
+      "name": "Yuumi",
+      "winRate": 0.58
+     }
+    ],
+    "weak": [
+     {
+      "name": "Senna",
+      "winRate": 0.55
+     },
+     {
+      "name": "Hwei",
+      "winRate": 0.53
+     },
+     {
+      "name": "Seraphine",
+      "winRate": 0.51
+     }
+    ]
+   }
   },
   "Lulu": {
    "tier": 3,
@@ -2206,7 +6967,82 @@
    },
    "flexRoles": [
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.59
+     },
+     {
+      "name": "Shen",
+      "winRate": 0.54
+     },
+     {
+      "name": "Karma",
+      "winRate": 0.52
+     }
+    ],
+    "weak": [
+     {
+      "name": "Amumu",
+      "winRate": 0.55
+     },
+     {
+      "name": "Thresh",
+      "winRate": 0.53
+     },
+     {
+      "name": "Senna",
+      "winRate": 0.53
+     }
+    ]
+   }
+  },
+  "Rell": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.52,
+   "pickRate": 0.04,
+   "banRate": 0.01,
+   "roles": {
+    "support": 0.99
+   },
+   "flexRoles": [
+    "support"
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.61
+     },
+     {
+      "name": "Fiddlesticks",
+      "winRate": 0.58
+     },
+     {
+      "name": "LeBlanc",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Senna",
+      "winRate": 0.53
+     },
+     {
+      "name": "Amumu",
+      "winRate": 0.53
+     },
+     {
+      "name": "Seraphine",
+      "winRate": 0.52
+     }
+    ]
+   }
   },
   "Blitzcrank": {
    "tier": 3,
@@ -2219,7 +7055,38 @@
    },
    "flexRoles": [
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Hwei",
+      "winRate": 0.56
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.55
+     },
+     {
+      "name": "Zoe",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Braum",
+      "winRate": 0.54
+     },
+     {
+      "name": "Taric",
+      "winRate": 0.54
+     },
+     {
+      "name": "Leona",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Milio": {
    "tier": 3,
@@ -2232,7 +7099,38 @@
    },
    "flexRoles": [
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.58
+     },
+     {
+      "name": "Neeko",
+      "winRate": 0.56
+     },
+     {
+      "name": "Morgana",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Poppy",
+      "winRate": 0.55
+     },
+     {
+      "name": "Fiddlesticks",
+      "winRate": 0.54
+     },
+     {
+      "name": "Blitzcrank",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Janna": {
    "tier": 3,
@@ -2245,7 +7143,38 @@
    },
    "flexRoles": [
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.6
+     },
+     {
+      "name": "Swain",
+      "winRate": 0.58
+     },
+     {
+      "name": "Camille",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Hwei",
+      "winRate": 0.54
+     },
+     {
+      "name": "Taric",
+      "winRate": 0.53
+     },
+     {
+      "name": "Thresh",
+      "winRate": 0.52
+     }
+    ]
+   }
   },
   "Soraka": {
    "tier": 3,
@@ -2258,7 +7187,38 @@
    },
    "flexRoles": [
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.63
+     },
+     {
+      "name": "LeBlanc",
+      "winRate": 0.59
+     },
+     {
+      "name": "Neeko",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Senna",
+      "winRate": 0.52
+     },
+     {
+      "name": "Blitzcrank",
+      "winRate": 0.52
+     },
+     {
+      "name": "Zilean",
+      "winRate": 0.52
+     }
+    ]
+   }
   },
   "Pyke": {
    "tier": 3,
@@ -2271,7 +7231,38 @@
    },
    "flexRoles": [
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.56
+     },
+     {
+      "name": "Hwei",
+      "winRate": 0.56
+     },
+     {
+      "name": "Anivia",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Maokai",
+      "winRate": 0.55
+     },
+     {
+      "name": "Amumu",
+      "winRate": 0.55
+     },
+     {
+      "name": "Thresh",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Nami": {
    "tier": 3,
@@ -2284,7 +7275,38 @@
    },
    "flexRoles": [
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Swain",
+      "winRate": 0.56
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.56
+     },
+     {
+      "name": "LeBlanc",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Amumu",
+      "winRate": 0.57
+     },
+     {
+      "name": "Poppy",
+      "winRate": 0.56
+     },
+     {
+      "name": "Leona",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Sona": {
    "tier": 3,
@@ -2297,7 +7319,38 @@
    },
    "flexRoles": [
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "LeBlanc",
+      "winRate": 0.6
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.58
+     },
+     {
+      "name": "Xerath",
+      "winRate": 0.57
+     }
+    ],
+    "weak": [
+     {
+      "name": "Sylas",
+      "winRate": 0.59
+     },
+     {
+      "name": "Fiddlesticks",
+      "winRate": 0.55
+     },
+     {
+      "name": "Amumu",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Zilean": {
    "tier": 3,
@@ -2310,33 +7363,38 @@
    },
    "flexRoles": [
     "support"
-   ]
-  },
-  "Alistar": {
-   "tier": 3,
-   "tierLabel": "Bon",
-   "winRate": 0.5,
-   "pickRate": 0.04,
-   "banRate": 0.02,
-   "roles": {
-    "support": 0.97
-   },
-   "flexRoles": [
-    "support"
-   ]
-  },
-  "Karma": {
-   "tier": 3,
-   "tierLabel": "Bon",
-   "winRate": 0.49,
-   "pickRate": 0.08,
-   "banRate": 0.05,
-   "roles": {
-    "support": 0.95
-   },
-   "flexRoles": [
-    "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.61
+     },
+     {
+      "name": "Zoe",
+      "winRate": 0.61
+     },
+     {
+      "name": "Hwei",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Sylas",
+      "winRate": 0.54
+     },
+     {
+      "name": "Sona",
+      "winRate": 0.53
+     },
+     {
+      "name": "Shaco",
+      "winRate": 0.52
+     }
+    ]
+   }
   },
   "Rakan": {
    "tier": 3,
@@ -2349,7 +7407,126 @@
    },
    "flexRoles": [
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Xerath",
+      "winRate": 0.56
+     },
+     {
+      "name": "Zoe",
+      "winRate": 0.56
+     },
+     {
+      "name": "LeBlanc",
+      "winRate": 0.56
+     }
+    ],
+    "weak": [
+     {
+      "name": "Janna",
+      "winRate": 0.54
+     },
+     {
+      "name": "Senna",
+      "winRate": 0.53
+     },
+     {
+      "name": "Morgana",
+      "winRate": 0.53
+     }
+    ]
+   }
+  },
+  "Alistar": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.5,
+   "pickRate": 0.04,
+   "banRate": 0.02,
+   "roles": {
+    "support": 0.97
+   },
+   "flexRoles": [
+    "support"
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.6
+     },
+     {
+      "name": "Yuumi",
+      "winRate": 0.55
+     },
+     {
+      "name": "LeBlanc",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Senna",
+      "winRate": 0.56
+     },
+     {
+      "name": "Janna",
+      "winRate": 0.55
+     },
+     {
+      "name": "Swain",
+      "winRate": 0.55
+     }
+    ]
+   }
+  },
+  "Karma": {
+   "tier": 3,
+   "tierLabel": "Bon",
+   "winRate": 0.49,
+   "pickRate": 0.08,
+   "banRate": 0.05,
+   "roles": {
+    "support": 0.95
+   },
+   "flexRoles": [
+    "support"
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.59
+     },
+     {
+      "name": "Hwei",
+      "winRate": 0.54
+     },
+     {
+      "name": "Swain",
+      "winRate": 0.53
+     }
+    ],
+    "weak": [
+     {
+      "name": "Fiddlesticks",
+      "winRate": 0.56
+     },
+     {
+      "name": "Rakan",
+      "winRate": 0.55
+     },
+     {
+      "name": "Braum",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Morgana": {
    "tier": 3,
@@ -2362,7 +7539,38 @@
    },
    "flexRoles": [
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Sylas",
+      "winRate": 0.56
+     },
+     {
+      "name": "Zoe",
+      "winRate": 0.56
+     },
+     {
+      "name": "Renata Glasc",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Sona",
+      "winRate": 0.56
+     },
+     {
+      "name": "Zilean",
+      "winRate": 0.55
+     },
+     {
+      "name": "Milio",
+      "winRate": 0.54
+     }
+    ]
+   }
   },
   "Taric": {
    "tier": 3,
@@ -2375,7 +7583,38 @@
    },
    "flexRoles": [
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Zyra",
+      "winRate": 0.62
+     },
+     {
+      "name": "Sylas",
+      "winRate": 0.61
+     },
+     {
+      "name": "Camille",
+      "winRate": 0.59
+     }
+    ],
+    "weak": [
+     {
+      "name": "Seraphine",
+      "winRate": 0.53
+     },
+     {
+      "name": "Sona",
+      "winRate": 0.53
+     },
+     {
+      "name": "Soraka",
+      "winRate": 0.52
+     }
+    ]
+   }
   },
   "Bard": {
    "tier": 3,
@@ -2388,12 +7627,43 @@
    },
    "flexRoles": [
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.58
+     },
+     {
+      "name": "Yuumi",
+      "winRate": 0.54
+     },
+     {
+      "name": "Swain",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Poppy",
+      "winRate": 0.57
+     },
+     {
+      "name": "Rell",
+      "winRate": 0.54
+     },
+     {
+      "name": "Thresh",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Renata Glasc": {
    "tier": 4,
    "tierLabel": "Moyen",
-   "winRate": 0.51,
+   "winRate": 0.5,
    "pickRate": 0.01,
    "banRate": 0,
    "roles": {
@@ -2401,7 +7671,38 @@
    },
    "flexRoles": [
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Swain",
+      "winRate": 0.55
+     },
+     {
+      "name": "Neeko",
+      "winRate": 0.54
+     },
+     {
+      "name": "Alistar",
+      "winRate": 0.53
+     }
+    ],
+    "weak": [
+     {
+      "name": "Morgana",
+      "winRate": 0.55
+     },
+     {
+      "name": "Blitzcrank",
+      "winRate": 0.54
+     },
+     {
+      "name": "Seraphine",
+      "winRate": 0.53
+     }
+    ]
+   }
   },
   "Yuumi": {
    "tier": 4,
@@ -2414,7 +7715,38 @@
    },
    "flexRoles": [
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Swain",
+      "winRate": 0.55
+     },
+     {
+      "name": "Mel",
+      "winRate": 0.54
+     },
+     {
+      "name": "Zoe",
+      "winRate": 0.54
+     }
+    ],
+    "weak": [
+     {
+      "name": "Galio",
+      "winRate": 0.6
+     },
+     {
+      "name": "Amumu",
+      "winRate": 0.6
+     },
+     {
+      "name": "Braum",
+      "winRate": 0.58
+     }
+    ]
+   }
   },
   "Neeko": {
    "tier": 4,
@@ -2423,11 +7755,42 @@
    "pickRate": 0.02,
    "banRate": 0.01,
    "roles": {
-    "support": 0.78
+    "support": 0.77
    },
    "flexRoles": [
     "support"
-   ]
+   ],
+   "counters": {
+    "role": "support",
+    "strong": [
+     {
+      "name": "Mel",
+      "winRate": 0.56
+     },
+     {
+      "name": "LeBlanc",
+      "winRate": 0.55
+     },
+     {
+      "name": "Anivia",
+      "winRate": 0.55
+     }
+    ],
+    "weak": [
+     {
+      "name": "Taric",
+      "winRate": 0.59
+     },
+     {
+      "name": "Soraka",
+      "winRate": 0.56
+     },
+     {
+      "name": "Sona",
+      "winRate": 0.56
+     }
+    ]
+   }
   }
  }
 }

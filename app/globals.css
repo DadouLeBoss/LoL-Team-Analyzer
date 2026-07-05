@@ -167,6 +167,15 @@ button.refresh.ghost { background: transparent; color: var(--gold); border: 1px 
 .mini-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; }
 .mini-list li { display: flex; align-items: center; gap: 10px; }
 .mini-name { flex: 1; font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* --- Champions les plus joues : counters sous chaque champion --- */
+.champ-list li { display: block; }
+.champ-main { display: flex; align-items: center; gap: 10px; }
+.champ-counters { margin: 3px 0 2px 42px; display: flex; flex-direction: column; gap: 1px; }
+.ctr { font-size: 10.5px; line-height: 1.5; color: var(--muted); }
+.ctr .ctr-lbl { font-weight: 700; text-transform: uppercase; letter-spacing: .03em; font-size: 9px; margin-right: 5px; }
+.ctr.bad .ctr-lbl { color: var(--red); }
+.ctr.good .ctr-lbl { color: var(--green); }
 .mini-stat { font-size: 13px; color: var(--muted); }
 .mini-role { font-size: 11px; color: var(--muted); min-width: 64px; text-align: right; }
 .mini-level { font-size: 11px; color: var(--muted); }

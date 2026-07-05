@@ -288,20 +288,38 @@ export default function Home() {
                 {p.champions.length === 0 ? (
                   <div className="empty">Aucune partie.</div>
                 ) : (
-                  <ul className="mini-list">
+                  <ul className="mini-list champ-list">
                     {p.champions.slice(0, 5).map((c, i) => (
                       <li key={i}>
-                        {champImg(version, c.image) && (
-                          <img className="champ-img sm" src={champImg(version, c.image)} alt={c.name} />
+                        <div className="champ-main">
+                          {champImg(version, c.image) && (
+                            <img className="champ-img sm" src={champImg(version, c.image)} alt={c.name} />
+                          )}
+                          <span className="mini-name">{c.name}</span>
+                          <span className="mini-stat mono">{c.games} p.</span>
+                          <span
+                            className="mini-stat mono"
+                            style={{ color: c.winrate >= 0.5 ? "var(--green)" : "var(--red)" }}
+                          >
+                            {pct(c.winrate)}
+                          </span>
+                        </div>
+                        {c.counters && (c.counters.strong.length > 0 || c.counters.weak.length > 0) && (
+                          <div className="champ-counters">
+                            {c.counters.strong.length > 0 && (
+                              <div className="ctr bad">
+                                <span className="ctr-lbl">contre par</span>
+                                {c.counters.strong.map((x) => x.name).join(" · ")}
+                              </div>
+                            )}
+                            {c.counters.weak.length > 0 && (
+                              <div className="ctr good">
+                                <span className="ctr-lbl">bat</span>
+                                {c.counters.weak.map((x) => x.name).join(" · ")}
+                              </div>
+                            )}
+                          </div>
                         )}
-                        <span className="mini-name">{c.name}</span>
-                        <span className="mini-stat mono">{c.games} p.</span>
-                        <span
-                          className="mini-stat mono"
-                          style={{ color: c.winrate >= 0.5 ? "var(--green)" : "var(--red)" }}
-                        >
-                          {pct(c.winrate)}
-                        </span>
                       </li>
                     ))}
                   </ul>
