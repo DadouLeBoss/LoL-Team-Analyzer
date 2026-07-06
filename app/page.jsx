@@ -539,7 +539,6 @@ export default function Home() {
             {fmtTier(data.teamElo.tier)}
             {data.teamElo.division ? ` ${data.teamElo.division}` : ""} · {data.teamElo.lp} LP
           </span>
-          <span className="te-num">elo {data.teamElo.value}</span>
         </div>
       )}
 
