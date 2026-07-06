@@ -235,7 +235,24 @@ export default function Home() {
           region: { platform: region.platform, regional: region.regional },
         }),
       });
-      const json = await res.json();
+      // La reponse n'est pas toujours du JSON : si la fonction serverless
+      // depasse sa limite de temps, Vercel renvoie une page d'erreur en texte.
+      // On lit donc en texte puis on tente de parser, pour donner un message
+      // clair au lieu d'un "Unexpected token" incomprehensible.
+      const raw = await res.text();
+      let json;
+      try {
+        json = JSON.parse(raw);
+      } catch {
+        if (res.status === 504 || /timeout|time-?out|FUNCTION_INVOCATION_TIMEOUT/i.test(raw)) {
+          throw new Error(
+            "L'analyse a depasse la limite de temps de l'hebergement (60s sur Vercel). " +
+              "Une saison complete est trop longue pour la version en ligne : lance l'analyse en local (npm run dev), " +
+              "ou reduis le nombre de comptes/parties."
+          );
+        }
+        throw new Error("Reponse inattendue du serveur (" + res.status + ").");
+      }
       if (!res.ok) throw new Error(json.error || "Erreur inconnue");
       setData(json);
     } catch (e) {
