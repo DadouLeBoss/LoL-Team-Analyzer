@@ -12,6 +12,11 @@ import {
 import { analyzeTeam } from "../../../lib/analysis.js";
 
 export const dynamic = "force-dynamic";
+// Duree max d'execution de la fonction (plafond du plan Vercel Hobby). Sans ca,
+// une analyse un peu longue serait coupee a 10s. L'analyse d'une saison complete
+// depasse malgre tout cette limite : le deploiement sert de vitrine, l'analyse
+// lourde se fait en local ou via une cle a plus haut debit.
+export const maxDuration = 60;
 
 // Debut de la saison courante (epoch en secondes). A ajuster si le decoupage
 // de saison/split change : seules les parties classees posterieures sont lues.
