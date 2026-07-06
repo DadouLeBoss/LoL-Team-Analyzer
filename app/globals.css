@@ -64,7 +64,9 @@ button.refresh.ghost { background: transparent; color: var(--gold); border: 1px 
 .champ-img { width: 44px; height: 44px; border-radius: 8px; border: 1px solid var(--border); background: var(--panel-2); }
 .champ-img.sm { width: 32px; height: 32px; }
 
-.ban { padding: 14px; display: flex; gap: 12px; align-items: flex-start; }
+.ban { padding: 14px; }
+.ban-top { display: flex; align-items: center; gap: 12px; }
+.ban-info { flex: 1; min-width: 0; }
 .ban .score {
   min-width: 46px; height: 46px; border-radius: 10px; display: flex; align-items: center; justify-content: center;
   font-weight: 700; font-size: 18px; color: #1a1204; cursor: help;
@@ -84,7 +86,6 @@ button.refresh.ghost { background: transparent; color: var(--gold); border: 1px 
 .tip-title { font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 7px; }
 .tip-line { font-size: 11px; color: var(--muted); line-height: 1.6; }
 .tip-line.mono { color: var(--text); font-variant-numeric: tabular-nums; }
-.ban .body { flex: 1; }
 .ban .name { font-weight: 600; font-size: 15px; }
 .meta-badge {
   position: relative; display: inline-block; margin-left: 8px; font-size: 10px; font-weight: 700;
@@ -107,7 +108,7 @@ button.refresh.ghost { background: transparent; color: var(--gold); border: 1px 
 .mt-row { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); line-height: 1.7; }
 .mt-row b { color: var(--text); font-weight: 600; }
 .ban .who { color: var(--muted); font-size: 13px; }
-.ban .reasons { margin: 8px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+.ban .reasons { margin: 11px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
 .ban .reasons li { background: var(--panel-2); border: 1px solid var(--border); color: var(--muted); font-size: 11px; padding: 2px 8px; border-radius: 20px; }
 
 .flex-card { padding: 14px; }

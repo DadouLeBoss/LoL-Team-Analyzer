@@ -518,11 +518,10 @@ export default function Home() {
         <div className="grid bans">
           {filteredBans.slice(0, 12).map((b) => (
             <div className="card ban" key={b.championId}>
-              <BanScore b={b} />
-              <div className="body">
-                <div className="champ-row">
-                  <ChampIcon version={version} image={b.image} name={b.name} className="detail-icon" />
-                  <div>
+              <div className="ban-top">
+                <BanScore b={b} />
+                <ChampIcon version={version} image={b.image} name={b.name} className="detail-icon" />
+                <div className="ban-info">
                     <div className="name">
                       {b.name}
                       {b.meta && b.meta.tier <= 3 && (
@@ -566,7 +565,6 @@ export default function Home() {
                     );
                   })}
                 </ul>
-              </div>
             </div>
           ))}
         </div>
