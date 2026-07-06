@@ -205,6 +205,10 @@ button.refresh.ghost { background: transparent; color: var(--gold); border: 1px 
 .mi-off { margin-left: auto; font-size: 10px; color: var(--muted); }
 
 /* Barre de composition */
+.team-elo { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 12px; }
+.te-label { font-size: 12px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 700; }
+.te-num { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+
 .comp-bar {
   display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
   background: var(--panel); border: 1px solid var(--border); border-radius: 10px;

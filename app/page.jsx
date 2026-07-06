@@ -532,6 +532,17 @@ export default function Home() {
         {data.metaPatch && ` · meta OP.GG ${data.metaPatch}`}
       </p>
 
+      {data.teamElo && (
+        <div className="team-elo">
+          <span className="te-label">Niveau moyen de l'equipe</span>
+          <span className={`rank tier-${data.teamElo.tier}`}>
+            {fmtTier(data.teamElo.tier)}
+            {data.teamElo.division ? ` ${data.teamElo.division}` : ""} · {data.teamElo.lp} LP
+          </span>
+          <span className="te-num">elo {data.teamElo.value}</span>
+        </div>
+      )}
+
       {error && <div className="notice error">{error}</div>}
 
       {data.errors?.length > 0 && (
