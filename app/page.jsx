@@ -200,7 +200,8 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [expanded, setExpanded] = useState({}); // puuid -> affiche 12 lignes
-  const [roleFilter, setRoleFilter] = useState({}); // puuid -> role filtre (ou undefined)
+  const [comp, setComp] = useState({}); // puuid -> role assigne (composition d'equipe)
+  const [roleMenu, setRoleMenu] = useState(null); // puuid dont le menu "+ role" est ouvert
   const [banRole, setBanRole] = useState(null); // role filtre pour la section bans
   const [progress, setProgress] = useState(null); // suivi d'avancement pendant l'analyse
   const [now, setNow] = useState(0); // horloge qui tourne pour afficher le temps ecoule
@@ -216,8 +217,21 @@ export default function Home() {
     setExpanded((prev) => ({ ...prev, [puuid]: !prev[puuid] }));
   }
 
-  function toggleRole(puuid, role) {
-    setRoleFilter((prev) => ({ ...prev, [puuid]: prev[puuid] === role ? undefined : role }));
+  // Assigne un role a un joueur pour la composition. Exclusif : un role donne
+  // ne peut etre tenu que par un seul joueur (on le retire des autres). Recliquer
+  // le meme role le desassigne.
+  function assignRole(puuid, role) {
+    setComp((prev) => {
+      const next = { ...prev };
+      if (next[puuid] === role) {
+        delete next[puuid];
+        return next;
+      }
+      for (const k of Object.keys(next)) if (next[k] === role) delete next[k];
+      next[puuid] = role;
+      return next;
+    });
+    setRoleMenu(null);
   }
 
   function setAccount(i, value) {
@@ -341,8 +355,43 @@ export default function Home() {
 
   const version = data?.ddragonVersion;
   const logRegion = REGIONS.find((r) => r.key === regionKey)?.log || "euw";
-  const banRoleList = data?.bans ? ROLE_ORDER_LIST.filter((r) => data.bans.some((b) => b.role === r)) : [];
-  const filteredBans = data?.bans ? (banRole ? data.bans.filter((b) => b.role === banRole) : data.bans) : [];
+
+  // Composition : role assigne par NOM de joueur (flex/bans referencent le nom)
+  // et role -> joueur qui le tient (pour l'exclusivite / griser les roles pris).
+  const assignedRoleByName = {};
+  const roleTakenBy = {}; // role -> puuid
+  if (data?.players) {
+    for (const p of data.players) {
+      const r = comp[p.puuid];
+      if (r) {
+        assignedRoleByName[p.name] = r;
+        roleTakenBy[r] = p.puuid;
+      }
+    }
+  }
+
+  // Un ban reste visible si son meilleur joueur n'a pas de role assigne, ou si le
+  // role assigne correspond au role ou il joue ce champion.
+  function banVisible(b) {
+    const ar = assignedRoleByName[b.bestPlayer];
+    return ar === undefined || ar === b.role;
+  }
+  // Un flex ne garde que les joueurs jouant le champion dans leur role assigne
+  // (ou non assignes) ; il disparait s'il ne reste pas 2 joueurs sur 2 roles.
+  function filterFlex(f) {
+    const players = f.players.filter((p) => {
+      const ar = assignedRoleByName[p.name];
+      return ar === undefined || ar === p.role;
+    });
+    const roles = [...new Set(players.map((p) => p.role).filter(Boolean))];
+    if (players.length >= 2 && roles.length >= 2) return { ...f, players, roles };
+    return null;
+  }
+
+  const compBans = data?.bans ? data.bans.filter(banVisible) : [];
+  const banRoleList = ROLE_ORDER_LIST.filter((r) => compBans.some((b) => b.role === r));
+  const filteredBans = banRole ? compBans.filter((b) => b.role === banRole) : compBans;
+  const filteredFlex = data?.flex ? data.flex.map(filterFlex).filter(Boolean) : [];
 
   // -------------------- Vue formulaire --------------------
   if (!data) {
@@ -491,15 +540,37 @@ export default function Home() {
         </div>
       )}
 
+      {Object.keys(comp).length > 0 && (
+        <div className="comp-bar">
+          <span className="comp-label">Composition</span>
+          {ROLE_ORDER_LIST.map((role) => {
+            const owner = roleTakenBy[role];
+            const name = owner ? data.players.find((x) => x.puuid === owner)?.name : null;
+            return (
+              <span key={role} className={`comp-slot${name ? " set" : ""}`}>
+                <b>{roleLabel(role)}</b> {name || "-"}
+              </span>
+            );
+          })}
+          <button className="comp-reset" onClick={() => setComp({})}>
+            Reinitialiser
+          </button>
+        </div>
+      )}
+
       {/* -------------------- Detail par joueur -------------------- */}
       <section className="section">
         <h2>Detail par joueur</h2>
         {data.players.map((p) => {
           const rows = expanded[p.puuid] ? 12 : 6;
-          const activeRole = roleFilter[p.puuid];
+          const activeRole = comp[p.puuid];
           const roleData = activeRole ? p.byRole?.[activeRole] : null;
-          const champs = roleData ? roleData.champions : p.champions;
-          const recents = roleData ? roleData.recentMatches : p.recentMatches;
+          // Role assigne hors pool (aucune partie) -> colonnes vides.
+          const champs = activeRole ? roleData?.champions || [] : p.champions;
+          const recents = activeRole ? roleData?.recentMatches || [] : p.recentMatches;
+          const playedRoles = p.roles.filter((r) => r.pct >= 0.1);
+          const playedSet = new Set(playedRoles.map((r) => r.role));
+          const assignedOffRole = activeRole && !playedSet.has(activeRole);
           return (
           <div className="card player" key={p.puuid}>
             <h3>
@@ -521,22 +592,71 @@ export default function Home() {
               </div>
             </h3>
 
-            {p.roles.length > 0 && (
-              <div className="player-roles">
-                {p.roles
-                  .filter((r) => r.pct >= 0.1)
-                  .map((r) => (
-                    <button
-                      className={`role-tag${activeRole === r.role ? " active" : ""}`}
-                      onClick={() => toggleRole(p.puuid, r.role)}
-                      title={`Filtrer sur ${roleLabel(r.role)}`}
-                      key={r.role}
-                    >
-                      {roleLabel(r.role)} {pct(r.pct)}
-                    </button>
-                  ))}
+            <div className="player-roles">
+              {playedRoles.map((r) => {
+                const owner = roleTakenBy[r.role];
+                const takenByOther = owner && owner !== p.puuid;
+                return (
+                  <button
+                    className={`role-tag${activeRole === r.role ? " active" : ""}${takenByOther ? " taken" : ""}`}
+                    onClick={() => assignRole(p.puuid, r.role)}
+                    disabled={takenByOther}
+                    title={
+                      takenByOther
+                        ? `${roleLabel(r.role)} deja pris par ${data.players.find((x) => x.puuid === owner)?.name}`
+                        : `Assigner ${roleLabel(r.role)} a ${p.name}`
+                    }
+                    key={r.role}
+                  >
+                    {roleLabel(r.role)} {pct(r.pct)}
+                  </button>
+                );
+              })}
+
+              {/* Role assigne hors du pool habituel du joueur */}
+              {assignedOffRole && (
+                <button
+                  className="role-tag active off"
+                  onClick={() => assignRole(p.puuid, activeRole)}
+                  title={`${roleLabel(activeRole)} (hors pool) assigne a ${p.name}`}
+                >
+                  {roleLabel(activeRole)} <span className="off-tag">hors pool</span>
+                </button>
+              )}
+
+              {/* Menu pour assigner un role hors du pool */}
+              <div className="role-add">
+                <button
+                  className="role-more"
+                  onClick={() => setRoleMenu(roleMenu === p.puuid ? null : p.puuid)}
+                  title="Assigner un autre role"
+                >
+                  &#8942;
+                </button>
+                {roleMenu === p.puuid && (
+                  <div className="role-menu">
+                    {ROLE_ORDER_LIST.map((role) => {
+                      const owner = roleTakenBy[role];
+                      const takenByOther = owner && owner !== p.puuid;
+                      return (
+                        <button
+                          key={role}
+                          className={`role-menu-item${activeRole === role ? " active" : ""}`}
+                          onClick={() => assignRole(p.puuid, role)}
+                          disabled={takenByOther}
+                        >
+                          {roleLabel(role)}
+                          {!playedSet.has(role) && <span className="mi-off">hors pool</span>}
+                          {takenByOther && (
+                            <span className="mi-off">pris ({data.players.find((x) => x.puuid === owner)?.name})</span>
+                          )}
+                        </button>
+                      );
+                    })}
+                  </div>
+                )}
               </div>
-            )}
+            </div>
 
             <div className="player-cols">
               {/* Champions les plus joues */}
@@ -652,11 +772,15 @@ export default function Home() {
           Champions flex
           <span className="hint">joues par plusieurs joueurs, dans au moins 2 roles differents</span>
         </h2>
-        {data.flex.length === 0 ? (
-          <div className="notice">Aucun champion joue par 2 joueurs ou plus dans 2 roles differents.</div>
+        {filteredFlex.length === 0 ? (
+          <div className="notice">
+            {data.flex.length > 0
+              ? "Aucun flex ne correspond a la composition selectionnee."
+              : "Aucun champion joue par 2 joueurs ou plus dans 2 roles differents."}
+          </div>
         ) : (
           <div className="grid flex">
-            {data.flex.map((f) => (
+            {filteredFlex.map((f) => (
               <div className="card flex-card" key={f.championId}>
                 <div className="champ-row">
                   <ChampIcon version={version} image={f.image} name={f.name} className="champ-img" />
@@ -704,6 +828,9 @@ export default function Home() {
             </button>
           ))}
         </div>
+        {filteredBans.length === 0 && (
+          <div className="notice">Aucun ban ne correspond a la composition selectionnee.</div>
+        )}
         <div className="grid bans">
           {filteredBans.slice(0, 12).map((b) => (
             <div className="card ban" key={b.championId}>
