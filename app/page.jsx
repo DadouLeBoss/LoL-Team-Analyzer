@@ -157,6 +157,11 @@ function num2(x) {
   return (Math.round((x || 0) * 100) / 100).toFixed(2);
 }
 
+// Points de maitrise : "1.23M" au-dela du million, sinon "450k".
+function fmtPoints(pts) {
+  return pts >= 1000000 ? (pts / 1000000).toFixed(2) + "M" : Math.round(pts / 1000) + "k";
+}
+
 // Pastille de score de ban avec tooltip detaillant le calcul au survol.
 function BanScore({ b }) {
   const d = b.breakdown;
@@ -169,15 +174,16 @@ function BanScore({ b }) {
         <div className="score-tip">
           <div className="tip-title">Detail du score</div>
           <div className="tip-line">
-            Force = confiance x (0.40·volume + 0.25·recent + 0.25·WR + 0.10·KDA)
+            Force = confiance x (0.40·volume + 0.20·recent + 0.30·WR + 0.10·KDA)
           </div>
           <div className="tip-line mono">
-            = {num2(d.confidence)} x (0.40·{num2(d.volume)} + 0.25·{num2(d.recent)} + 0.25·
+            = {num2(d.confidence)} x (0.40·{num2(d.volume)} + 0.20·{num2(d.recent)} + 0.30·
             {num2(d.winrate)} + 0.10·{num2(d.kda)}) = {num2(d.force)}
           </div>
           <div className="tip-line mono">
             Score = force x flex-jeu(x{num2(d.gameFlexFactor)}, {d.roleCount} role
             {d.roleCount > 1 ? "s" : ""}) x meta(x{num2(d.metaFactor)})
+            {d.skillFactor > 1 ? ` x niveau(x${num2(d.skillFactor)})` : ""}
             {d.masteryBoost > 0 ? ` + ${num2(d.masteryBoost)}` : ""} = {b.score}/100
           </div>
         </div>
@@ -627,7 +633,7 @@ export default function Home() {
                         <span className="mini-name">{m.name}</span>
                         <span className="mini-level">Niv. {m.level}</span>
                         <span className="mini-stat mono">
-                          {Math.round(m.points / 1000)}k pts
+                          {fmtPoints(m.points)} pts
                         </span>
                       </li>
                     ))}
