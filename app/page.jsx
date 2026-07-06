@@ -23,6 +23,23 @@ const REGIONS = [
   { key: "JP", label: "Japon (JP)", platform: "jp1", regional: "asia", log: "jp" },
 ];
 
+// Analyse un lien op.gg multisearch et en extrait les pseudos + la region.
+// Ex : https://op.gg/fr/lol/multisearch/euw?summoners=Zhynkaaa%23KCwin%2C+League+of+Pigs%23PIGS...
+// URLSearchParams gere le decodage (+ -> espace, %23 -> #, %2C -> ,).
+function parseMultiGG(link) {
+  try {
+    const url = new URL(link.trim());
+    const summoners = url.searchParams.get("summoners");
+    if (!summoners) return null;
+    const names = summoners.split(",").map((s) => s.trim()).filter(Boolean);
+    if (names.length === 0) return null;
+    const m = url.pathname.match(/multisearch\/([a-z]+)/i);
+    return { names, regionPart: m ? m[1].toLowerCase() : null };
+  } catch {
+    return null;
+  }
+}
+
 // Libelles de roles affiches (l'API renvoie TOP/JUNGLE/MIDDLE/BOTTOM/UTILITY).
 const ROLE_LABEL = { TOP: "TOP", JUNGLE: "JUNGLE", MIDDLE: "MID", BOTTOM: "BOT", UTILITY: "SUPPORT" };
 const ROLE_ORDER_LIST = ["TOP", "JUNGLE", "MIDDLE", "BOTTOM", "UTILITY"];
@@ -161,6 +178,7 @@ function BanScore({ b }) {
 
 export default function Home() {
   const [accounts, setAccounts] = useState(DEFAULT_ACCOUNTS);
+  const [multiLink, setMultiLink] = useState("");
   const [regionKey, setRegionKey] = useState("EUW");
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -179,6 +197,24 @@ export default function Home() {
 
   function setAccount(i, value) {
     setAccounts((prev) => prev.map((a, idx) => (idx === i ? value : a)));
+  }
+
+  // Convertit le lien MultiGG en remplissant les champs joueurs et la region.
+  // Les champs restent editables ensuite pour ajuster un joueur en particulier.
+  function applyMultiLink() {
+    const parsed = parseMultiGG(multiLink);
+    if (!parsed) {
+      setError("Lien MultiGG invalide (attendu un lien op.gg multisearch).");
+      return;
+    }
+    setError(null);
+    const filled = parsed.names.slice(0, 5);
+    while (filled.length < 5) filled.push("");
+    setAccounts(filled);
+    if (parsed.regionPart) {
+      const reg = REGIONS.find((r) => r.log === parsed.regionPart);
+      if (reg) setRegionKey(reg.key);
+    }
   }
 
   async function run() {
@@ -229,6 +265,23 @@ export default function Home() {
         </p>
 
         <div className="card form">
+          <div className="field multigg">
+            <label>MultiGG</label>
+            <div className="multigg-row">
+              <input
+                type="text"
+                value={multiLink}
+                placeholder="Colle un lien op.gg multisearch"
+                onChange={(e) => setMultiLink(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && applyMultiLink()}
+              />
+              <button type="button" className="multigg-btn" onClick={applyMultiLink}>
+                Convertir
+              </button>
+            </div>
+          </div>
+          <div className="multigg-sep">puis ajuste les comptes si besoin</div>
+
           <div className="form-fields">
             {accounts.map((a, i) => (
               <div className="field" key={i}>

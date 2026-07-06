@@ -50,6 +50,23 @@ button.refresh.ghost { background: transparent; color: var(--gold); border: 1px 
   padding: 10px 12px; border-radius: 8px; font-size: 14px; width: 100%;
 }
 .field input:focus, .field select:focus { outline: none; border-color: var(--gold); }
+.multigg { margin-bottom: 16px; }
+.multigg-row { display: flex; gap: 8px; }
+.multigg-row input { flex: 1; min-width: 0; }
+.multigg-btn {
+  flex-shrink: 0; padding: 0 16px; border-radius: 8px; cursor: pointer;
+  background: var(--panel-2); border: 1px solid var(--gold); color: var(--gold);
+  font-size: 13px; font-weight: 600; white-space: nowrap;
+}
+.multigg-btn:hover { background: var(--gold); color: #1a1204; }
+.multigg-sep {
+  display: flex; align-items: center; gap: 12px;
+  color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em;
+  margin-bottom: 16px;
+}
+.multigg-sep::before, .multigg-sep::after {
+  content: ""; flex: 1; height: 1px; background: var(--border);
+}
 
 .section { margin-top: 40px; }
 .section h2 { font-size: 18px; border-left: 3px solid var(--gold); padding-left: 10px; margin-bottom: 16px; }
