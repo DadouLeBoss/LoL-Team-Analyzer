@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const DEFAULT_ACCOUNTS = [
   "Zhynkaaa#KCwin",
@@ -137,6 +137,16 @@ function relativeTime(ts) {
   return `Il y a ${d} jour${d > 1 ? "s" : ""}`;
 }
 
+// Duree en ms -> "m:ss" (ou "h:mm:ss" au-dela d'une heure).
+function fmtDuration(ms) {
+  const s = Math.max(0, Math.round(ms / 1000));
+  const h = Math.floor(s / 3600);
+  const m = Math.floor((s % 3600) / 60);
+  const sec = s % 60;
+  const pad = (n) => String(n).padStart(2, "0");
+  return h > 0 ? `${h}:${pad(m)}:${pad(sec)}` : `${m}:${pad(sec)}`;
+}
+
 function scoreColor(score) {
   if (score >= 60) return "#e05265";
   if (score >= 40) return "#e0a052";
@@ -186,6 +196,15 @@ export default function Home() {
   const [expanded, setExpanded] = useState({}); // puuid -> affiche 12 lignes
   const [roleFilter, setRoleFilter] = useState({}); // puuid -> role filtre (ou undefined)
   const [banRole, setBanRole] = useState(null); // role filtre pour la section bans
+  const [progress, setProgress] = useState(null); // suivi d'avancement pendant l'analyse
+  const [now, setNow] = useState(0); // horloge qui tourne pour afficher le temps ecoule
+
+  // Tic d'horloge chaque seconde pendant le chargement (pour temps ecoule / ETA).
+  useEffect(() => {
+    if (!loading) return;
+    const t = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(t);
+  }, [loading]);
 
   function toggleExpanded(puuid) {
     setExpanded((prev) => ({ ...prev, [puuid]: !prev[puuid] }));
@@ -217,48 +236,100 @@ export default function Home() {
     }
   }
 
+  // POST JSON robuste : lit en texte puis tente de parser, pour transformer une
+  // page d'erreur serverless (timeout) en message clair plutot qu'un crash JSON.
+  async function postJson(url, body) {
+    const res = await fetch(url, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    });
+    const raw = await res.text();
+    let json;
+    try {
+      json = JSON.parse(raw);
+    } catch {
+      if (res.status === 504 || /timeout|time-?out|FUNCTION_INVOCATION_TIMEOUT/i.test(raw)) {
+        throw new Error("Une etape a depasse la limite de temps de l'hebergement. Reessaie : le cache reprend la ou ca s'est arrete.");
+      }
+      throw new Error("Reponse inattendue du serveur (" + res.status + ").");
+    }
+    if (!res.ok) throw new Error(json.error || "Erreur inconnue");
+    return json;
+  }
+
+  // Taille d'un lot de telechargement et plafond de parties reellement
+  // recuperees chez Riot par fenetre de 2 min (marge sous la limite 100/120s).
+  const BATCH = 25;
+  const MAX_FETCH_PER_WINDOW = 90;
+  const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
   async function run() {
     const players = accounts.map((a) => a.trim()).filter(Boolean);
     if (players.length === 0) {
       setError("Renseigne au moins un compte.");
       return;
     }
-    const region = REGIONS.find((r) => r.key === regionKey);
+    const reg = REGIONS.find((r) => r.key === regionKey);
+    const region = { platform: reg.platform, regional: reg.regional };
+    const startedAt = Date.now();
     setLoading(true);
     setError(null);
+    setProgress({ phase: "prepare", prepDone: 0, prepTotal: players.length, dl: 0, dlTotal: 0, startedAt });
+
     try {
-      const res = await fetch("/api/analyze", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          players,
-          region: { platform: region.platform, regional: region.regional },
-        }),
-      });
-      // La reponse n'est pas toujours du JSON : si la fonction serverless
-      // depasse sa limite de temps, Vercel renvoie une page d'erreur en texte.
-      // On lit donc en texte puis on tente de parser, pour donner un message
-      // clair au lieu d'un "Unexpected token" incomprehensible.
-      const raw = await res.text();
-      let json;
-      try {
-        json = JSON.parse(raw);
-      } catch {
-        if (res.status === 504 || /timeout|time-?out|FUNCTION_INVOCATION_TIMEOUT/i.test(raw)) {
-          throw new Error(
-            "L'analyse a depasse la limite de temps de l'hebergement (60s sur Vercel). " +
-              "Une saison complete est trop longue pour la version en ligne : lance l'analyse en local (npm run dev), " +
-              "ou reduis le nombre de comptes/parties."
-          );
+      // --- Phase 1 : preparation joueur par joueur ---
+      const okIds = [];
+      const errors = [];
+      const allIds = new Set();
+      for (let i = 0; i < players.length; i++) {
+        const p = await postJson("/api/prepare", { riotId: players[i], region });
+        if (p.error) errors.push({ riotId: p.riotId, error: p.error });
+        else {
+          okIds.push(p.riotId);
+          (p.matchIds || []).forEach((id) => allIds.add(id));
         }
-        throw new Error("Reponse inattendue du serveur (" + res.status + ").");
+        setProgress((prev) => ({ ...prev, prepDone: i + 1 }));
       }
-      if (!res.ok) throw new Error(json.error || "Erreur inconnue");
-      setData(json);
+
+      if (okIds.length === 0) {
+        throw new Error(
+          "Aucun compte valide. " + errors.map((e) => `${e.riotId} (${e.error})`).join(", ")
+        );
+      }
+
+      // --- Phase 2 : telechargement des parties par lots, cadence sous la limite ---
+      const ids = [...allIds];
+      const dlTotal = ids.length;
+      let dl = 0;
+      const fetchLog = []; // { t, n } des parties reellement recuperees chez Riot
+      setProgress((prev) => ({ ...prev, phase: "download", dl: 0, dlTotal }));
+
+      for (let i = 0; i < ids.length; i += BATCH) {
+        // Cadence : ne pas depasser MAX_FETCH_PER_WINDOW parties recuperees / 2 min.
+        for (;;) {
+          const cutoff = Date.now() - 120000;
+          while (fetchLog.length && fetchLog[0].t < cutoff) fetchLog.shift();
+          const windowSum = fetchLog.reduce((s, e) => s + e.n, 0);
+          if (windowSum + BATCH <= MAX_FETCH_PER_WINDOW) break;
+          await sleep(2000);
+        }
+        const slice = ids.slice(i, i + BATCH);
+        const r = await postJson("/api/matches", { ids: slice, region });
+        if (r.fetched > 0) fetchLog.push({ t: Date.now(), n: r.fetched });
+        dl += r.done;
+        setProgress((prev) => ({ ...prev, dl }));
+      }
+
+      // --- Phase 3 : analyse (tout est en cache, aucun appel Riot) ---
+      setProgress((prev) => ({ ...prev, phase: "finalize" }));
+      const analysis = await postJson("/api/finalize", { riotIds: okIds, errors, region });
+      setData(analysis);
     } catch (e) {
       setError(e.message);
     } finally {
       setLoading(false);
+      setProgress(null);
     }
   }
 
@@ -330,15 +401,57 @@ export default function Home() {
           </button>
         </div>
 
-        {loading && (
+        {loading && progress && (
           <div className="loading">
-            Recuperation des donnees Riot...
-            <br />
-            <span style={{ fontSize: 12 }}>
-              Le premier chargement d'une saison complete peut prendre une quinzaine de minutes
-              (limite Riot de 100 requetes / 2 min). S'il est interrompu, relance : le chargement
-              reprend la ou il s'etait arrete grace au cache. Les analyses suivantes sont instantanees.
-            </span>
+            {progress.phase === "prepare" && (
+              <>
+                <div className="prog-label">
+                  Preparation des joueurs... {progress.prepDone}/{progress.prepTotal}
+                </div>
+                <div className="prog-bar">
+                  <div
+                    className="prog-fill"
+                    style={{ width: `${(progress.prepTotal ? progress.prepDone / progress.prepTotal : 0) * 100}%` }}
+                  />
+                </div>
+                <div className="prog-sub">Recuperation de la liste des parties de chaque compte</div>
+              </>
+            )}
+
+            {progress.phase === "download" &&
+              (() => {
+                const elapsed = (now || Date.now()) - progress.startedAt;
+                const p = progress.dlTotal ? progress.dl / progress.dlTotal : 0;
+                const eta = progress.dl > 0 ? (elapsed / progress.dl) * (progress.dlTotal - progress.dl) : null;
+                return (
+                  <>
+                    <div className="prog-label">
+                      Telechargement des parties... {progress.dl}/{progress.dlTotal} ({Math.round(p * 100)}%)
+                    </div>
+                    <div className="prog-bar">
+                      <div className="prog-fill" style={{ width: `${p * 100}%` }} />
+                    </div>
+                    <div className="prog-sub">
+                      Temps ecoule {fmtDuration(elapsed)}
+                      {eta != null ? ` · restant ~${fmtDuration(eta)}` : ""}
+                    </div>
+                  </>
+                );
+              })()}
+
+            {progress.phase === "finalize" && (
+              <>
+                <div className="prog-label">Calcul de l'analyse...</div>
+                <div className="prog-bar">
+                  <div className="prog-fill indet" />
+                </div>
+              </>
+            )}
+
+            <div className="prog-note">
+              Le premier chargement d'une saison peut etre long (limite Riot de 100 requetes / 2 min). Tu peux
+              laisser l'onglet ouvert ; si tu relances, le cache reprend la ou ca s'etait arrete.
+            </div>
           </div>
         )}
       </div>
