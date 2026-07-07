@@ -166,6 +166,8 @@ function fmtPoints(pts) {
 // Pastille de score de ban avec tooltip detaillant le calcul au survol.
 function BanScore({ b }) {
   const d = b.breakdown;
+  const w = d?.weights || { wVolume: 0.4, wRecent: 0.2, wWin: 0.3, wKda: 0.1 };
+  const mastery = d?.mastery || 0;
   return (
     <div className="score-wrap">
       <div className="score" style={{ background: scoreColor(b.score) }}>
@@ -175,17 +177,17 @@ function BanScore({ b }) {
         <div className="score-tip">
           <div className="tip-title">Detail du score</div>
           <div className="tip-line">
-            Force = confiance x (0.40·volume + 0.20·recent + 0.30·WR + 0.10·KDA)
+            Force = confiance x (volume + recent + WR + KDA{mastery > 0 ? " + maitrise" : ""})
           </div>
           <div className="tip-line mono">
-            = {num2(d.confidence)} x (0.40·{num2(d.volume)} + 0.20·{num2(d.recent)} + 0.30·
-            {num2(d.winrate)} + 0.10·{num2(d.kda)}) = {num2(d.force)}
+            = {num2(d.confidence)} x ({num2(w.wVolume)}·{num2(d.volume)} + {num2(w.wRecent)}·
+            {num2(d.recent)} + {num2(w.wWin)}·{num2(d.winrate)} + {num2(w.wKda)}·{num2(d.kda)}
+            {mastery > 0 ? ` + ${num2(mastery)}` : ""}) = {num2(d.force)}
           </div>
           <div className="tip-line mono">
             Score = force x flex-jeu(x{num2(d.gameFlexFactor)}, {d.roleCount} role
             {d.roleCount > 1 ? "s" : ""}) x meta(x{num2(d.metaFactor)})
-            {d.skillFactor > 1 ? ` x niveau(x${num2(d.skillFactor)})` : ""}
-            {d.masteryBoost > 0 ? ` + ${num2(d.masteryBoost)}` : ""} = {b.score}/100
+            {d.skillFactor > 1 ? ` x niveau(x${num2(d.skillFactor)})` : ""} = {b.score}/100
           </div>
         </div>
       )}
