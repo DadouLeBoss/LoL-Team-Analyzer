@@ -1,4 +1,5 @@
 import "./globals.css";
+import Footer from "./Footer.jsx";
 
 export const metadata = {
   title: "LoL Team Analyzer",
@@ -8,7 +9,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
