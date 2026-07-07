@@ -78,14 +78,6 @@ export default function MentionsLegales() {
             responsabilite de l'editeur quant aux decisions de jeu prises sur leur base.
           </p>
         </section>
-
-        <section className="doc-section">
-          <h2>Contact</h2>
-          <p>
-            Pour toute question relative au site ou aux donnees :{" "}
-            <a href="mailto:info@indigo-studio.be">info@indigo-studio.be</a>
-          </p>
-        </section>
       </div>
     </div>
   );
