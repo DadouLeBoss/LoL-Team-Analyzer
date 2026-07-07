@@ -13,7 +13,7 @@ export const maxDuration = 60;
 // risque de depasser la limite de temps.
 export async function POST(request) {
   try {
-    const { riotIds, errors, region } = await request.json();
+    const { riotIds, errors, region, settings } = await request.json();
     const ids = Array.isArray(riotIds) ? riotIds : [];
 
     const ddragon = await getDDragon();
@@ -60,7 +60,7 @@ export async function POST(request) {
       // pas de meta -> analyse sans bonus meta
     }
 
-    const analysis = analyzeTeam(enriched, ddragon, meta);
+    const analysis = analyzeTeam(enriched, ddragon, meta, settings);
     analysis.errors = collectedErrors;
     analysis.matchesDownloaded = uniquePresent;
     analysis.matchesFailed = uniqueMatchIds.size - uniquePresent;

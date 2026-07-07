@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { DEFAULT_SETTINGS, SETTINGS_SCHEMA } from "../lib/settings.js";
 
 const DEFAULT_ACCOUNTS = [
   "Zhynkaaa#KCwin",
@@ -192,6 +193,73 @@ function BanScore({ b }) {
   );
 }
 
+// Icone d'engrenage (pas d'emoji : SVG inline).
+function GearIcon() {
+  return (
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="12" cy="12" r="3" />
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+    </svg>
+  );
+}
+
+// Panneau de reglages : edite un brouillon local, applique a la demande.
+function SettingsPanel({ initial, onApply, onClose, applying }) {
+  const [draft, setDraft] = useState(initial);
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal" onClick={(e) => e.stopPropagation()}>
+        <div className="modal-head">
+          <h3>Parametres</h3>
+          <button className="modal-close" onClick={onClose} aria-label="Fermer">
+            &times;
+          </button>
+        </div>
+        <div className="modal-body">
+          {SETTINGS_SCHEMA.map((group) => (
+            <div className="settings-group" key={group.title}>
+              <div className="settings-group-title">{group.title}</div>
+              {group.hint && <div className="settings-group-hint">{group.hint}</div>}
+              <div className="settings-grid">
+                {group.fields.map((f) => (
+                  <label className="settings-field" key={f.key}>
+                    <span>{f.label}</span>
+                    <input
+                      type="number"
+                      step={f.step}
+                      min={f.min}
+                      max={f.max}
+                      value={draft[f.key]}
+                      onChange={(e) =>
+                        setDraft((prev) => ({
+                          ...prev,
+                          [f.key]: e.target.value === "" ? "" : Number(e.target.value),
+                        }))
+                      }
+                    />
+                  </label>
+                ))}
+              </div>
+            </div>
+          ))}
+          <div className="settings-note">
+            Les reglages sont enregistres dans ce navigateur. "Appliquer" recalcule l'analyse
+            (instantane, sans re-telecharger les parties).
+          </div>
+        </div>
+        <div className="modal-foot">
+          <button className="ghost-btn" onClick={() => setDraft(DEFAULT_SETTINGS)}>
+            Reinitialiser
+          </button>
+          <button className="apply-btn" onClick={() => onApply(draft)} disabled={applying}>
+            {applying ? "Application..." : "Appliquer"}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   const [accounts, setAccounts] = useState(DEFAULT_ACCOUNTS);
   const [multiLink, setMultiLink] = useState("");
@@ -205,6 +273,10 @@ export default function Home() {
   const [banRole, setBanRole] = useState(null); // role filtre pour la section bans
   const [progress, setProgress] = useState(null); // suivi d'avancement pendant l'analyse
   const [now, setNow] = useState(0); // horloge qui tourne pour afficher le temps ecoule
+  const [settings, setSettings] = useState(DEFAULT_SETTINGS); // reglages du calcul
+  const [showSettings, setShowSettings] = useState(false);
+  const [applying, setApplying] = useState(false); // recalcul en cours apres changement de reglages
+  const [lastRun, setLastRun] = useState(null); // { riotIds, errors, region } pour recalculer
 
   // Tic d'horloge chaque seconde pendant le chargement (pour temps ecoule / ETA).
   useEffect(() => {
@@ -212,6 +284,49 @@ export default function Home() {
     const t = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(t);
   }, [loading]);
+
+  // Charge les reglages sauvegardes dans ce navigateur (au montage).
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("lol-settings");
+      if (saved) setSettings({ ...DEFAULT_SETTINGS, ...JSON.parse(saved) });
+    } catch {}
+  }, []);
+
+  // Nettoie un brouillon de reglages : force des nombres valides, defaut sinon.
+  function cleanSettings(raw) {
+    const out = {};
+    for (const key of Object.keys(DEFAULT_SETTINGS)) {
+      const v = Number(raw[key]);
+      out[key] = Number.isFinite(v) ? v : DEFAULT_SETTINGS[key];
+    }
+    return out;
+  }
+
+  // Applique de nouveaux reglages : sauvegarde + recalcule l'analyse depuis le
+  // cache (aucun re-telechargement), si une analyse a deja tourne.
+  async function applySettings(rawDraft) {
+    const clean = cleanSettings(rawDraft);
+    setSettings(clean);
+    try {
+      localStorage.setItem("lol-settings", JSON.stringify(clean));
+    } catch {}
+    if (!lastRun) {
+      setShowSettings(false);
+      return;
+    }
+    setApplying(true);
+    setError(null);
+    try {
+      const analysis = await postJson("/api/finalize", { ...lastRun, settings: clean });
+      setData(analysis);
+      setShowSettings(false);
+    } catch (e) {
+      setError(e.message);
+    } finally {
+      setApplying(false);
+    }
+  }
 
   function toggleExpanded(puuid) {
     setExpanded((prev) => ({ ...prev, [puuid]: !prev[puuid] }));
@@ -343,7 +458,8 @@ export default function Home() {
 
       // --- Phase 3 : analyse (tout est en cache, aucun appel Riot) ---
       setProgress((prev) => ({ ...prev, phase: "finalize" }));
-      const analysis = await postJson("/api/finalize", { riotIds: okIds, errors, region });
+      setLastRun({ riotIds: okIds, errors, region });
+      const analysis = await postJson("/api/finalize", { riotIds: okIds, errors, region, settings });
       setData(analysis);
     } catch (e) {
       setError(e.message);
@@ -516,16 +632,36 @@ export default function Home() {
   // -------------------- Vue resultats --------------------
   return (
     <div className="wrap">
+      {showSettings && (
+        <SettingsPanel
+          initial={settings}
+          onApply={applySettings}
+          onClose={() => setShowSettings(false)}
+          applying={applying}
+        />
+      )}
       <header className="top">
         <div className="brand">
-          <img className="logo" src="/logo.png" alt="LoL Team Analyzer" />
+          <img
+            className="logo clickable"
+            src="/logo.png"
+            alt="Accueil"
+            title="Retour a l'accueil"
+            onClick={() => setData(null)}
+          />
           <h1>
             LoL <span className="accent">Team Analyzer</span>
           </h1>
         </div>
-        <button className="refresh ghost" onClick={() => setData(null)}>
-          Nouvelle analyse
-        </button>
+        <div className="top-actions">
+          <button className="icon-btn" onClick={() => setShowSettings(true)} title="Parametres">
+            <GearIcon />
+            <span>Parametres</span>
+          </button>
+          <button className="refresh ghost" onClick={() => setData(null)}>
+            Nouvelle analyse
+          </button>
+        </div>
       </header>
       <p className="sub">
         {data.players.length} joueurs analyses sur leurs parties classees de la saison · {data.matchesDownloaded} parties uniques · patch {version}
