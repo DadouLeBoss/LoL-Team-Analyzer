@@ -170,6 +170,20 @@ button.refresh.ghost { background: transparent; color: var(--gold); border: 1px 
 .meta-badge.tier2 { background: #e0a052; color: #2a1a04; } /* Fort */
 .meta-badge.tier3 { background: #4d9fec; color: #041121; } /* Bon */
 
+/* Badge "en preparation" (pick recemment travaille) */
+.prep-badge {
+  display: inline-block; margin-left: 8px; font-size: 10px; font-weight: 700;
+  padding: 1px 7px; border-radius: 20px; vertical-align: middle; letter-spacing: .02em;
+  background: #7d5be0; color: #f2edff; cursor: help;
+}
+
+/* Badge "peu de donnees" sur un joueur peu analyse */
+.low-data {
+  font-size: 11px; font-weight: 600; color: #f0c674; letter-spacing: .02em;
+  background: rgba(224, 160, 82, .12); border: 1px solid rgba(224, 160, 82, .4);
+  padding: 3px 9px; border-radius: 6px; cursor: help;
+}
+
 /* Tooltip du badge meta : detail pick/ban */
 .meta-tip {
   position: absolute; top: calc(100% + 6px); right: 0; left: auto; z-index: 25;

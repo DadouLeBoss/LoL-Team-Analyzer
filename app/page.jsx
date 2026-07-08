@@ -44,6 +44,10 @@ function parseMultiGG(link) {
 // Libelles de roles affiches (l'API renvoie TOP/JUNGLE/MIDDLE/BOTTOM/UTILITY).
 const ROLE_LABEL = { TOP: "TOP", JUNGLE: "JUNGLE", MIDDLE: "MID", BOTTOM: "BOT", UTILITY: "SUPPORT" };
 const ROLE_ORDER_LIST = ["TOP", "JUNGLE", "MIDDLE", "BOTTOM", "UTILITY"];
+
+// En dessous de ce nombre de parties analysees, l'analyse d'un joueur est peu
+// fiable : on l'indique par un badge.
+const LOW_DATA_GAMES = 20;
 function roleLabel(r) {
   return ROLE_LABEL[r] || "";
 }
@@ -166,31 +170,45 @@ function fmtPoints(pts) {
 // Pastille de score de ban avec tooltip detaillant le calcul au survol.
 function BanScore({ b }) {
   const d = b.breakdown;
-  const w = d?.weights || { wVolume: 0.4, wRecent: 0.2, wWin: 0.3, wKda: 0.1 };
-  const mastery = d?.mastery || 0;
+  if (!d) {
+    return (
+      <div className="score-wrap">
+        <div className="score" style={{ background: scoreColor(b.score) }}>{b.score}</div>
+      </div>
+    );
+  }
+  const w = d.weights || { wActivity: 0.6, wWin: 0.3, wKda: 0.1 };
+  const mastery = d.mastery || 0;
+  const repli = d.repli || 0;
+  const hasRepli = repli > 0.0005;
+  const base = hasRepli ? d.effectiveForce : d.force;
   return (
     <div className="score-wrap">
       <div className="score" style={{ background: scoreColor(b.score) }}>
         {b.score}
       </div>
-      {d && (
-        <div className="score-tip">
-          <div className="tip-title">Detail du score</div>
-          <div className="tip-line">
-            Force = confiance x (volume + recent + WR + KDA{mastery > 0 ? " + maitrise" : ""})
-          </div>
-          <div className="tip-line mono">
-            = {num2(d.confidence)} x ({num2(w.wVolume)}·{num2(d.volume)} + {num2(w.wRecent)}·
-            {num2(d.recent)} + {num2(w.wWin)}·{num2(d.winrate)} + {num2(w.wKda)}·{num2(d.kda)}
-            {mastery > 0 ? ` + ${num2(mastery)}` : ""}) = {num2(d.force)}
-          </div>
-          <div className="tip-line mono">
-            Score = force x flex-jeu(x{num2(d.gameFlexFactor)}, {d.roleCount} role
-            {d.roleCount > 1 ? "s" : ""}) x meta(x{num2(d.metaFactor)})
-            {d.skillFactor > 1 ? ` x niveau(x${num2(d.skillFactor)})` : ""} = {b.score}/100
-          </div>
+      <div className="score-tip">
+        <div className="tip-title">Detail du score</div>
+        <div className="tip-line">
+          Force = confiance x (activite + WR liss. + KDA{mastery > 0 ? " + maitrise" : ""})
         </div>
-      )}
+        <div className="tip-line mono">
+          = {num2(d.confidence)} x ({num2(w.wActivity)}·{num2(d.activity)} + {num2(w.wWin)}·
+          {num2(d.winrate)} + {num2(w.wKda)}·{num2(d.kda)}
+          {mastery > 0 ? ` + ${num2(mastery)}` : ""}) = {num2(d.force)}
+        </div>
+        {hasRepli && (
+          <div className="tip-line mono">
+            Impact = force - repli 2e choix ({num2(repli)}) = {num2(base)}
+          </div>
+        )}
+        <div className="tip-line mono">
+          Score = {hasRepli ? "impact" : "force"} x flex(x{num2(d.gameFlexFactor)}, {d.roleCount} role
+          {d.roleCount > 1 ? "s" : ""}) x meta(x{num2(d.metaFactor)})
+          {d.skillFactor > 1 ? ` x niveau(x${num2(d.skillFactor)})` : ""}
+          {d.prepFactor > 1 ? ` x prep(x${num2(d.prepFactor)})` : ""} = {b.score}/100
+        </div>
+      </div>
     </div>
   );
 }
@@ -732,6 +750,14 @@ export default function Home() {
               </a>
               <RankBadge label="Solo/Duo" r={p.rank?.solo} />
               <RankBadge label="Flex" r={p.rank?.flex} />
+              {p.totalGames < LOW_DATA_GAMES && (
+                <span
+                  className="low-data"
+                  title="Peu de parties analysees : les stats et le score de ce joueur sont peu fiables"
+                >
+                  peu de donnees ({p.totalGames})
+                </span>
+              )}
               <div className="player-meta">
                 <span className="count">{p.totalGames} parties analysees</span>
                 <button className="see-more" onClick={() => toggleExpanded(p.puuid)}>
@@ -988,6 +1014,11 @@ export default function Home() {
                 <div className="ban-info">
                     <div className="name">
                       {b.name}
+                      {b.isPrep && (
+                        <span className="prep-badge" title="Beaucoup de parties recentes sur ce champion : pick probablement travaille en ce moment">
+                          en preparation
+                        </span>
+                      )}
                       {b.meta && b.meta.tier <= 3 && (
                         <span className={`meta-badge tier${b.meta.tier}`}>
                           {b.meta.tierLabel} {pct(b.meta.winRate)}
