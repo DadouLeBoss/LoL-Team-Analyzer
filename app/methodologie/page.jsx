@@ -47,13 +47,12 @@ export default function Methodologie() {
             de ban en decoule.
           </p>
           <div className="formula">
-            <span className="fx-label">force</span> = confiance x (0.4 x volume + 0.2 x recent + 0.3 x winrate + 0.1 x KDA + maitrise)
+            <span className="fx-label">force</span> = confiance x (0.6 x activite + 0.3 x winrate + 0.1 x KDA + maitrise)
           </div>
           <ul>
             <li><b>Confiance</b> = min(parties / 5, 1). En dessous de 5 parties, la force est reduite proportionnellement (5 parties ou plus = confiance pleine). Cela evite de surevaluer un champion joue une ou deux fois.</li>
-            <li><b>Volume</b> : part de ce champion sur l'ensemble des parties de la saison. Mesure l'attachement global.</li>
-            <li><b>Recent</b> : part sur les 40 dernieres parties. Capte la forme du moment et les one-tricks actuels.</li>
-            <li><b>Winrate</b> : taux de victoire sur le champion.</li>
+            <li><b>Activite</b> : part de jeu du champion, ponderee par la recence. Chaque partie pese selon son anciennete (une partie perd la moitie de son poids toutes les 60 jours), puis on rapporte le poids du champion au poids total du joueur. Une seule mesure fluide qui fond le volume global et la forme du moment : un champion beaucoup joue recemment pese lourd, un champion delaisse depuis des mois s'efface tout seul.</li>
+            <li><b>Winrate lisse</b> : taux de victoire, mais adouci pour les petits echantillons. On ajoute quelques parties fictives a 50% (formule bayesienne), donc un 3 victoires - 0 defaite ne vaut pas 100% mais environ 69%, tandis qu'un 20-10 reste proche de 65%. Le winrate <em>affiche</em> ailleurs dans l'app reste le vrai ; seul le score utilise cette version lissee.</li>
             <li><b>KDA</b> : (kills + assists) / deaths, normalise (un KDA de 5 ou plus vaut le maximum).</li>
             <li><b>Maitrise</b> : +0.05 si le joueur depasse 300 000 points de maitrise sur le champion, sinon 0. Comme cette composante est dans la parenthese, elle est ensuite multipliee par les facteurs du score de ban.</li>
           </ul>
@@ -62,21 +61,28 @@ export default function Methodologie() {
         <section className="doc-section">
           <h2>Score de ban</h2>
           <p>
-            Pour chaque champion, on part de la force du <b>meilleur joueur de
-            l'equipe</b> sur ce champion, puis on applique trois multiplicateurs. Le
-            resultat est ramene sur 100 et plafonne a 100.
+            Pour chaque champion, on part du <b>meilleur joueur de l'equipe</b> sur ce
+            champion. On calcule d'abord l'<b>impact</b> du ban, puis on applique des
+            multiplicateurs. Le resultat est ramene sur 100 et plafonne a 100.
           </p>
           <div className="formula">
-            <span className="fx-label">score</span> = force x flex-en-jeu x meta x niveau x 100 <span className="fx-max">(max 100)</span>
+            <span className="fx-label">impact</span> = force - repli du 2e choix (meme role)
+          </div>
+          <div className="formula">
+            <span className="fx-label">score</span> = impact x flex-en-jeu x meta x niveau x prep x 100 <span className="fx-max">(max 100)</span>
           </div>
           <ul>
+            <li><b>Impact differentiel</b> : un ban n'est utile que s'il retire quelque chose d'irremplacable. On retranche donc a la force celle du 2e meilleur champion du joueur <em>dans le meme role</em>. Un joueur avec un pool profond (un bon repli derriere) voit ses champions moins prioritaires ; un one-trick sans alternative reste au sommet, meme si son champion n'est pas le plus fort dans l'absolu. Reglable de 0 (on ignore le repli, score base sur la force brute) a 1 (repli complet).</li>
             <li><b>Flex en jeu</b> : +0.1 par role jouable du champion dans la meta au-dela du premier (1 role = x1, 2 roles = x1.1, 3 roles = x1.2...). Un champion jouable sur plusieurs postes est plus difficile a esquiver.</li>
             <li><b>Meta</b> : selon le tier OP.GG du champion. OP x1.15, Fort x1.1, Bon x1.05, Moyen x1, Faible x0.9.</li>
             <li><b>Niveau</b> : si le meilleur joueur du champion est au-dessus du niveau moyen de son equipe, +0.1 par cran de division (environ 100 elo) d'ecart, sans plafond. L'idee est de concentrer les bans sur le joueur qui surclasse le plus son equipe. Neutre s'il est dans la moyenne ou en dessous.</li>
+            <li><b>Preparation</b> : un champion beaucoup joue ces deux dernieres semaines et majoritairement recemment est probablement un pick travaille pour un match. Il recoit un bonus (x1.15) et un badge "en preparation". Comme c'est un choix delibere et non un simple repli, il echappe au retranchement du 2e choix (sinon son main dans le role l'annulerait).</li>
           </ul>
           <p className="muted">
-            Dans l'application, survolez n'importe quel score de ban pour voir le
-            detail chiffre de son calcul.
+            Consequence : une equipe tres flexible (chacun a plusieurs bons champions
+            par role) affiche des scores plus bas. Ce n'est pas un defaut, c'est
+            l'information : il n'y a pas de one-trick a punir absolument. Survolez
+            n'importe quel score dans l'app pour voir le detail chiffre.
           </p>
         </section>
 
