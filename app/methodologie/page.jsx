@@ -136,6 +136,26 @@ export default function Methodologie() {
         </section>
 
         <section className="doc-section">
+          <h2>Mode match (2 equipes)</h2>
+          <p>
+            Le mode match analyse ton equipe ET l'equipe adverse, puis les croise en
+            assistant de draft :
+          </p>
+          <ul>
+            <li><b>Comparatif lane par lane</b> : pour chaque poste, ton joueur contre le leur, avec l'avantage de niveau (base sur le rang).</li>
+            <li><b>Bans contre eux</b> : leurs champions dangereux (meme calcul de score que pour une equipe), en retirant ceux que tu sais deja punir.</li>
+            <li><b>Vous savez deja les punir</b> : leurs menaces pour lesquelles un de tes joueurs a un counter dans son pool (inutile de gaspiller un ban dessus).</li>
+            <li><b>Suggestions de picks</b> : tes champions dont la meta indique qu'ils battent leurs picks probables.</li>
+            <li><b>Draft adverse probable</b> : leurs champions les plus joues par poste.</li>
+          </ul>
+          <p className="muted">
+            Les counters viennent d'OP.GG (top 3 par champion, a son role principal) :
+            c'est un indice, pas une couverture exhaustive. La prediction de draft est
+            une heuristique sur l'historique, pas une certitude.
+          </p>
+        </section>
+
+        <section className="doc-section">
           <h2>Limites</h2>
           <ul>
             <li>L'analyse repose sur l'historique classe disponible via l'API ; les parties hors classee ou trop anciennes ne sont pas comptees.</li>
