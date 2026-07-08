@@ -61,28 +61,23 @@ export default function Methodologie() {
         <section className="doc-section">
           <h2>Score de ban</h2>
           <p>
-            Pour chaque champion, on part du <b>meilleur joueur de l'equipe</b> sur ce
-            champion. On calcule d'abord l'<b>impact</b> du ban, puis on applique des
-            multiplicateurs. Le resultat est ramene sur 100 et plafonne a 100.
+            Pour chaque champion, on part de la force du <b>meilleur joueur de
+            l'equipe</b> sur ce champion, puis on applique des multiplicateurs. Le
+            resultat est ramene sur 100 et plafonne a 100.
           </p>
           <div className="formula">
-            <span className="fx-label">impact</span> = force - repli du 2e choix (meme role)
-          </div>
-          <div className="formula">
-            <span className="fx-label">score</span> = impact x flex-en-jeu x meta x niveau x prep x 100 <span className="fx-max">(max 100)</span>
+            <span className="fx-label">score</span> = force x flex-en-jeu x meta x niveau x prep x sans-repli x 100 <span className="fx-max">(max 100)</span>
           </div>
           <ul>
-            <li><b>Impact differentiel</b> : un ban n'est utile que s'il retire quelque chose d'irremplacable. On retranche donc a la force celle du 2e meilleur champion du joueur <em>dans le meme role</em>. Un joueur avec un pool profond (un bon repli derriere) voit ses champions moins prioritaires ; un one-trick sans alternative reste au sommet, meme si son champion n'est pas le plus fort dans l'absolu. Reglable de 0 (on ignore le repli, score base sur la force brute) a 1 (repli complet).</li>
+            <li><b>Sans repli (one-trick)</b> : un ban vaut d'autant plus que le joueur n'a rien d'equivalent derriere. On compare le champion a son 2e meilleur choix <em>dans le meme role</em> : s'il n'a pas de repli (vrai one-trick), bonus maximal ; s'il a une alternative aussi forte, aucun bonus. C'est un bonus uniquement, jamais un malus : un joueur au pool profond garde sa force pleine, un one-trick est mis en avant. Reglable via "Bonus sans repli".</li>
             <li><b>Flex en jeu</b> : +0.1 par role jouable du champion dans la meta au-dela du premier (1 role = x1, 2 roles = x1.1, 3 roles = x1.2...). Un champion jouable sur plusieurs postes est plus difficile a esquiver.</li>
             <li><b>Meta</b> : selon le tier OP.GG du champion. OP x1.15, Fort x1.1, Bon x1.05, Moyen x1, Faible x0.9.</li>
             <li><b>Niveau</b> : si le meilleur joueur du champion est au-dessus du niveau moyen de son equipe, +0.1 par cran de division (environ 100 elo) d'ecart, sans plafond. L'idee est de concentrer les bans sur le joueur qui surclasse le plus son equipe. Neutre s'il est dans la moyenne ou en dessous.</li>
-            <li><b>Preparation</b> : un champion beaucoup joue ces deux dernieres semaines et majoritairement recemment est probablement un pick travaille pour un match. Il recoit un bonus (x1.15) et un badge "en preparation". Comme c'est un choix delibere et non un simple repli, il echappe au retranchement du 2e choix (sinon son main dans le role l'annulerait).</li>
+            <li><b>Preparation</b> : un champion beaucoup joue ces deux dernieres semaines et majoritairement recemment est probablement un pick travaille pour un match. Il recoit un bonus et un badge "en preparation".</li>
           </ul>
           <p className="muted">
-            Consequence : une equipe tres flexible (chacun a plusieurs bons champions
-            par role) affiche des scores plus bas. Ce n'est pas un defaut, c'est
-            l'information : il n'y a pas de one-trick a punir absolument. Survolez
-            n'importe quel score dans l'app pour voir le detail chiffre.
+            Survolez n'importe quel score dans l'app pour voir le detail chiffre de son
+            calcul.
           </p>
         </section>
 

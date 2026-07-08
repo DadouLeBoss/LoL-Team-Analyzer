@@ -179,9 +179,7 @@ function BanScore({ b }) {
   }
   const w = d.weights || { wActivity: 0.6, wWin: 0.3, wKda: 0.1 };
   const mastery = d.mastery || 0;
-  const repli = d.repli || 0;
-  const hasRepli = repli > 0.0005;
-  const base = hasRepli ? d.effectiveForce : d.force;
+  const solo = d.soloFactor || 1;
   return (
     <div className="score-wrap">
       <div className="score" style={{ background: scoreColor(b.score) }}>
@@ -197,16 +195,12 @@ function BanScore({ b }) {
           {num2(d.winrate)} + {num2(w.wKda)}·{num2(d.kda)}
           {mastery > 0 ? ` + ${num2(mastery)}` : ""}) = {num2(d.force)}
         </div>
-        {hasRepli && (
-          <div className="tip-line mono">
-            Impact = force - repli 2e choix ({num2(repli)}) = {num2(base)}
-          </div>
-        )}
         <div className="tip-line mono">
-          Score = {hasRepli ? "impact" : "force"} x flex(x{num2(d.gameFlexFactor)}, {d.roleCount} role
+          Score = force x flex(x{num2(d.gameFlexFactor)}, {d.roleCount} role
           {d.roleCount > 1 ? "s" : ""}) x meta(x{num2(d.metaFactor)})
           {d.skillFactor > 1 ? ` x niveau(x${num2(d.skillFactor)})` : ""}
-          {d.prepFactor > 1 ? ` x prep(x${num2(d.prepFactor)})` : ""} = {b.score}/100
+          {d.prepFactor > 1 ? ` x prep(x${num2(d.prepFactor)})` : ""}
+          {solo > 1.0005 ? ` x sans-repli(x${num2(solo)})` : ""} = {b.score}/100
         </div>
       </div>
     </div>
