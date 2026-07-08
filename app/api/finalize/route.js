@@ -1,70 +1,18 @@
 import { NextResponse } from "next/server";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
-import { KEY_NS, getDDragon } from "../../../lib/riot.js";
-import { readCache, readCacheMany, cachePaths } from "../../../lib/cache.js";
-import { analyzeTeam } from "../../../lib/analysis.js";
+import { getDDragon } from "../../../lib/riot.js";
+import { buildTeam, loadMeta } from "../../../lib/teamFromCache.js";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
 
-// Derniere etape : tout est deja en cache (prep + parties). On relit, on
-// assemble et on calcule l'analyse. Aucun appel Riot ici, donc rapide et sans
-// risque de depasser la limite de temps.
+// Derniere etape (mode 1 equipe) : tout est deja en cache (prep + parties). On
+// relit, on assemble et on calcule l'analyse via le helper partage buildTeam.
+// Aucun appel Riot ici, donc rapide et sans risque de depasser la limite de temps.
 export async function POST(request) {
   try {
-    const { riotIds, errors, region, settings } = await request.json();
-    const ids = Array.isArray(riotIds) ? riotIds : [];
-
-    const ddragon = await getDDragon();
-
-    // Prep de chaque joueur (puuid, maitrises, rang, liste de parties).
-    const preps = await Promise.all(
-      ids.map((id) => readCache(cachePaths.prep(KEY_NS, id)))
-    );
-
-    const collectedErrors = Array.isArray(errors) ? [...errors] : [];
-    const enriched = [];
-    const uniqueMatchIds = new Set();
-
-    for (let i = 0; i < ids.length; i++) {
-      const prep = preps[i];
-      if (!prep) {
-        collectedErrors.push({ riotId: ids[i], error: "preparation expiree, relance l'analyse" });
-        continue;
-      }
-      prep.matchIds.forEach((m) => uniqueMatchIds.add(m));
-      // Lecture groupee des parties de ce joueur depuis le cache.
-      const matches = (
-        await readCacheMany(prep.matchIds.map((m) => cachePaths.match(KEY_NS, m)))
-      ).filter(Boolean);
-      enriched.push({
-        riotId: prep.riotId,
-        name: prep.name,
-        puuid: prep.puuid,
-        masteries: prep.masteries,
-        rank: prep.rank,
-        matches,
-      });
-    }
-
-    // Combien de parties uniques sont effectivement en cache.
-    const uniquePresent = (
-      await readCacheMany([...uniqueMatchIds].map((m) => cachePaths.match(KEY_NS, m)))
-    ).filter(Boolean).length;
-
-    let meta = null;
-    try {
-      meta = JSON.parse(await readFile(path.join(process.cwd(), "data", "meta.json"), "utf8"));
-    } catch {
-      // pas de meta -> analyse sans bonus meta
-    }
-
-    const analysis = analyzeTeam(enriched, ddragon, meta, settings);
-    analysis.errors = collectedErrors;
-    analysis.matchesDownloaded = uniquePresent;
-    analysis.matchesFailed = uniqueMatchIds.size - uniquePresent;
-
+    const { riotIds, errors, settings } = await request.json();
+    const [ddragon, meta] = await Promise.all([getDDragon(), loadMeta()]);
+    const analysis = await buildTeam(riotIds, errors, ddragon, meta, settings);
     return NextResponse.json(analysis);
   } catch (err) {
     console.error(err);
