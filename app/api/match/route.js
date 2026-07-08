@@ -11,7 +11,8 @@ export const maxDuration = 60;
 // suggestions de picks). Renvoie { mine, enemy, match }.
 export async function POST(request) {
   try {
-    const { myRiotIds, enemyRiotIds, myErrors, enemyErrors, settings } = await request.json();
+    const { myRiotIds, enemyRiotIds, myErrors, enemyErrors, myRoles, enemyRoles, settings } =
+      await request.json();
     const [ddragon, meta] = await Promise.all([getDDragon(), loadMeta()]);
 
     const [mine, enemy] = await Promise.all([
@@ -19,7 +20,7 @@ export async function POST(request) {
       buildTeam(enemyRiotIds, enemyErrors, ddragon, meta, settings),
     ]);
 
-    const match = analyzeMatch(mine, enemy, meta, settings);
+    const match = analyzeMatch(mine, enemy, meta, { myRoles, enemyRoles });
     return NextResponse.json({ mine, enemy, match });
   } catch (err) {
     console.error(err);

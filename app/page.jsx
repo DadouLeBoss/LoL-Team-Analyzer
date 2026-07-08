@@ -276,7 +276,17 @@ function SettingsPanel({ initial, onApply, onClose, applying }) {
 
 // Bloc de saisie d'une equipe : champ MultiGG (+ Convertir) puis 5 comptes.
 // Reutilise pour "mon equipe" et "equipe adverse" (mode match).
-function TeamInputs({ heading, accounts, onChange, multiLink, onMultiLinkChange, onConvert }) {
+function TeamInputs({
+  heading,
+  accounts,
+  onChange,
+  multiLink,
+  onMultiLinkChange,
+  onConvert,
+  roles,
+  onRoleChange,
+  showRoles,
+}) {
   return (
     <div className="team-inputs">
       {heading && <div className="team-inputs-head">{heading}</div>}
@@ -300,12 +310,29 @@ function TeamInputs({ heading, accounts, onChange, multiLink, onMultiLinkChange,
         {accounts.map((a, i) => (
           <div className="field" key={i}>
             <label>Joueur {i + 1}</label>
-            <input
-              type="text"
-              value={a}
-              placeholder="Pseudo#TAG"
-              onChange={(e) => onChange(i, e.target.value)}
-            />
+            <div className={showRoles ? "player-row" : undefined}>
+              <input
+                type="text"
+                value={a}
+                placeholder="Pseudo#TAG"
+                onChange={(e) => onChange(i, e.target.value)}
+              />
+              {showRoles && (
+                <select
+                  className="role-select"
+                  value={roles[i] || ""}
+                  onChange={(e) => onRoleChange(i, e.target.value)}
+                  title="Role du joueur"
+                >
+                  <option value="">Role</option>
+                  {ROLE_ORDER_LIST.map((r) => (
+                    <option key={r} value={r}>
+                      {roleLabel(r)}
+                    </option>
+                  ))}
+                </select>
+              )}
+            </div>
           </div>
         ))}
       </div>
@@ -521,8 +548,10 @@ export default function Home() {
   const [mode, setMode] = useState("single"); // "single" | "match"
   const [accounts, setAccounts] = useState(DEFAULT_ACCOUNTS);
   const [multiLink, setMultiLink] = useState("");
+  const [roles, setRoles] = useState(["", "", "", "", ""]); // role assigne par joueur (mode match)
   const [enemyAccounts, setEnemyAccounts] = useState(["", "", "", "", ""]);
   const [enemyMultiLink, setEnemyMultiLink] = useState("");
+  const [enemyRoles, setEnemyRoles] = useState(["", "", "", "", ""]);
   const [regionKey, setRegionKey] = useState("EUW");
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -615,6 +644,12 @@ export default function Home() {
   }
   function setEnemyAccount(i, value) {
     setEnemyAccounts((prev) => prev.map((a, idx) => (idx === i ? value : a)));
+  }
+  function setRole(i, value) {
+    setRoles((prev) => prev.map((r, idx) => (idx === i ? value : r)));
+  }
+  function setEnemyRole(i, value) {
+    setEnemyRoles((prev) => prev.map((r, idx) => (idx === i ? value : r)));
   }
 
   // Convertit un lien MultiGG en remplissant les champs joueurs (equipe "mine"
@@ -741,7 +776,25 @@ export default function Home() {
       // --- Phase 3 : analyse (tout est en cache, aucun appel Riot) ---
       setProgress((prev) => ({ ...prev, phase: "finalize" }));
       if (mode === "match") {
-        const run = { mode: "match", myRiotIds: myOk, enemyRiotIds: enemyOk, myErrors, enemyErrors, region };
+        // Roles assignes par joueur (riotId -> role) pour fiabiliser l'appariement.
+        const roleMap = (accs, rls) => {
+          const m = {};
+          accs.forEach((a, i) => {
+            const id = a.trim();
+            if (id && rls[i]) m[id] = rls[i];
+          });
+          return m;
+        };
+        const run = {
+          mode: "match",
+          myRiotIds: myOk,
+          enemyRiotIds: enemyOk,
+          myErrors,
+          enemyErrors,
+          myRoles: roleMap(accounts, roles),
+          enemyRoles: roleMap(enemyAccounts, enemyRoles),
+          region,
+        };
         setLastRun(run);
         const result = await postJson("/api/match", { ...run, settings });
         setData(result);
@@ -828,9 +881,9 @@ export default function Home() {
           </button>
         </div>
 
-        <div className="card form">
+        <div className={`card form${mode === "match" ? " match" : ""}`}>
           {mode === "match" ? (
-            <>
+            <div className="teams-row">
               <TeamInputs
                 heading="Mon equipe"
                 accounts={accounts}
@@ -838,8 +891,10 @@ export default function Home() {
                 multiLink={multiLink}
                 onMultiLinkChange={setMultiLink}
                 onConvert={() => applyMultiLink("mine")}
+                roles={roles}
+                onRoleChange={setRole}
+                showRoles
               />
-              <div className="team-sep" />
               <TeamInputs
                 heading="Equipe adverse"
                 accounts={enemyAccounts}
@@ -847,8 +902,11 @@ export default function Home() {
                 multiLink={enemyMultiLink}
                 onMultiLinkChange={setEnemyMultiLink}
                 onConvert={() => applyMultiLink("enemy")}
+                roles={enemyRoles}
+                onRoleChange={setEnemyRole}
+                showRoles
               />
-            </>
+            </div>
           ) : (
             <TeamInputs
               accounts={accounts}

@@ -413,8 +413,20 @@ tr:last-child td { border-bottom: none; }
 .mode-btn + .mode-btn { border-left: 1px solid var(--border); }
 .mode-btn.active { background: var(--gold); color: #1a1204; }
 .team-inputs-head { font-size: 13px; font-weight: 700; color: var(--gold); text-transform: uppercase; letter-spacing: .05em; margin-bottom: 12px; }
-.team-sep { height: 1px; background: var(--border); margin: 20px 0; }
 .form-note { margin-top: 14px; font-size: 12px; color: var(--muted); }
+/* Mode match : les 2 equipes cote a cote, carte plus large */
+.form.match { max-width: 880px; }
+.teams-row { display: flex; gap: 28px; }
+.teams-row > .team-inputs { flex: 1; min-width: 0; }
+.teams-row > .team-inputs + .team-inputs { border-left: 1px solid var(--border); padding-left: 28px; }
+/* Ligne compte + role */
+.player-row { display: flex; gap: 8px; }
+.player-row input { flex: 1; min-width: 0; }
+.role-select { width: 104px; flex-shrink: 0; }
+@media (max-width: 680px) {
+  .teams-row { flex-direction: column; gap: 20px; }
+  .teams-row > .team-inputs + .team-inputs { border-left: none; padding-left: 0; border-top: 1px solid var(--border); padding-top: 20px; }
+}
 
 /* --- En-tete match : les deux equipes --- */
 .match-head { display: flex; align-items: center; justify-content: center; gap: 18px; flex-wrap: wrap; margin: 14px 0 8px; }
