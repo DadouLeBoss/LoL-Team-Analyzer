@@ -274,9 +274,255 @@ function SettingsPanel({ initial, onApply, onClose, applying }) {
   );
 }
 
+// Bloc de saisie d'une equipe : champ MultiGG (+ Convertir) puis 5 comptes.
+// Reutilise pour "mon equipe" et "equipe adverse" (mode match).
+function TeamInputs({ heading, accounts, onChange, multiLink, onMultiLinkChange, onConvert }) {
+  return (
+    <div className="team-inputs">
+      {heading && <div className="team-inputs-head">{heading}</div>}
+      <div className="field multigg">
+        <label>MultiGG</label>
+        <div className="multigg-row">
+          <input
+            type="text"
+            value={multiLink}
+            placeholder="Colle un lien op.gg multisearch"
+            onChange={(e) => onMultiLinkChange(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && onConvert()}
+          />
+          <button type="button" className="multigg-btn" onClick={onConvert}>
+            Convertir
+          </button>
+        </div>
+      </div>
+      <div className="multigg-sep">puis ajuste les comptes si besoin</div>
+      <div className="form-fields">
+        {accounts.map((a, i) => (
+          <div className="field" key={i}>
+            <label>Joueur {i + 1}</label>
+            <input
+              type="text"
+              value={a}
+              placeholder="Pseudo#TAG"
+              onChange={(e) => onChange(i, e.target.value)}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// Rang court d'un joueur (Solo/Duo sinon Flex) : "Emerald II", "Non classe".
+function rankShort(rank) {
+  const r = rank?.solo || rank?.flex;
+  if (!r) return "Non classe";
+  const div = APEX.includes(r.tier) ? "" : ` ${r.rank}`;
+  return `${fmtTier(r.tier)}${div}`;
+}
+
+const FAVOR_LABEL = { mine: "avantage toi", enemy: "avantage adverse", even: "equilibre", unknown: "rang inconnu" };
+
+// Vue "mode match" : croisement de deux equipes (assistant de draft).
+function MatchView({ data, version, logRegion, onHome, onSettings }) {
+  const { mine, enemy, match } = data;
+  // Bans a poser = leurs champions dangereux qu'on ne sait PAS punir. Ceux qu'on
+  // punit deja sont listes a part (intel : inutile de gaspiller un ban dessus).
+  const toBan = match.bansAgainst.filter((b) => !b.counterable).slice(0, 12);
+  const punishable = match.bansAgainst.filter((b) => b.counterable).slice(0, 8);
+  const suggestions = match.pickSuggestions;
+
+  return (
+    <>
+      <header className="top">
+        <div className="brand">
+          <img className="logo clickable" src="/logo.png" alt="Accueil" title="Retour a l'accueil" onClick={onHome} />
+          <h1>
+            LoL <span className="accent">Team Analyzer</span>
+          </h1>
+        </div>
+        <div className="top-actions">
+          <button className="icon-btn" onClick={onSettings} title="Parametres">
+            <GearIcon />
+            <span>Parametres</span>
+          </button>
+          <button className="refresh ghost" onClick={onHome}>
+            Nouvelle analyse
+          </button>
+        </div>
+      </header>
+
+      <div className="match-head">
+        <div className="match-team mine">
+          <span className="mt-name">Mon equipe</span>
+          {mine.teamElo && (
+            <span className={`rank tier-${mine.teamElo.tier}`}>
+              {fmtTier(mine.teamElo.tier)}
+              {mine.teamElo.division ? ` ${mine.teamElo.division}` : ""} · {mine.teamElo.lp} LP
+            </span>
+          )}
+        </div>
+        <span className="match-vs">VS</span>
+        <div className="match-team enemy">
+          <span className="mt-name">Equipe adverse</span>
+          {enemy.teamElo && (
+            <span className={`rank tier-${enemy.teamElo.tier}`}>
+              {fmtTier(enemy.teamElo.tier)}
+              {enemy.teamElo.division ? ` ${enemy.teamElo.division}` : ""} · {enemy.teamElo.lp} LP
+            </span>
+          )}
+        </div>
+      </div>
+
+      {/* -------------------- Comparatif lane par lane -------------------- */}
+      <section className="section">
+        <h2>Comparatif lane par lane</h2>
+        <div className="lanes">
+          {match.laneMatchups.map((l) => (
+            <div className={`lane favor-${l.favor}`} key={l.role}>
+              <div className="lane-side mine">
+                <span className="ls-name">{l.mine?.name || "-"}</span>
+                <span className="ls-rank">{l.mine ? rankShort(l.mine.rank) : ""}</span>
+              </div>
+              <div className="lane-mid">
+                <span className="lane-role">{roleLabel(l.role)}</span>
+                <span className={`lane-favor favor-${l.favor}`}>{FAVOR_LABEL[l.favor]}</span>
+              </div>
+              <div className="lane-side enemy">
+                <span className="ls-name">{l.enemy?.name || "-"}</span>
+                <span className="ls-rank">{l.enemy ? rankShort(l.enemy.rank) : ""}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* -------------------- Bans contre eux -------------------- */}
+      <section className="section">
+        <h2>
+          Bans contre eux
+          <span className="hint">leurs champions dangereux que vous ne savez pas deja punir</span>
+        </h2>
+        {toBan.length === 0 ? (
+          <div className="notice">Rien de prioritaire : vous savez punir leurs menaces (voir ci-dessous).</div>
+        ) : (
+          <div className="grid bans">
+            {toBan.map((b) => (
+              <div className="card ban" key={b.championId}>
+                <div className="ban-top">
+                  <BanScore b={b} />
+                  <ChampIcon version={version} image={b.image} name={b.name} className="detail-icon" />
+                  <div className="ban-info">
+                    <div className="name">{b.name}</div>
+                    <div className="who">
+                      {b.bestPlayer} · {roleLabel(b.role)} · {b.games} parties · {pct(b.winrate)} WR
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
+
+      {/* -------------------- Menaces deja punissables -------------------- */}
+      {punishable.length > 0 && (
+        <section className="section">
+          <h2>
+            Vous savez deja les punir
+            <span className="hint">pas besoin de gaspiller un ban : vous avez le counter dans vos pools</span>
+          </h2>
+          <div className="grid bans">
+            {punishable.map((b) => (
+              <div className="card ban counterable" key={b.championId}>
+                <div className="ban-top">
+                  <BanScore b={b} />
+                  <ChampIcon version={version} image={b.image} name={b.name} className="detail-icon" />
+                  <div className="ban-info">
+                    <div className="name">{b.name}</div>
+                    <div className="who">
+                      {b.bestPlayer} · {roleLabel(b.role)} · {b.games} parties · {pct(b.winrate)} WR
+                    </div>
+                  </div>
+                </div>
+                {b.counteredBy && (
+                  <div className="counter-note">
+                    Punissable : {b.counteredBy.player} avec {b.counteredBy.champion} ({pct(b.counteredBy.winRate)})
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* -------------------- Suggestions de picks -------------------- */}
+      <section className="section">
+        <h2>
+          Suggestions de picks
+          <span className="hint">vos champions qui battent leurs picks probables (meta OP.GG, indicatif)</span>
+        </h2>
+        {suggestions.length === 0 ? (
+          <div className="notice">Aucune suggestion de counter trouvee dans vos pools.</div>
+        ) : (
+          <div className="grid sugg">
+            {suggestions.map((s) => (
+              <div className="card sugg-card" key={s.role}>
+                <div className="sugg-role">{roleLabel(s.role)}</div>
+                {s.suggestions.map((x, i) => (
+                  <div className="sugg-line" key={i}>
+                    <b>{x.pick}</b> <span className="sugg-player">({x.player})</span> bat{" "}
+                    <span className="sugg-vs">{x.vs}</span>
+                    <span className="sugg-wr">{pct(x.winRate)}</span>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        )}
+      </section>
+
+      {/* -------------------- Prediction de draft adverse -------------------- */}
+      <section className="section">
+        <h2>
+          Draft adverse probable
+          <span className="hint">leurs champions les plus joues par role</span>
+        </h2>
+        <div className="grid draft">
+          {match.enemyDraft.map((d) => (
+            <div className="card draft-card" key={d.role}>
+              <div className="draft-role">{roleLabel(d.role)}</div>
+              {d.picks.length === 0 ? (
+                <div className="empty">Pas de joueur identifie.</div>
+              ) : (
+                <ul className="draft-list">
+                  {d.picks.map((p, i) => (
+                    <li key={i}>
+                      <ChampIcon version={version} image={p.image} name={p.name} className="detail-icon" />
+                      <div className="draft-info">
+                        <span className="mini-name">{p.name}</span>
+                        <span className="draft-sub">
+                          {p.player} · {p.games}p · {pct(p.winrate)}
+                        </span>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+        </div>
+      </section>
+    </>
+  );
+}
+
 export default function Home() {
+  const [mode, setMode] = useState("single"); // "single" | "match"
   const [accounts, setAccounts] = useState(DEFAULT_ACCOUNTS);
   const [multiLink, setMultiLink] = useState("");
+  const [enemyAccounts, setEnemyAccounts] = useState(["", "", "", "", ""]);
+  const [enemyMultiLink, setEnemyMultiLink] = useState("");
   const [regionKey, setRegionKey] = useState("EUW");
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -332,8 +578,9 @@ export default function Home() {
     setApplying(true);
     setError(null);
     try {
-      const analysis = await postJson("/api/finalize", { ...lastRun, settings: clean });
-      setData(analysis);
+      const url = lastRun.mode === "match" ? "/api/match" : "/api/finalize";
+      const result = await postJson(url, { ...lastRun, settings: clean });
+      setData(result);
       setShowSettings(false);
     } catch (e) {
       setError(e.message);
@@ -366,11 +613,15 @@ export default function Home() {
   function setAccount(i, value) {
     setAccounts((prev) => prev.map((a, idx) => (idx === i ? value : a)));
   }
+  function setEnemyAccount(i, value) {
+    setEnemyAccounts((prev) => prev.map((a, idx) => (idx === i ? value : a)));
+  }
 
-  // Convertit le lien MultiGG en remplissant les champs joueurs et la region.
-  // Les champs restent editables ensuite pour ajuster un joueur en particulier.
-  function applyMultiLink() {
-    const parsed = parseMultiGG(multiLink);
+  // Convertit un lien MultiGG en remplissant les champs joueurs (equipe "mine"
+  // ou "enemy") et la region. Les champs restent editables ensuite.
+  function applyMultiLink(target) {
+    const link = target === "enemy" ? enemyMultiLink : multiLink;
+    const parsed = parseMultiGG(link);
     if (!parsed) {
       setError("Lien MultiGG invalide (attendu un lien op.gg multisearch).");
       return;
@@ -378,7 +629,8 @@ export default function Home() {
     setError(null);
     const filled = parsed.names.slice(0, 5);
     while (filled.length < 5) filled.push("");
-    setAccounts(filled);
+    if (target === "enemy") setEnemyAccounts(filled);
+    else setAccounts(filled);
     if (parsed.regionPart) {
       const reg = REGIONS.find((r) => r.log === parsed.regionPart);
       if (reg) setRegionKey(reg.key);
@@ -414,36 +666,52 @@ export default function Home() {
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
   async function run() {
-    const players = accounts.map((a) => a.trim()).filter(Boolean);
-    if (players.length === 0) {
-      setError("Renseigne au moins un compte.");
+    const mineList = accounts.map((a) => a.trim()).filter(Boolean);
+    const enemyList = mode === "match" ? enemyAccounts.map((a) => a.trim()).filter(Boolean) : [];
+    if (mineList.length === 0) {
+      setError(mode === "match" ? "Renseigne ton equipe." : "Renseigne au moins un compte.");
+      return;
+    }
+    if (mode === "match" && enemyList.length === 0) {
+      setError("Renseigne l'equipe adverse.");
       return;
     }
     const reg = REGIONS.find((r) => r.key === regionKey);
     const region = { platform: reg.platform, regional: reg.regional };
     const startedAt = Date.now();
+    const allPlayers = [...mineList, ...enemyList];
     setLoading(true);
     setError(null);
-    setProgress({ phase: "prepare", prepDone: 0, prepTotal: players.length, dl: 0, dlTotal: 0, startedAt });
+    setProgress({ phase: "prepare", prepDone: 0, prepTotal: allPlayers.length, dl: 0, dlTotal: 0, startedAt });
 
     try {
-      // --- Phase 1 : preparation joueur par joueur ---
-      const okIds = [];
-      const errors = [];
+      // --- Phase 1 : preparation joueur par joueur (les 2 equipes en mode match) ---
+      const myOk = [];
+      const enemyOk = [];
+      const myErrors = [];
+      const enemyErrors = [];
       const allIds = new Set();
-      for (let i = 0; i < players.length; i++) {
-        const p = await postJson("/api/prepare", { riotId: players[i], region });
-        if (p.error) errors.push({ riotId: p.riotId, error: p.error });
+      for (let i = 0; i < allPlayers.length; i++) {
+        const isEnemy = i >= mineList.length;
+        const p = await postJson("/api/prepare", { riotId: allPlayers[i], region });
+        if (p.error) (isEnemy ? enemyErrors : myErrors).push({ riotId: p.riotId, error: p.error });
         else {
-          okIds.push(p.riotId);
+          (isEnemy ? enemyOk : myOk).push(p.riotId);
           (p.matchIds || []).forEach((id) => allIds.add(id));
         }
         setProgress((prev) => ({ ...prev, prepDone: i + 1 }));
       }
 
-      if (okIds.length === 0) {
+      if (myOk.length === 0) {
         throw new Error(
-          "Aucun compte valide. " + errors.map((e) => `${e.riotId} (${e.error})`).join(", ")
+          "Aucun compte valide dans ton equipe. " +
+            myErrors.map((e) => `${e.riotId} (${e.error})`).join(", ")
+        );
+      }
+      if (mode === "match" && enemyOk.length === 0) {
+        throw new Error(
+          "Aucun compte valide dans l'equipe adverse. " +
+            enemyErrors.map((e) => `${e.riotId} (${e.error})`).join(", ")
         );
       }
 
@@ -472,9 +740,17 @@ export default function Home() {
 
       // --- Phase 3 : analyse (tout est en cache, aucun appel Riot) ---
       setProgress((prev) => ({ ...prev, phase: "finalize" }));
-      setLastRun({ riotIds: okIds, errors, region });
-      const analysis = await postJson("/api/finalize", { riotIds: okIds, errors, region, settings });
-      setData(analysis);
+      if (mode === "match") {
+        const run = { mode: "match", myRiotIds: myOk, enemyRiotIds: enemyOk, myErrors, enemyErrors, region };
+        setLastRun(run);
+        const result = await postJson("/api/match", { ...run, settings });
+        setData(result);
+      } else {
+        const run = { mode: "single", riotIds: myOk, errors: myErrors, region };
+        setLastRun(run);
+        const analysis = await postJson("/api/finalize", { ...run, settings });
+        setData(analysis);
+      }
     } catch (e) {
       setError(e.message);
     } finally {
@@ -537,52 +813,74 @@ export default function Home() {
           Renseigne jusqu'a 5 comptes (format Pseudo#TAG) et lance l'analyse de leurs parties classees de la saison.
         </p>
 
-        <div className="card form">
-          <div className="field multigg">
-            <label>MultiGG</label>
-            <div className="multigg-row">
-              <input
-                type="text"
-                value={multiLink}
-                placeholder="Colle un lien op.gg multisearch"
-                onChange={(e) => setMultiLink(e.target.value)}
-                onKeyDown={(e) => e.key === "Enter" && applyMultiLink()}
-              />
-              <button type="button" className="multigg-btn" onClick={applyMultiLink}>
-                Convertir
-              </button>
-            </div>
-          </div>
-          <div className="multigg-sep">puis ajuste les comptes si besoin</div>
+        <div className="mode-toggle">
+          <button
+            className={`mode-btn${mode === "single" ? " active" : ""}`}
+            onClick={() => setMode("single")}
+          >
+            Une equipe
+          </button>
+          <button
+            className={`mode-btn${mode === "match" ? " active" : ""}`}
+            onClick={() => setMode("match")}
+          >
+            Match (2 equipes)
+          </button>
+        </div>
 
-          <div className="form-fields">
-            {accounts.map((a, i) => (
-              <div className="field" key={i}>
-                <label>Joueur {i + 1}</label>
-                <input
-                  type="text"
-                  value={a}
-                  placeholder="Pseudo#TAG"
-                  onChange={(e) => setAccount(i, e.target.value)}
-                />
-              </div>
-            ))}
-            <div className="field">
-              <label>Region</label>
-              <select value={regionKey} onChange={(e) => setRegionKey(e.target.value)}>
-                {REGIONS.map((r) => (
-                  <option key={r.key} value={r.key}>
-                    {r.label}
-                  </option>
-                ))}
-              </select>
-            </div>
+        <div className="card form">
+          {mode === "match" ? (
+            <>
+              <TeamInputs
+                heading="Mon equipe"
+                accounts={accounts}
+                onChange={setAccount}
+                multiLink={multiLink}
+                onMultiLinkChange={setMultiLink}
+                onConvert={() => applyMultiLink("mine")}
+              />
+              <div className="team-sep" />
+              <TeamInputs
+                heading="Equipe adverse"
+                accounts={enemyAccounts}
+                onChange={setEnemyAccount}
+                multiLink={enemyMultiLink}
+                onMultiLinkChange={setEnemyMultiLink}
+                onConvert={() => applyMultiLink("enemy")}
+              />
+            </>
+          ) : (
+            <TeamInputs
+              accounts={accounts}
+              onChange={setAccount}
+              multiLink={multiLink}
+              onMultiLinkChange={setMultiLink}
+              onConvert={() => applyMultiLink("mine")}
+            />
+          )}
+
+          <div className="field" style={{ marginTop: 16 }}>
+            <label>Region</label>
+            <select value={regionKey} onChange={(e) => setRegionKey(e.target.value)}>
+              {REGIONS.map((r) => (
+                <option key={r.key} value={r.key}>
+                  {r.label}
+                </option>
+              ))}
+            </select>
           </div>
+
+          {mode === "match" && (
+            <div className="form-note">
+              L'equipe adverse est telechargee comme la tienne (~20 min a froid la 1re
+              fois, instantane ensuite grace au cache).
+            </div>
+          )}
 
           {error && <div className="notice error" style={{ marginTop: 16 }}>{error}</div>}
 
           <button className="refresh" onClick={run} disabled={loading} style={{ marginTop: 20 }}>
-            {loading ? "Analyse en cours..." : "Analyser"}
+            {loading ? "Analyse en cours..." : mode === "match" ? "Analyser le match" : "Analyser"}
           </button>
         </div>
 
@@ -643,7 +941,31 @@ export default function Home() {
     );
   }
 
-  // -------------------- Vue resultats --------------------
+  // -------------------- Vue resultats : mode match --------------------
+  if (data.match) {
+    return (
+      <div className="wrap">
+        {showSettings && (
+          <SettingsPanel
+            initial={settings}
+            onApply={applySettings}
+            onClose={() => setShowSettings(false)}
+            applying={applying}
+          />
+        )}
+        <MatchView
+          data={data}
+          version={data.mine?.ddragonVersion}
+          logRegion={logRegion}
+          onHome={() => setData(null)}
+          onSettings={() => setShowSettings(true)}
+        />
+        {error && <div className="notice error" style={{ marginTop: 16 }}>{error}</div>}
+      </div>
+    );
+  }
+
+  // -------------------- Vue resultats : mode 1 equipe --------------------
   return (
     <div className="wrap">
       {showSettings && (
